@@ -9,8 +9,7 @@
 /* Begin PBXBuildFile section */
 		42B1AD851EEE3F18000221FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B1AD841EEE3F18000221FE /* main.m */; };
 		42B1AD881EEE3F18000221FE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B1AD871EEE3F18000221FE /* AppDelegate.m */; };
-		42B1AD8B1EEE3F18000221FE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B1AD8A1EEE3F18000221FE /* ViewController.m */; };
-		42B1AD8E1EEE3F18000221FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42B1AD8C1EEE3F18000221FE /* Main.storyboard */; };
+		42B1AD8B1EEE3F18000221FE /* YPKImagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B1AD8A1EEE3F18000221FE /* YPKImagesViewController.m */; };
 		42B1AD901EEE3F18000221FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42B1AD8F1EEE3F18000221FE /* Assets.xcassets */; };
 		42B1AD931EEE3F18000221FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42B1AD911EEE3F18000221FE /* LaunchScreen.storyboard */; };
 		42B1AD9E1EEE3F18000221FE /* DemoPhotoKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B1AD9D1EEE3F18000221FE /* DemoPhotoKitTests.m */; };
@@ -19,6 +18,9 @@
 		42B1ADBB1EEE6CF3000221FE /* YPKImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B1ADBA1EEE6CF3000221FE /* YPKImageModel.m */; };
 		42B1ADBE1EEE6DE5000221FE /* YPKAlbumModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B1ADBD1EEE6DE5000221FE /* YPKAlbumModel.m */; };
 		42B1ADC51EEE77EE000221FE /* YPKImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B1ADC41EEE77EE000221FE /* YPKImageCell.m */; };
+		42B1ADC81EEE8015000221FE /* YPKAlbumsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B1ADC71EEE8015000221FE /* YPKAlbumsViewController.m */; };
+		42B1ADCB1EEE8039000221FE /* YPKAlbumCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B1ADCA1EEE8039000221FE /* YPKAlbumCell.m */; };
+		42B1ADCD1EEE81B4000221FE /* beauty.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B1ADCC1EEE81B4000221FE /* beauty.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,9 +45,8 @@
 		42B1AD841EEE3F18000221FE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		42B1AD861EEE3F18000221FE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		42B1AD871EEE3F18000221FE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		42B1AD891EEE3F18000221FE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		42B1AD8A1EEE3F18000221FE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		42B1AD8D1EEE3F18000221FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		42B1AD891EEE3F18000221FE /* YPKImagesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YPKImagesViewController.h; sourceTree = "<group>"; };
+		42B1AD8A1EEE3F18000221FE /* YPKImagesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YPKImagesViewController.m; sourceTree = "<group>"; };
 		42B1AD8F1EEE3F18000221FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		42B1AD921EEE3F18000221FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		42B1AD941EEE3F18000221FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -64,6 +65,11 @@
 		42B1ADBF1EEE6E1B000221FE /* YPKMarco.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YPKMarco.pch; sourceTree = "<group>"; };
 		42B1ADC31EEE77EE000221FE /* YPKImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YPKImageCell.h; sourceTree = "<group>"; };
 		42B1ADC41EEE77EE000221FE /* YPKImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YPKImageCell.m; sourceTree = "<group>"; };
+		42B1ADC61EEE8015000221FE /* YPKAlbumsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YPKAlbumsViewController.h; sourceTree = "<group>"; };
+		42B1ADC71EEE8015000221FE /* YPKAlbumsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YPKAlbumsViewController.m; sourceTree = "<group>"; };
+		42B1ADC91EEE8039000221FE /* YPKAlbumCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YPKAlbumCell.h; sourceTree = "<group>"; };
+		42B1ADCA1EEE8039000221FE /* YPKAlbumCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YPKAlbumCell.m; sourceTree = "<group>"; };
+		42B1ADCC1EEE81B4000221FE /* beauty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beauty.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,14 +120,12 @@
 		42B1AD821EEE3F18000221FE /* DemoPhotoKit */ = {
 			isa = PBXGroup;
 			children = (
+				42B1ADCC1EEE81B4000221FE /* beauty.png */,
 				42B1AD861EEE3F18000221FE /* AppDelegate.h */,
 				42B1AD871EEE3F18000221FE /* AppDelegate.m */,
-				42B1AD891EEE3F18000221FE /* ViewController.h */,
-				42B1AD8A1EEE3F18000221FE /* ViewController.m */,
 				42B1ADC21EEE75A7000221FE /* controller */,
 				42B1ADC11EEE759A000221FE /* view */,
 				42B1ADC01EEE7586000221FE /* model */,
-				42B1AD8C1EEE3F18000221FE /* Main.storyboard */,
 				42B1AD8F1EEE3F18000221FE /* Assets.xcassets */,
 				42B1AD911EEE3F18000221FE /* LaunchScreen.storyboard */,
 				42B1AD941EEE3F18000221FE /* Info.plist */,
@@ -175,6 +179,8 @@
 			children = (
 				42B1ADC31EEE77EE000221FE /* YPKImageCell.h */,
 				42B1ADC41EEE77EE000221FE /* YPKImageCell.m */,
+				42B1ADC91EEE8039000221FE /* YPKAlbumCell.h */,
+				42B1ADCA1EEE8039000221FE /* YPKAlbumCell.m */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -182,6 +188,10 @@
 		42B1ADC21EEE75A7000221FE /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				42B1AD891EEE3F18000221FE /* YPKImagesViewController.h */,
+				42B1AD8A1EEE3F18000221FE /* YPKImagesViewController.m */,
+				42B1ADC61EEE8015000221FE /* YPKAlbumsViewController.h */,
+				42B1ADC71EEE8015000221FE /* YPKAlbumsViewController.m */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -295,7 +305,7 @@
 			files = (
 				42B1AD931EEE3F18000221FE /* LaunchScreen.storyboard in Resources */,
 				42B1AD901EEE3F18000221FE /* Assets.xcassets in Resources */,
-				42B1AD8E1EEE3F18000221FE /* Main.storyboard in Resources */,
+				42B1ADCD1EEE81B4000221FE /* beauty.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,13 +330,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42B1AD8B1EEE3F18000221FE /* ViewController.m in Sources */,
+				42B1AD8B1EEE3F18000221FE /* YPKImagesViewController.m in Sources */,
 				42B1AD881EEE3F18000221FE /* AppDelegate.m in Sources */,
 				42B1ADB81EEE4014000221FE /* YPKManager.m in Sources */,
+				42B1ADC81EEE8015000221FE /* YPKAlbumsViewController.m in Sources */,
 				42B1ADBB1EEE6CF3000221FE /* YPKImageModel.m in Sources */,
 				42B1ADBE1EEE6DE5000221FE /* YPKAlbumModel.m in Sources */,
 				42B1AD851EEE3F18000221FE /* main.m in Sources */,
 				42B1ADC51EEE77EE000221FE /* YPKImageCell.m in Sources */,
+				42B1ADCB1EEE8039000221FE /* YPKAlbumCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,14 +374,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		42B1AD8C1EEE3F18000221FE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				42B1AD8D1EEE3F18000221FE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		42B1AD911EEE3F18000221FE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

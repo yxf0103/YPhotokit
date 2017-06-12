@@ -18,6 +18,11 @@
 /** 封面*/
 @property(nonatomic,strong)UIImage *coverImage;
 
--(instancetype)initWithAlbum:(PHAssetCollection *)album image:(UIImage *)image NS_DESIGNATED_INITIALIZER;
+/** count*/
+@property(nonatomic,assign)NSInteger count;
+
+-(instancetype)initWithAlbum:(PHAssetCollection *)album
+                       count:(NSInteger)count
+                       image:(UIImage *)image NS_DESIGNATED_INITIALIZER;
 
 @end

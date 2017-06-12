@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@class YPKAlbumModel;
 
+@interface YPKImagesViewController : UIViewController
+
++(instancetype)initWithAlbum:(YPKAlbumModel *)album;
 
 @end
 

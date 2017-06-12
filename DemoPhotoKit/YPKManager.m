@@ -103,20 +103,20 @@
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         NSMutableArray *albums = [NSMutableArray array];
         
-        NSLog(@"======= my photo stream ======");
+//        NSLog(@"======= my photo stream ======");
         //获得我的相片流(属于PHAssetCollectionTypeAlbum)
         NSArray *myPhotoAlbums = [self addCollectionsFromType:PHAssetCollectionTypeAlbum
                                                       subtype:PHAssetCollectionSubtypeAlbumMyPhotoStream];
         [albums addObjectsFromArray:myPhotoAlbums];
         
         
-        NSLog(@"======= system ======");
+//        NSLog(@"======= system ======");
         //获得所有的系统相簿(属于PHAssetCollectionTypeSmartAlbum)
         NSArray *systemAlbums = [self addCollectionsFromType:PHAssetCollectionTypeSmartAlbum
                                                      subtype:PHAssetCollectionSubtypeAny];
         [albums addObjectsFromArray:systemAlbums];
         
-        NSLog(@"======= custom ======");
+//        NSLog(@"======= custom ======");
         // 获得所有的自定义相簿(属于PHAssetCollectionTypeAlbum)
         NSArray *customAlbums = [self addCollectionsFromType:PHAssetCollectionTypeAlbum
                                                      subtype:PHAssetCollectionSubtypeAlbumRegular];
@@ -158,7 +158,9 @@
                                                                                                options:manager.collectionFetchOption];
     [collections enumerateObjectsUsingBlock:^(PHAssetCollection * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         UIImage *cover = [manager getAlbumCover:obj size:CGSizeMake(50, 50)];
+        NSInteger count = [manager fetchResultFromAlbum:obj].count;
         YPKAlbumModel *album = [[YPKAlbumModel alloc] initWithAlbum:obj
+                                                              count:count
                                                               image:cover];
         [collectionsArray addObject:album];
     }];

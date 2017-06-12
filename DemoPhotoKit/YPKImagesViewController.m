@@ -6,13 +6,13 @@
 //  Copyright © 2017年 yxf. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "YPKImagesViewController.h"
 #import "YPKManager.h"
 #import "YPKImageModel.h"
 #import "YPKAlbumModel.h"
 #import "YPKImageCell.h"
 
-@interface ViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
+@interface YPKImagesViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 
 /** image collection*/
 @property(nonatomic,weak)UICollectionView *collectionView;
@@ -20,15 +20,31 @@
 /** photos*/
 @property(nonatomic,strong)NSMutableArray *images;
 
+/** album*/
+@property(nonatomic,strong)YPKAlbumModel *album;
+
 @end
 
-@implementation ViewController
+@implementation YPKImagesViewController
+
++(instancetype)initWithAlbum:(YPKAlbumModel *)album{
+    YPKImagesViewController *vc = [[YPKImagesViewController alloc] init];
+    if (vc) {
+        vc.album = album;
+    }
+    return vc;
+}
+
+-(void)dealloc{
+    NSLog(@"%s",__func__);
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor redColor];
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"选择图片" style:UIBarButtonItemStyleDone target:self action:@selector(seePhotos:)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStyleDone target:self action:@selector(cancel:)];
+    self.navigationItem.title = self.album.album.localizedTitle ? self.album.album.localizedTitle : @"我的相册";
     
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     CGFloat length = (SCREENWIDTH - 20) / 3.0;
@@ -45,10 +61,7 @@
     [collectionview registerClass:[YPKImageCell class] forCellWithReuseIdentifier:ImageCellIdentifier];
     [self.view addSubview:collectionview];
     _collectionView = collectionview;
-}
-
-
--(IBAction)seePhotos:(id)sender{
+    
     YPKWeakSelf;
     [YPKManager checkAuthorizedStatus:^(PHAuthorizationStatus status) {
         switch (status) {
@@ -65,6 +78,12 @@
                 break;
         }
     }];
+    
+}
+
+
+-(IBAction)cancel:(id)sender{
+//    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - images
@@ -79,11 +98,20 @@
 
 -(void)photoAuthorizationStatusAuthorized{
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        NSArray<YPKImageModel *> *images = [[YPKManager shareInstance] getNormalImagesWithUnitSize:CGSizeMake(80, 80)];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            self.images = [NSMutableArray arrayWithArray:images];
-            [self.collectionView reloadData];
-        });
+        if (self.album) {
+            YPKWeakSelf;
+            [YPKManager getAlbum:self.album
+                      completion:^(NSArray<YPKImageModel *> *images, NSError *error) {
+                          weakSelf.images = [NSMutableArray arrayWithArray:images];
+                          [weakSelf.collectionView reloadData];
+                      }];
+        }else{
+            NSArray<YPKImageModel *> *images = [[YPKManager shareInstance] getNormalImagesWithUnitSize:CGSizeMake(80, 80)];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                self.images = [NSMutableArray arrayWithArray:images];
+                [self.collectionView reloadData];
+            });
+        }
     });
     
 }

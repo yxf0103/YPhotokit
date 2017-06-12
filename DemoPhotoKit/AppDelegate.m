@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "YPKAlbumsViewController.h"
+#import "YPKImagesViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +18,15 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    YPKAlbumsViewController *albumVc = [[YPKAlbumsViewController alloc] init];
+    YPKImagesViewController *imageVc = [[YPKImagesViewController alloc] init];
+    UINavigationController *naviVc = [[UINavigationController alloc] initWithRootViewController:albumVc];
+    [naviVc pushViewController:imageVc animated:NO];
+    
+    self.window.rootViewController = naviVc;
+    
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
