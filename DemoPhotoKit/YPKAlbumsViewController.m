@@ -36,9 +36,13 @@
     albumTableView.dataSource = self;
     [albumTableView registerClass:[YPKAlbumCell class] forCellReuseIdentifier:albumCellIdentifier];
     albumTableView.rowHeight = 70;
+    [albumTableView setTableFooterView:[[UIView alloc] init]];
+    
+    [self.view bringSubviewToFront:self.indicatorView];
     
     YPKWeakSelf;
     [YPKManager getAllAlbums:^(NSArray<YPKAlbumModel *> *collections, NSError *error) {
+        [weakSelf.indicatorView stopAnimating];
         weakSelf.albums = [NSMutableArray arrayWithArray:collections];
         [weakSelf.albumView reloadData];
     }];

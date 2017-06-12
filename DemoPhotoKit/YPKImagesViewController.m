@@ -11,6 +11,7 @@
 #import "YPKImageModel.h"
 #import "YPKAlbumModel.h"
 #import "YPKImageCell.h"
+#import "YPKImageViewController.h"
 
 @interface YPKImagesViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 
@@ -62,6 +63,8 @@
     [self.view addSubview:collectionview];
     _collectionView = collectionview;
     
+    [self.view bringSubviewToFront:self.indicatorView];
+    
     YPKWeakSelf;
     [YPKManager checkAuthorizedStatus:^(PHAuthorizationStatus status) {
         switch (status) {
@@ -88,6 +91,7 @@
 
 #pragma mark - images
 -(void)photoAuthorizationStatusDenied{
+    [self.indicatorView stopAnimating];
     UIAlertView *alertview = [[UIAlertView alloc] initWithTitle:nil
                                                         message:@"请在设置里开启相册访问权限"
                                                        delegate:nil
@@ -102,12 +106,14 @@
             YPKWeakSelf;
             [YPKManager getAlbum:self.album
                       completion:^(NSArray<YPKImageModel *> *images, NSError *error) {
+                          [weakSelf.indicatorView stopAnimating];
                           weakSelf.images = [NSMutableArray arrayWithArray:images];
                           [weakSelf.collectionView reloadData];
                       }];
         }else{
             NSArray<YPKImageModel *> *images = [[YPKManager shareInstance] getNormalImagesWithUnitSize:CGSizeMake(80, 80)];
             dispatch_async(dispatch_get_main_queue(), ^{
+                [self.indicatorView stopAnimating];
                 self.images = [NSMutableArray arrayWithArray:images];
                 [self.collectionView reloadData];
             });
@@ -138,6 +144,12 @@
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     return _images.count;
+}
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    YPKImageViewController *vc = [[YPKImageViewController alloc] init];
+    vc.images = self.images;
+    vc.currentIndex = indexPath.item;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

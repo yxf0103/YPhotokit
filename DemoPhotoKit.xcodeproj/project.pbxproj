@@ -21,6 +21,8 @@
 		42B1ADC81EEE8015000221FE /* YPKAlbumsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B1ADC71EEE8015000221FE /* YPKAlbumsViewController.m */; };
 		42B1ADCB1EEE8039000221FE /* YPKAlbumCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B1ADCA1EEE8039000221FE /* YPKAlbumCell.m */; };
 		42B1ADCD1EEE81B4000221FE /* beauty.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B1ADCC1EEE81B4000221FE /* beauty.png */; };
+		42B1ADD01EEE899D000221FE /* YPKBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B1ADCF1EEE899D000221FE /* YPKBaseViewController.m */; };
+		42B1ADD31EEE8C4D000221FE /* YPKImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B1ADD21EEE8C4D000221FE /* YPKImageViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,10 @@
 		42B1ADC91EEE8039000221FE /* YPKAlbumCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YPKAlbumCell.h; sourceTree = "<group>"; };
 		42B1ADCA1EEE8039000221FE /* YPKAlbumCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YPKAlbumCell.m; sourceTree = "<group>"; };
 		42B1ADCC1EEE81B4000221FE /* beauty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beauty.png; sourceTree = "<group>"; };
+		42B1ADCE1EEE899D000221FE /* YPKBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YPKBaseViewController.h; sourceTree = "<group>"; };
+		42B1ADCF1EEE899D000221FE /* YPKBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YPKBaseViewController.m; sourceTree = "<group>"; };
+		42B1ADD11EEE8C4D000221FE /* YPKImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YPKImageViewController.h; sourceTree = "<group>"; };
+		42B1ADD21EEE8C4D000221FE /* YPKImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YPKImageViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,10 +194,14 @@
 		42B1ADC21EEE75A7000221FE /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				42B1AD891EEE3F18000221FE /* YPKImagesViewController.h */,
-				42B1AD8A1EEE3F18000221FE /* YPKImagesViewController.m */,
 				42B1ADC61EEE8015000221FE /* YPKAlbumsViewController.h */,
 				42B1ADC71EEE8015000221FE /* YPKAlbumsViewController.m */,
+				42B1ADCE1EEE899D000221FE /* YPKBaseViewController.h */,
+				42B1ADCF1EEE899D000221FE /* YPKBaseViewController.m */,
+				42B1AD891EEE3F18000221FE /* YPKImagesViewController.h */,
+				42B1AD8A1EEE3F18000221FE /* YPKImagesViewController.m */,
+				42B1ADD11EEE8C4D000221FE /* YPKImageViewController.h */,
+				42B1ADD21EEE8C4D000221FE /* YPKImageViewController.m */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -335,7 +345,9 @@
 				42B1ADB81EEE4014000221FE /* YPKManager.m in Sources */,
 				42B1ADC81EEE8015000221FE /* YPKAlbumsViewController.m in Sources */,
 				42B1ADBB1EEE6CF3000221FE /* YPKImageModel.m in Sources */,
+				42B1ADD31EEE8C4D000221FE /* YPKImageViewController.m in Sources */,
 				42B1ADBE1EEE6DE5000221FE /* YPKAlbumModel.m in Sources */,
+				42B1ADD01EEE899D000221FE /* YPKBaseViewController.m in Sources */,
 				42B1AD851EEE3F18000221FE /* main.m in Sources */,
 				42B1ADC51EEE77EE000221FE /* YPKImageCell.m in Sources */,
 				42B1ADCB1EEE8039000221FE /* YPKAlbumCell.m in Sources */,

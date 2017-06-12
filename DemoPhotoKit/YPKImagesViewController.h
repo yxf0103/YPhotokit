@@ -6,11 +6,11 @@
 //  Copyright © 2017年 yxf. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "YPKBaseViewController.h"
 
 @class YPKAlbumModel;
 
-@interface YPKImagesViewController : UIViewController
+@interface YPKImagesViewController : YPKBaseViewController
 
 +(instancetype)initWithAlbum:(YPKAlbumModel *)album;
 
