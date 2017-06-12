@@ -15,6 +15,7 @@
 		42B1AD931EEE3F18000221FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42B1AD911EEE3F18000221FE /* LaunchScreen.storyboard */; };
 		42B1AD9E1EEE3F18000221FE /* DemoPhotoKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B1AD9D1EEE3F18000221FE /* DemoPhotoKitTests.m */; };
 		42B1ADA91EEE3F18000221FE /* DemoPhotoKitUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B1ADA81EEE3F18000221FE /* DemoPhotoKitUITests.m */; };
+		42B1ADB81EEE4014000221FE /* YPKManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B1ADB71EEE4014000221FE /* YPKManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		42B1ADA41EEE3F18000221FE /* DemoPhotoKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoPhotoKitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		42B1ADA81EEE3F18000221FE /* DemoPhotoKitUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoPhotoKitUITests.m; sourceTree = "<group>"; };
 		42B1ADAA1EEE3F18000221FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42B1ADB61EEE4014000221FE /* YPKManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YPKManager.h; sourceTree = "<group>"; };
+		42B1ADB71EEE4014000221FE /* YPKManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YPKManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,8 @@
 				42B1AD871EEE3F18000221FE /* AppDelegate.m */,
 				42B1AD891EEE3F18000221FE /* ViewController.h */,
 				42B1AD8A1EEE3F18000221FE /* ViewController.m */,
+				42B1ADB61EEE4014000221FE /* YPKManager.h */,
+				42B1ADB71EEE4014000221FE /* YPKManager.m */,
 				42B1AD8C1EEE3F18000221FE /* Main.storyboard */,
 				42B1AD8F1EEE3F18000221FE /* Assets.xcassets */,
 				42B1AD911EEE3F18000221FE /* LaunchScreen.storyboard */,
@@ -276,6 +281,7 @@
 			files = (
 				42B1AD8B1EEE3F18000221FE /* ViewController.m in Sources */,
 				42B1AD881EEE3F18000221FE /* AppDelegate.m in Sources */,
+				42B1ADB81EEE4014000221FE /* YPKManager.m in Sources */,
 				42B1AD851EEE3F18000221FE /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

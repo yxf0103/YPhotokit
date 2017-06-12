@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "YPKManager.h"
 
 @interface ViewController ()
 
@@ -16,7 +17,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.view.backgroundColor = [UIColor redColor];
+    
+    [YPKManager getAllAlbums:^(id obj, NSError *error) {
+        NSLog(@"%@",obj);
+    }];
+    
 }
 
 
