@@ -7,6 +7,8 @@
 //
 
 #import "YPKManager.h"
+#import "YPKAlbumModel.h"
+#import "YPKImageModel.h"
 
 @interface YPKManager ()<PHPhotoLibraryChangeObserver>
 
@@ -31,23 +33,12 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         manager = [[self alloc] init];
-        [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
-            NSLog(@"status:%zd",status);
-        }];
     });
     return manager;
 }
 
 -(void)dealloc{
     
-}
-
--(void)startWork{
-    [[PHPhotoLibrary sharedPhotoLibrary] registerChangeObserver:self];
-}
-
--(void)stopWork{
-    [[PHPhotoLibrary sharedPhotoLibrary] unregisterChangeObserver:self];
 }
 
 #pragma mark - getter
@@ -92,9 +83,23 @@
     }
     return _collectionFetchOption;
 }
+#pragma mark - public func
+
+-(void)startWork{
+//    [[PHPhotoLibrary sharedPhotoLibrary] registerChangeObserver:self];
+}
+
+-(void)stopWork{
+//    [[PHPhotoLibrary sharedPhotoLibrary] unregisterChangeObserver:self];
+}
+
++(void)checkAuthorizedStatus:(void (^)(PHAuthorizationStatus))status{
+    PHAuthorizationStatus authStatus = [PHPhotoLibrary authorizationStatus];
+    status(authStatus);
+}
 
 /** 获取所有相册*/
-+(void)getAllAlbums:(YPMCompletion)completion{
++(void)getAllAlbums:(YPKAlbumsCompletion)completion{
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         NSMutableArray *albums = [NSMutableArray array];
         
@@ -124,10 +129,10 @@
 }
 
 /** 获取某个相册的图片*/
-+(void)getAlbum:(id)album completion:(YPMCompletion)completion{
++(void)getAlbum:(YPKAlbumModel *)album completion:(YPKImagesCompleton)completion{
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         YPKManager *manager = [YPKManager shareInstance];
-        PHFetchResult *result = [[YPKManager shareInstance] fetchResultFromAlbum:album];
+        PHFetchResult *result = [manager fetchResultFromAlbum:album.album];
         NSArray *images = [manager getImagesInResult:result size:CGSizeMake(50, 50)];
         dispatch_async(dispatch_get_main_queue(), ^{
             completion(images,nil);
@@ -136,9 +141,9 @@
 }
 
 /** 获取某个图片的信息*/
-+(void)getImage:(PHAsset *)image completion:(YPMCompletion)completion{
++(void)getImage:(PHAsset *)image completion:(YPKImageCompletion)completion{
     YPKManager *manager = [YPKManager shareInstance];
-    UIImage *assetImage = [manager getImageInfo:image size:CGSizeMake(100, 100)];
+    YPKImageModel *assetImage = [manager getImageInfo:image size:CGSizeMake(100, 100)];
     completion(assetImage,nil);
 }
 
@@ -152,7 +157,10 @@
                                                                                                subtype:subType
                                                                                                options:manager.collectionFetchOption];
     [collections enumerateObjectsUsingBlock:^(PHAssetCollection * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        [collectionsArray addObject:obj];
+        UIImage *cover = [manager getAlbumCover:obj size:CGSizeMake(50, 50)];
+        YPKAlbumModel *album = [[YPKAlbumModel alloc] initWithAlbum:obj
+                                                              image:cover];
+        [collectionsArray addObject:album];
     }];
     return collectionsArray;
 }
@@ -171,7 +179,7 @@
     PHAsset *asset = [self fetchResultFromAlbum:album].lastObject;
     if (!asset) return nil;
     
-    return [self getImageInfo:asset size:imageSize];
+    return [self getImageInfo:asset size:imageSize].image;
 }
 
 /** 获取一个相册里的所有图片*/
@@ -204,17 +212,19 @@
 }
 
 /** 获取某张图片的信息*/
--(UIImage *)getImageInfo:(PHAsset *)asset
+-(YPKImageModel *)getImageInfo:(PHAsset *)asset
                                size:(CGSize)imageSeize
 {
-    __block UIImage *image = nil;
+    __block YPKImageModel *image = nil;
     //同步获取图片（self.imageOption）
     [self.imageManager requestImageForAsset:asset
                                  targetSize:imageSeize
                                 contentMode:PHImageContentModeDefault
                                     options:self.imageOption
                               resultHandler:^(UIImage * _Nullable result, NSDictionary * _Nullable info) {
-                                  image = result;
+                                  image = [[YPKImageModel alloc] initWithAsset:asset
+                                                                         image:result
+                                                                          info:info];
                               }];
     return image;
 }

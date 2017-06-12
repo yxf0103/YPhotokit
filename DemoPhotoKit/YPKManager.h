@@ -7,9 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <Photos/Photos.h>
 
-typedef void(^YPMCompletion)(id ,NSError *error);
+@class YPKImageModel;
+@class YPKAlbumModel;
+
+//获取所有相册信息的回调
+typedef void(^YPKAlbumsCompletion)(NSArray<YPKAlbumModel *> *collections ,NSError *error);
+
+//获取相册所有图片信息的回调
+typedef void(^YPKImagesCompleton)(NSArray<YPKImageModel *> *images,NSError *error);
+
+//获取指定图片信息的回调
+typedef void(^YPKImageCompletion)(YPKImageModel *image,NSError *error);
+
 
 @interface YPKManager : NSObject
 
@@ -28,17 +38,25 @@ typedef void(^YPMCompletion)(id ,NSError *error);
 /** 初始化*/
 +(instancetype)shareInstance;
 
+/** 监听变化*/
 -(void)startWork;
 
+/** 停止监听变化*/
 -(void)stopWork;
 
+/** 检查相册是否能被访问*/
++(void)checkAuthorizedStatus:(void (^)(PHAuthorizationStatus status))status;
+
 /** 获取所有相册*/
-+(void)getAllAlbums:(YPMCompletion)completion;
++(void)getAllAlbums:(YPKAlbumsCompletion)completion;
 
 /** 获取某个相册的图片*/
-+(void)getAlbum:(id)album completion:(YPMCompletion)completion;
++(void)getAlbum:(YPKAlbumModel *)album completion:(YPKImagesCompleton)completion;
+
+/** 获取我的相机的相片信息*/
+-(NSArray *)getNormalImagesWithUnitSize:(CGSize)size;
 
 /** 获取某个图片的信息*/
-+(void)getImage:(id)image completion:(YPMCompletion)completion;
++(void)getImage:(PHAsset *)image completion:(YPKImageCompletion)completion;
 
 @end

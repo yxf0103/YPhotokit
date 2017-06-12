@@ -16,6 +16,9 @@
 		42B1AD9E1EEE3F18000221FE /* DemoPhotoKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B1AD9D1EEE3F18000221FE /* DemoPhotoKitTests.m */; };
 		42B1ADA91EEE3F18000221FE /* DemoPhotoKitUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B1ADA81EEE3F18000221FE /* DemoPhotoKitUITests.m */; };
 		42B1ADB81EEE4014000221FE /* YPKManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B1ADB71EEE4014000221FE /* YPKManager.m */; };
+		42B1ADBB1EEE6CF3000221FE /* YPKImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B1ADBA1EEE6CF3000221FE /* YPKImageModel.m */; };
+		42B1ADBE1EEE6DE5000221FE /* YPKAlbumModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B1ADBD1EEE6DE5000221FE /* YPKAlbumModel.m */; };
+		42B1ADC51EEE77EE000221FE /* YPKImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B1ADC41EEE77EE000221FE /* YPKImageCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +57,13 @@
 		42B1ADAA1EEE3F18000221FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42B1ADB61EEE4014000221FE /* YPKManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YPKManager.h; sourceTree = "<group>"; };
 		42B1ADB71EEE4014000221FE /* YPKManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YPKManager.m; sourceTree = "<group>"; };
+		42B1ADB91EEE6CF3000221FE /* YPKImageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YPKImageModel.h; sourceTree = "<group>"; };
+		42B1ADBA1EEE6CF3000221FE /* YPKImageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YPKImageModel.m; sourceTree = "<group>"; };
+		42B1ADBC1EEE6DE5000221FE /* YPKAlbumModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YPKAlbumModel.h; sourceTree = "<group>"; };
+		42B1ADBD1EEE6DE5000221FE /* YPKAlbumModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YPKAlbumModel.m; sourceTree = "<group>"; };
+		42B1ADBF1EEE6E1B000221FE /* YPKMarco.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YPKMarco.pch; sourceTree = "<group>"; };
+		42B1ADC31EEE77EE000221FE /* YPKImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YPKImageCell.h; sourceTree = "<group>"; };
+		42B1ADC41EEE77EE000221FE /* YPKImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YPKImageCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,8 +118,9 @@
 				42B1AD871EEE3F18000221FE /* AppDelegate.m */,
 				42B1AD891EEE3F18000221FE /* ViewController.h */,
 				42B1AD8A1EEE3F18000221FE /* ViewController.m */,
-				42B1ADB61EEE4014000221FE /* YPKManager.h */,
-				42B1ADB71EEE4014000221FE /* YPKManager.m */,
+				42B1ADC21EEE75A7000221FE /* controller */,
+				42B1ADC11EEE759A000221FE /* view */,
+				42B1ADC01EEE7586000221FE /* model */,
 				42B1AD8C1EEE3F18000221FE /* Main.storyboard */,
 				42B1AD8F1EEE3F18000221FE /* Assets.xcassets */,
 				42B1AD911EEE3F18000221FE /* LaunchScreen.storyboard */,
@@ -123,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				42B1AD841EEE3F18000221FE /* main.m */,
+				42B1ADBF1EEE6E1B000221FE /* YPKMarco.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -143,6 +155,35 @@
 				42B1ADAA1EEE3F18000221FE /* Info.plist */,
 			);
 			path = DemoPhotoKitUITests;
+			sourceTree = "<group>";
+		};
+		42B1ADC01EEE7586000221FE /* model */ = {
+			isa = PBXGroup;
+			children = (
+				42B1ADB61EEE4014000221FE /* YPKManager.h */,
+				42B1ADB71EEE4014000221FE /* YPKManager.m */,
+				42B1ADBC1EEE6DE5000221FE /* YPKAlbumModel.h */,
+				42B1ADBD1EEE6DE5000221FE /* YPKAlbumModel.m */,
+				42B1ADB91EEE6CF3000221FE /* YPKImageModel.h */,
+				42B1ADBA1EEE6CF3000221FE /* YPKImageModel.m */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		42B1ADC11EEE759A000221FE /* view */ = {
+			isa = PBXGroup;
+			children = (
+				42B1ADC31EEE77EE000221FE /* YPKImageCell.h */,
+				42B1ADC41EEE77EE000221FE /* YPKImageCell.m */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		42B1ADC21EEE75A7000221FE /* controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,7 +323,10 @@
 				42B1AD8B1EEE3F18000221FE /* ViewController.m in Sources */,
 				42B1AD881EEE3F18000221FE /* AppDelegate.m in Sources */,
 				42B1ADB81EEE4014000221FE /* YPKManager.m in Sources */,
+				42B1ADBB1EEE6CF3000221FE /* YPKImageModel.m in Sources */,
+				42B1ADBE1EEE6DE5000221FE /* YPKAlbumModel.m in Sources */,
 				42B1AD851EEE3F18000221FE /* main.m in Sources */,
+				42B1ADC51EEE77EE000221FE /* YPKImageCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +476,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = FLV4GVU8JK;
+				GCC_PREFIX_HEADER = $SRCROOT/DemoPhotoKit/YPKMarco.pch;
 				INFOPLIST_FILE = DemoPhotoKit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -445,6 +490,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = FLV4GVU8JK;
+				GCC_PREFIX_HEADER = $SRCROOT/DemoPhotoKit/YPKMarco.pch;
 				INFOPLIST_FILE = DemoPhotoKit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -518,6 +564,7 @@
 				42B1ADAF1EEE3F18000221FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		42B1ADB01EEE3F18000221FE /* Build configuration list for PBXNativeTarget "DemoPhotoKitTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +573,7 @@
 				42B1ADB21EEE3F18000221FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		42B1ADB31EEE3F18000221FE /* Build configuration list for PBXNativeTarget "DemoPhotoKitUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +582,7 @@
 				42B1ADB51EEE3F18000221FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
