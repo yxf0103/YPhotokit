@@ -59,4 +59,6 @@ typedef void(^YPKImageCompletion)(YPKImageModel *image,NSError *error);
 /** 获取某个图片的信息*/
 +(void)getImage:(PHAsset *)image completion:(YPKImageCompletion)completion;
 
++(UIImage *)bigImage:(PHAsset *)image;
+
 @end

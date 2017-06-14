@@ -14,6 +14,9 @@
 /** image*/
 @property(nonatomic,weak)UIImageView *imageView;
 
+/** bgScrollview*/
+@property(nonatomic,weak)UIScrollView *bgScrollView;
+
 @end
 
 
@@ -43,3 +46,4 @@
 }
 
 @end
+

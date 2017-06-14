@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		424652BF1EF0CB8C00DD7E62 /* YPKImageScannerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 424652BE1EF0CB8C00DD7E62 /* YPKImageScannerCell.m */; };
 		42B1AD851EEE3F18000221FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B1AD841EEE3F18000221FE /* main.m */; };
 		42B1AD881EEE3F18000221FE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B1AD871EEE3F18000221FE /* AppDelegate.m */; };
 		42B1AD8B1EEE3F18000221FE /* YPKImagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B1AD8A1EEE3F18000221FE /* YPKImagesViewController.m */; };
@@ -43,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		424652BD1EF0CB8C00DD7E62 /* YPKImageScannerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YPKImageScannerCell.h; sourceTree = "<group>"; };
+		424652BE1EF0CB8C00DD7E62 /* YPKImageScannerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YPKImageScannerCell.m; sourceTree = "<group>"; };
 		42B1AD801EEE3F18000221FE /* DemoPhotoKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoPhotoKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42B1AD841EEE3F18000221FE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		42B1AD861EEE3F18000221FE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -185,6 +188,8 @@
 			children = (
 				42B1ADC31EEE77EE000221FE /* YPKImageCell.h */,
 				42B1ADC41EEE77EE000221FE /* YPKImageCell.m */,
+				424652BD1EF0CB8C00DD7E62 /* YPKImageScannerCell.h */,
+				424652BE1EF0CB8C00DD7E62 /* YPKImageScannerCell.m */,
 				42B1ADC91EEE8039000221FE /* YPKAlbumCell.h */,
 				42B1ADCA1EEE8039000221FE /* YPKAlbumCell.m */,
 			);
@@ -349,6 +354,7 @@
 				42B1ADBE1EEE6DE5000221FE /* YPKAlbumModel.m in Sources */,
 				42B1ADD01EEE899D000221FE /* YPKBaseViewController.m in Sources */,
 				42B1AD851EEE3F18000221FE /* main.m in Sources */,
+				424652BF1EF0CB8C00DD7E62 /* YPKImageScannerCell.m in Sources */,
 				42B1ADC51EEE77EE000221FE /* YPKImageCell.m in Sources */,
 				42B1ADCB1EEE8039000221FE /* YPKAlbumCell.m in Sources */,
 			);

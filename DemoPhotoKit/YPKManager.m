@@ -147,9 +147,23 @@
     completion(assetImage,nil);
 }
 
++(UIImage *)bigImage:(PHAsset *)image{
+    __block UIImage *bigImage = nil;
+    YPKManager *manager = [YPKManager shareInstance];
+    //同步获取图片（self.imageOption）
+    [manager.imageManager requestImageForAsset:image
+                                 targetSize:PHImageManagerMaximumSize
+                                contentMode:PHImageContentModeDefault
+                                    options:manager.imageOption
+                              resultHandler:^(UIImage * _Nullable result, NSDictionary * _Nullable info) {
+                                  bigImage = result;
+                              }];
+    return bigImage;
+}
+
 #pragma mark - custom func
 +(NSArray *)addCollectionsFromType:(PHAssetCollectionType)type
-                                             subtype:(PHAssetCollectionSubtype)subType
+                           subtype:(PHAssetCollectionSubtype)subType
 {
     NSMutableArray *collectionsArray = [NSMutableArray array];
     YPKManager *manager = [YPKManager shareInstance];
@@ -167,6 +181,7 @@
     return collectionsArray;
 }
 
+//获取相册里的所有图片
 -(PHFetchResult<PHAsset *> *)fetchResultFromAlbum:(PHAssetCollection *)collection
 {
     return [PHAsset fetchAssetsInAssetCollection:collection

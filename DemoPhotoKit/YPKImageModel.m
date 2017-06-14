@@ -7,7 +7,7 @@
 //
 
 #import "YPKImageModel.h"
-
+#import "YPKManager.h"
 @implementation YPKImageModel
 
 -(instancetype)init{
@@ -22,6 +22,13 @@
         self.imageInfo = info;
     }
     return self;
+}
+
+-(UIImage *)bigImage{
+    if (!_bigImage) {
+        _bigImage = [YPKManager bigImage:self.asset];
+    }
+    return _bigImage;
 }
 
 @end
