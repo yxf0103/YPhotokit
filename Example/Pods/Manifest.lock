@@ -1,0 +1,16 @@
+PODS:
+  - KYPhotoKit (0.1.0)
+
+DEPENDENCIES:
+  - KYPhotoKit (from `../`)
+
+EXTERNAL SOURCES:
+  KYPhotoKit:
+    :path: ../
+
+SPEC CHECKSUMS:
+  KYPhotoKit: 913ac81eaf30307abc64e3b910c478d900e40fb0
+
+PODFILE CHECKSUM: 612827f538650d8c7b3809183beb01e47dbc0275
+
+COCOAPODS: 1.4.0
