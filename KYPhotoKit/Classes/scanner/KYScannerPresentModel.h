@@ -5,8 +5,25 @@
 //  Created by yxf on 2018/5/11.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@interface KYScannerPresentModel : NSObject
+typedef NS_ENUM(NSUInteger, KYScannerPresentType) {
+    KYScannerPresentPop = 0, // 弹出
+    KYScannerPresentPush//右向左推出
+};
+
+@interface KYScannerPresentModel : NSObject<UIViewControllerAnimatedTransitioning>
+
+/*animation type,default:KYScannerPresentPop*/
+@property (nonatomic,assign)KYScannerPresentType modalType;
+
+/*touch view frame*/
+@property (nonatomic,assign)CGRect touchFrame;
+
+/*touch view image*/
+@property (nonatomic,strong)UIImage *touchImage;
+
+/*touch view back frame*/
+@property (nonatomic,assign)CGRect backFrame;
 
 @end

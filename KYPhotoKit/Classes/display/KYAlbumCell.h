@@ -6,7 +6,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "KYAlbum.h"
+
+UIKIT_EXTERN  NSString * const KYAlbumCellIdentifier;
 
 @interface KYAlbumCell : UITableViewCell
+
+/*相册*/
+@property (nonatomic,strong)KYAlbum *album;
 
 @end

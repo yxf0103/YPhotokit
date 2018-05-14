@@ -7,6 +7,15 @@
 
 #import <UIKit/UIKit.h>
 
+UIKIT_EXTERN NSString * const KYAssetCellIdentifier;
+
+@class KYAsset;
+
 @interface KYAssetCell : UICollectionViewCell
+
+/*图片*/
+@property (nonatomic,strong)KYAsset *asset;
+
+@property (nonatomic,weak,readonly)UIImageView *ky_imgView;
 
 @end

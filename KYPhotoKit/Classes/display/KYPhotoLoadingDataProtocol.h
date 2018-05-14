@@ -9,4 +9,8 @@
 
 @protocol KYPhotoLoadingDataProtocol <NSObject>
 
+-(void)startLoadingData;
+
+-(void)loadDataComplete;
+
 @end

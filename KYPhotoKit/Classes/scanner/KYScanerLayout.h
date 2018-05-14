@@ -9,4 +9,6 @@
 
 @interface KYScanerLayout : UICollectionViewFlowLayout
 
++(instancetype)initWithItemSize:(CGSize)size margin:(CGFloat)margin;
+
 @end
