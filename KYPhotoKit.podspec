@@ -28,26 +28,26 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
 
-#s.source_files = 'KYPhotoKit/Classes/**/*'
+s.source_files = 'KYPhotoKit/Classes/**/*'
 
 
-s.subspec 'sources' do |b|
-    b.source_files = 'KYPhotoKit/Classes/sources/**/*'
-end
-
-  s.subspec 'display' do |b|
-      b.dependency 'KYPhoto/sources'
-      b.source_files = 'KYPhotoKit/Classes/display/**/*'
-  end
-
-  s.subspec 'hud' do |b|
-      b.source_files = 'KYPhotoKit/Classes/hud/**/*'
-  end
-
-  s.subspec 'scanner' do |b|
-      b.dependency 'KYPhoto/sources'
-      b.source_files = 'KYPhotoKit/Classes/scanner/**/*'
-  end
+#s.subspec 'sources' do |b|
+#    b.source_files = 'KYPhotoKit/Classes/sources/**/*'
+#end
+#
+#  s.subspec 'display' do |b|
+#      b.dependency 'KYPhoto/sources'
+#      b.source_files = 'KYPhotoKit/Classes/display/**/*'
+#  end
+#
+#  s.subspec 'hud' do |b|
+#      b.source_files = 'KYPhotoKit/Classes/hud/**/*'
+#  end
+#
+#  s.subspec 'scanner' do |b|
+#      b.dependency 'KYPhoto/sources'
+#      b.source_files = 'KYPhotoKit/Classes/scanner/**/*'
+#  end
 
   # s.resource_bundles = {
   #   'KYPhotoKit' => ['KYPhotoKit/Assets/*.png']
