@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'KYPhotoKit'
-  s.version          = '0.1.0'
+  s.version          = '2.0'
   s.summary          = 'A simple for system lib photos,and a custom images scanner'
 
 # This description is used to generate tags and improve search results.
@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
 
   s.description      = 'A simple for system lib photos,and a custom images scanner,it just afford some ideas,you still need to do some work before you use it.'
 
-  s.homepage         = 'https://github.com/massyxf/KYPhotoKit'
+  s.homepage         = 'https://github.com/massyxf/YPhotokit'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'massyxf' => 'messy007@163.com' }
