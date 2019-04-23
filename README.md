@@ -1,5 +1,7 @@
 # KYPhotoKit
 
+an iOS photos libary with system photos.
+
 [![CI Status](https://img.shields.io/travis/massyxf/KYPhotoKit.svg?style=flat)](https://travis-ci.org/massyxf/KYPhotoKit)
 [![Version](https://img.shields.io/cocoapods/v/KYPhotoKit.svg?style=flat)](https://cocoapods.org/pods/KYPhotoKit)
 [![License](https://img.shields.io/cocoapods/l/KYPhotoKit.svg?style=flat)](https://cocoapods.org/pods/KYPhotoKit)
