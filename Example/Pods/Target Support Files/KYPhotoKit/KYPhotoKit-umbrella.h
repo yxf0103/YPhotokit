@@ -19,6 +19,7 @@
 #import "KYHud.h"
 #import "KYImageScannerCell.h"
 #import "KYImageScannerViewController.h"
+#import "KYPhotoTool.h"
 #import "KYScanerLayout.h"
 #import "KYScannerImage.h"
 #import "KYScannerPresentModel.h"

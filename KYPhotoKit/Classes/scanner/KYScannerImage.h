@@ -17,6 +17,6 @@
 @property (nonatomic,assign)CGRect originFrame;
 
 /*destination frame in window*/
-@property (nonatomic,assign)CGRect destFrame;
+@property (nonatomic,assign,readonly)CGRect destFrame;
 
 @end

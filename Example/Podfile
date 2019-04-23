@@ -5,7 +5,7 @@ target 'KYPhotoKit_Example' do
 
   target 'KYPhotoKit_Tests' do
     inherit! :search_paths
-
     
   end
+  
 end

@@ -20,10 +20,13 @@ typedef NS_ENUM(NSUInteger, KYScannerPresentType) {
 /*touch view frame*/
 @property (nonatomic,assign)CGRect touchFrame;
 
+/*touch view back frame*/
+@property (nonatomic,assign)CGRect destFrame;
+
 /*touch view image*/
 @property (nonatomic,strong)UIImage *touchImage;
 
-/*touch view back frame*/
-@property (nonatomic,assign)CGRect backFrame;
+/*popback*/
+@property (nonatomic,assign)BOOL popBack;
 
 @end

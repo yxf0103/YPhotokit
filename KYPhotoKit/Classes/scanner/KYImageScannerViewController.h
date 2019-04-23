@@ -12,6 +12,7 @@
 @protocol KYImageScannerViewControllerDelegate<NSObject>
 -(void)scannerVcWillPresent:(KYImageScannerViewController *)scannerVc;
 -(void)scannerVcWillDismiss:(KYImageScannerViewController *)scannerVc;
+-(CGRect)scannerVc:(KYImageScannerViewController *)scannerVc dismissAtIndex:(NSInteger)index;
 @end
 
 @interface KYImageScannerViewController : UIViewController

@@ -30,6 +30,4 @@ UIKIT_EXTERN NSString * const KYImageScannerCellId;
 /*delegate*/
 @property (nonatomic,weak)id<KYImageScannerCellDelegate> delegate;
 
-+(CGRect)destFrameWithImage:(UIImage *)image;
-
 @end

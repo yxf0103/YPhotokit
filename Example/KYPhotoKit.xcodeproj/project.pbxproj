@@ -208,7 +208,6 @@
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
 				A864633B728633017F76D4C6 /* [CP] Embed Pods Frameworks */,
-				E3EE811FAE4FA6787FF0AB79 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -227,8 +226,6 @@
 				6003F5AA195388D20070C39A /* Sources */,
 				6003F5AB195388D20070C39A /* Frameworks */,
 				6003F5AC195388D20070C39A /* Resources */,
-				C0BD12EECEAF1AC4DD411244 /* [CP] Embed Pods Frameworks */,
-				030CB6C06587872AB717480A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -300,21 +297,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		030CB6C06587872AB717480A /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KYPhotoKit_Tests/Pods-KYPhotoKit_Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		1B4265A82E79F67C85B2B26F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -357,7 +339,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-KYPhotoKit_Example/Pods-KYPhotoKit_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-KYPhotoKit_Example/Pods-KYPhotoKit_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/KYPhotoKit/KYPhotoKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -366,37 +348,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KYPhotoKit_Example/Pods-KYPhotoKit_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C0BD12EECEAF1AC4DD411244 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KYPhotoKit_Tests/Pods-KYPhotoKit_Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E3EE811FAE4FA6787FF0AB79 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KYPhotoKit_Example/Pods-KYPhotoKit_Example-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KYPhotoKit_Example/Pods-KYPhotoKit_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

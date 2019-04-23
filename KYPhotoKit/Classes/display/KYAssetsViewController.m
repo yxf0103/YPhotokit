@@ -136,4 +136,9 @@
     [self setNeedsStatusBarAppearanceUpdate];
 }
 
+- (CGRect)scannerVc:(KYImageScannerViewController *)scannerVc dismissAtIndex:(NSInteger)index{
+    KYAssetCell *cell = (KYAssetCell *)[_assetCollectionView cellForItemAtIndexPath:[NSIndexPath indexPathForItem:index inSection:0]];
+    return [_assetCollectionView convertRect:cell.frame toView:[UIApplication sharedApplication].keyWindow];
+}
+
 @end

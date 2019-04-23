@@ -13,6 +13,7 @@
 #import "KYScannerImage.h"
 #import "KYAsset.h"
 #import "KYScannerPresentModel.h"
+#import "KYPhotoSourceManager.h"
 
 @interface KYViewController ()<UIViewControllerTransitioningDelegate,KYPhotoNaviViewControllerDelegate>
 
@@ -40,20 +41,29 @@
 -(KYScannerPresentModel *)presentModel{
     if (!_presentModel) {
         _presentModel = [[KYScannerPresentModel alloc] init];
+//        _presentModel.modalType = KYScannerPresentPop;
         _presentModel.modalType = KYScannerPresentPush;
     }
     return _presentModel;
 }
 
 -(void)showImages{
-    KYPhotoNaviViewController *navi = [KYPhotoNaviViewController photoNavicontroller];
-    navi.ky_delegate = self;
-    [self presentViewController:navi animated:YES completion:nil];
+    [KYPhotoSourceManager requestSystemPhotoLibAuth:^(PHAuthorizationStatus statu) {
+        dispatch_sync(dispatch_get_main_queue(), ^{
+            if (statu == PHAuthorizationStatusAuthorized) {
+                KYPhotoNaviViewController *navi = [KYPhotoNaviViewController photoNavicontroller];
+                navi.ky_delegate = self;
+                [self presentViewController:navi animated:YES completion:nil];
+            }else{
+                NSLog(@"相册未授权");
+            }
+        });
+    }];
 }
 
 #pragma mark - KYPhotoNaviViewControllerDelegate
 -(void)assetsViewController:(KYAssetsViewController *)assetVc allAssets:(NSArray<KYAssetviewModel *> *)assets selectAssetAtIndex:(NSInteger)index{
-    NSMutableArray *scannerimgs = [NSMutableArray array];
+    NSMutableArray<KYScannerImage *> *scannerimgs = [NSMutableArray array];
     [assets enumerateObjectsUsingBlock:^(KYAssetviewModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         KYScannerImage *image = [[KYScannerImage alloc] init];
         image.originImage = obj.asset.image;
@@ -62,11 +72,16 @@
     }];
     KYImageScannerViewController *imgVc = [[KYImageScannerViewController alloc] init];
     imgVc.modalPresentationStyle = UIModalPresentationCustom;
-    imgVc.ky_delegate = assetVc;
     imgVc.transitioningDelegate = self;
+    imgVc.ky_delegate = assetVc;
     imgVc.images = scannerimgs;
     imgVc.index = index;
-    [assetVc.navigationController presentViewController:imgVc animated:YES completion:nil];
+    
+    self.presentModel.touchFrame = scannerimgs[index].originFrame;
+    self.presentModel.destFrame = scannerimgs[index].destFrame;
+    self.presentModel.touchImage = scannerimgs[index].originImage;
+    
+    [assetVc presentViewController:imgVc animated:YES completion:nil];
 }
 
 #pragma mark - UIViewControllerTransitioningDelegate

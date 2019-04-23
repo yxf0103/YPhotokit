@@ -1,16 +1,27 @@
 PODS:
-  - KYPhotoKit (0.1.0)
+  - KYPhotoKit (2.1.2):
+    - KYPhotoKit/display (= 2.1.2)
+    - KYPhotoKit/hud (= 2.1.2)
+    - KYPhotoKit/scanner (= 2.1.2)
+    - KYPhotoKit/sources (= 2.1.2)
+  - KYPhotoKit/display (2.1.2):
+    - KYPhotoKit/scanner
+    - KYPhotoKit/sources
+  - KYPhotoKit/hud (2.1.2)
+  - KYPhotoKit/scanner (2.1.2):
+    - KYPhotoKit/sources
+  - KYPhotoKit/sources (2.1.2)
 
 DEPENDENCIES:
   - KYPhotoKit (from `../`)
 
 EXTERNAL SOURCES:
   KYPhotoKit:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  KYPhotoKit: 913ac81eaf30307abc64e3b910c478d900e40fb0
+  KYPhotoKit: f8e17888d4b49c4175ebbd377f44e2cfce4a0216
 
-PODFILE CHECKSUM: 612827f538650d8c7b3809183beb01e47dbc0275
+PODFILE CHECKSUM: 0fd92acb2fc3876726ca1bc1caaab068b85228a5
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.6.1

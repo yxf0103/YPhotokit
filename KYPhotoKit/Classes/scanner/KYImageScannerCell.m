@@ -7,6 +7,7 @@
 
 #import "KYImageScannerCell.h"
 #import "KYScannerImage.h"
+#import "KYPhotoTool.h"
 
 NSString * const KYImageScannerCellId = @"KYImageScannerCellId";
 
@@ -61,7 +62,7 @@ NSString * const KYImageScannerCellId = @"KYImageScannerCellId";
     _bgScrollView.zoomScale = 1.0;
     _bgScrollView.contentSize = CGSizeZero;
     _imgView.image = scannerImg.originImage;
-    _imgView.frame = [KYImageScannerCell destFrameWithImage:scannerImg.originImage];
+    _imgView.frame = scannerImg.destFrame;
 }
 
 #pragma mark - UIScrollViewDelegate
@@ -154,30 +155,7 @@ NSString * const KYImageScannerCellId = @"KYImageScannerCellId";
 
 
 #pragma mark - public
-+(CGRect)destFrameWithImage:(UIImage *)image{
-    //1.保证宽度占满屏幕
-    //2.修改高度,如果高度大于屏幕高度，修改宽度
-    CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
-    CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
-    if(fabs(image.size.height)<1e-6){
-        return CGRectZero;
-    }
-    CGFloat imgRate = image.size.width / image.size.height;
-    if (fabs(imgRate)<1e-6) {
-        return CGRectZero;
-    }
-    CGFloat imgWidth = screenWidth;
-    CGFloat imgHeight = imgWidth / imgRate;
-    if (imgHeight > screenHeight) {
-        imgHeight = screenHeight;
-        imgWidth = imgHeight * imgRate;
-    }
-    
-    CGFloat x = (screenWidth - imgWidth) / 2;
-    CGFloat y = (screenHeight - imgHeight) / 2;
-    
-    return CGRectMake(x, y, imgWidth, imgHeight);
-}
+
 
 #pragma mark - custom func
 -(void)hideAction{
