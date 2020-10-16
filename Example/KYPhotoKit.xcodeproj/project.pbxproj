@@ -248,7 +248,7 @@
 				ORGANIZATIONNAME = massyxf;
 				TargetAttributes = {
 					6003F589195388D20070C39A = {
-						DevelopmentTeam = FLV4GVU8JK;
+						DevelopmentTeam = HDBTF9879K;
 					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
@@ -260,6 +260,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -488,12 +489,12 @@
 			baseConfigurationReference = C5145B7BCA036A0FFA3D60FD /* Pods-KYPhotoKit_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = FLV4GVU8JK;
+				DEVELOPMENT_TEAM = HDBTF9879K;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KYPhotoKit/KYPhotoKit-Prefix.pch";
 				INFOPLIST_FILE = "KYPhotoKit/KYPhotoKit-Info.plist";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = yxf.Board2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yxf.zsrss;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -504,12 +505,12 @@
 			baseConfigurationReference = DBBD997B5362E8EB580596CA /* Pods-KYPhotoKit_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = FLV4GVU8JK;
+				DEVELOPMENT_TEAM = HDBTF9879K;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KYPhotoKit/KYPhotoKit-Prefix.pch";
 				INFOPLIST_FILE = "KYPhotoKit/KYPhotoKit-Info.plist";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = yxf.Board2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yxf.zsrss;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

@@ -30,29 +30,37 @@ Pod::Spec.new do |s|
 
 #s.source_files = 'KYPhotoKit/Classes/**/*'
 
-
+  s.subspec 'base' do |sb|
+    sb.source_files = 'KYPhotoKit/Classes/base/**/*'
+  end
+  
   s.subspec 'sources' do |ss|
+      ss.dependency 'KYPhotoKit/base'
       ss.source_files = 'KYPhotoKit/Classes/sources/**/*'
+  end
+
+  s.subspec 'hud' do |b|
+      b.dependency 'KYPhotoKit/base'
+      b.source_files = 'KYPhotoKit/Classes/hud/**/*'
   end
   
   s.subspec 'scanner' do |ss|
       ss.dependency 'KYPhotoKit/sources'
+      ss.dependency 'KYPhotoKit/hud'
       ss.source_files = 'KYPhotoKit/Classes/scanner/**/*'
   end
 
   s.subspec 'display' do |sd|
       sd.dependency 'KYPhotoKit/sources'
       sd.dependency 'KYPhotoKit/scanner'
+      sd.dependency 'KYPhotoKit/hud'
       sd.source_files = 'KYPhotoKit/Classes/display/**/*'
   end
 
-  s.subspec 'hud' do |b|
-      b.source_files = 'KYPhotoKit/Classes/hud/**/*'
-  end
-
-  # s.resource_bundles = {
-  #   'KYPhotoKit' => ['KYPhotoKit/Assets/*.png']
-  # }
+   s.resource_bundles = {
+     'KYPhotoKit' => ['KYPhotoKit/Assets/**/*']
+   }
+   s.prefix_header_contents = "#import<KYPhotoKit/SYPhotoHeader.h>"
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'

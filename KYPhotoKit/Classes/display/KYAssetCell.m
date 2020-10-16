@@ -15,6 +15,8 @@ NSString * const KYAssetCellIdentifier = @"KYAssetCellIdentifier";
 /*image*/
 @property (nonatomic,weak)UIImageView *ky_imgView;
 
+@property (nonatomic,weak)UIButton *selectBtn;
+
 @end
 
 @implementation KYAssetCell
@@ -24,6 +26,13 @@ NSString * const KYAssetCellIdentifier = @"KYAssetCellIdentifier";
         UIImageView *imgView = [[UIImageView alloc] init];
         [self.contentView addSubview:imgView];
         _ky_imgView = imgView;
+        
+        UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [self.contentView addSubview:btn];
+        btn.frame = CGRectMake(0, 0, 40, 40);
+        [btn addTarget:self action:@selector(selectBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
+        _selectBtn = btn;
+        
     }
     return self;
 }
@@ -36,6 +45,10 @@ NSString * const KYAssetCellIdentifier = @"KYAssetCellIdentifier";
 -(void)setAsset:(KYAsset *)asset{
     _asset = asset;
     _ky_imgView.image = asset.image;
+}
+
+-(void)selectBtnClicked:(UIButton *)btn{
+    
 }
 
 @end

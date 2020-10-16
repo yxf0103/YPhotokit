@@ -11,15 +11,16 @@
 @implementation KYAsset
 
 -(instancetype)init{
-    return [self initWithAsset:nil image:nil info:nil ];
+    return [self initWithAsset:nil image:nil isInCloud:NO info:nil];
 }
 
--(instancetype)initWithAsset:(PHAsset *)asset image:(UIImage *)image info:(NSDictionary *)info{
+-(instancetype)initWithAsset:(PHAsset *)asset image:(UIImage *)image isInCloud:(BOOL)isInCloud info:(NSDictionary *)info{
     self = [super init];
     if (self) {
-        self.asset = asset;
-        self.image = image;
-        self.imageInfo = info;
+        _asset = asset;
+        _image = image;
+        _isInCloud = isInCloud;
+        _imageInfo = info;
     }
     return self;
 }

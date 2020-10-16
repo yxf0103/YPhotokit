@@ -19,15 +19,42 @@
   "platforms": {
     "ios": "8.0"
   },
+  "resource_bundles": {
+    "KYPhotoKit": [
+      "KYPhotoKit/Assets/**/*"
+    ]
+  },
+  "prefix_header_contents": "#import<KYPhotoKit/SYPhotoHeader.h>",
   "subspecs": [
     {
+      "name": "base",
+      "source_files": "KYPhotoKit/Classes/base/**/*"
+    },
+    {
       "name": "sources",
+      "dependencies": {
+        "KYPhotoKit/base": [
+
+        ]
+      },
       "source_files": "KYPhotoKit/Classes/sources/**/*"
+    },
+    {
+      "name": "hud",
+      "dependencies": {
+        "KYPhotoKit/base": [
+
+        ]
+      },
+      "source_files": "KYPhotoKit/Classes/hud/**/*"
     },
     {
       "name": "scanner",
       "dependencies": {
         "KYPhotoKit/sources": [
+
+        ],
+        "KYPhotoKit/hud": [
 
         ]
       },
@@ -41,13 +68,12 @@
         ],
         "KYPhotoKit/scanner": [
 
+        ],
+        "KYPhotoKit/hud": [
+
         ]
       },
       "source_files": "KYPhotoKit/Classes/display/**/*"
-    },
-    {
-      "name": "hud",
-      "source_files": "KYPhotoKit/Classes/hud/**/*"
     }
   ]
 }

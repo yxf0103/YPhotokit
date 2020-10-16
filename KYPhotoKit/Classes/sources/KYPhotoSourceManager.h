@@ -40,6 +40,9 @@ typedef void(^KYGetImagesBlock)(NSArray<UIImage *> *images);
  */
 @property (nonatomic,assign,readonly)PHAuthorizationStatus statu;
 
+///缩略图大小
+@property (nonatomic,assign)CGSize smallSize;
+
 #pragma mark - 初始化
 +(instancetype)shareInstance;
 

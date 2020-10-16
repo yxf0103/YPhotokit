@@ -53,6 +53,7 @@
             if (statu == PHAuthorizationStatusAuthorized) {
                 KYPhotoNaviViewController *navi = [KYPhotoNaviViewController photoNavicontroller];
                 navi.ky_delegate = self;
+                navi.modalPresentationStyle = UIModalPresentationFullScreen;
                 [self presentViewController:navi animated:YES completion:nil];
             }else{
                 NSLog(@"相册未授权");

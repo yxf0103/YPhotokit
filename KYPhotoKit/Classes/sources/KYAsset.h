@@ -23,6 +23,14 @@
 /** image info 与asset关系不大*/
 @property(nonatomic,strong)NSDictionary *imageInfo;
 
--(instancetype)initWithAsset:(PHAsset *)asset image:(UIImage *)image info:(NSDictionary *)info NS_DESIGNATED_INITIALIZER;
+///从icloud同步图片
+@property (nonatomic,strong)void (^pullImageFromICloud)(KYAsset *asset,BOOL isBegin);
+@property (nonatomic,assign,readonly)BOOL isInCloud;
+
+
+-(instancetype)initWithAsset:(PHAsset *)asset
+                       image:(UIImage *)image
+                   isInCloud:(BOOL)isInCloud
+                        info:(NSDictionary *)info NS_DESIGNATED_INITIALIZER;
 
 @end

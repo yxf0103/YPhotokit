@@ -10,6 +10,10 @@
 #endif
 #endif
 
+#import "KYPhotoHeader.h"
+#import "KYPhotoSourceTool.h"
+#import "SYPhotoHeader.h"
+#import "UIImage+SYExtension.h"
 #import "KYAlbumCell.h"
 #import "KYAlbumsViewController.h"
 #import "KYAssetCell.h"

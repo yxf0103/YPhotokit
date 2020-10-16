@@ -9,6 +9,7 @@
 #import "KYPhotoSourceManager.h"
 #import "KYAssetCell.h"
 #import "KYPhotoNaviViewController.h"
+#import "KYHud.h"
 
 #define KYAssetMargin 5
 
@@ -29,6 +30,9 @@
 
 /*hide status bar*/
 @property (nonatomic,assign)BOOL hideBar;
+
+@property (nonatomic,weak)KYHud *hud;
+
 
 @end
 
@@ -76,7 +80,7 @@
     if (_album) {
         __weak typeof(self) ws = self;
         [self startLoadingData];
-        [KYPhotoSourceManager getAssetsFromAlbum:_album imageSize:CGSizeMake(80, 80) complete:^(NSArray<KYAsset *> *assets) {
+        [KYPhotoSourceManager getAssetsFromAlbum:_album imageSize:CGSizeMake(200, 200) complete:^(NSArray<KYAsset *> *assets) {
             [ws loadDataComplete];
             ws.assets = assets;
             [ws.assetCollectionView reloadData];
@@ -116,13 +120,28 @@
 }
 
 #pragma mark - KYPhotoLoadingDataProtocol
--(void)startLoadingData{}
--(void)loadDataComplete{}
+-(void)startLoadingData{
+    [self.hud startAnimation];
+}
+-(void)loadDataComplete{
+    [self.hud stopAnimation];
+}
 
-#pragma mark - show
+#pragma mark - getter
 -(BOOL)prefersStatusBarHidden{
     return self.hideBar;
 }
+
+-(KYHud *)hud{
+    if (!_hud) {
+        KYHud *hud = [[KYHud alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
+        hud.center = CGPointMake(KYSCREENWIDTH / 2, KYNAVIHEIGHT + 200);
+        [self.view addSubview:hud];
+        _hud = hud;
+    }
+    return _hud;
+}
+
 #pragma mark - KYImageScannerViewControllerDelegate
 -(void)scannerVcWillPresent:(KYImageScannerViewController *)scannerVc{
     if (self.hideBar) { return;}

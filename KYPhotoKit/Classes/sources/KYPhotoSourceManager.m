@@ -6,6 +6,7 @@
 //
 
 #import "KYPhotoSourceManager.h"
+#import "UIImage+SYExtension.h"
 
 
 @interface KYPhotoSourceManager ()
@@ -86,6 +87,14 @@
 -(PHAuthorizationStatus)statu{
     return [PHPhotoLibrary authorizationStatus];
 }
+
+-(CGSize)smallSize{
+    if (_smallSize == NULL || CGSizeEqualToSize(_smallSize, CGSizeZero)) {
+        _smallSize = CGSizeMake(150, 150);
+    }
+    return _smallSize;
+}
+
 
 #pragma mark - 获取系统相册信息
 +(void)getAllAlbums:(KYGetAlbumsBlock)complete{
@@ -181,7 +190,7 @@
     [collections enumerateObjectsUsingBlock:^(PHAssetCollection * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         PHFetchResult<PHAsset *> *assets = [manager fetchResultFromAlbum:obj];
         PHAsset *asset = assets.lastObject;
-        UIImage *cover = [manager getImageInfo:asset size:CGSizeMake(50, 50)].image;
+        UIImage *cover = [manager getImageInfo:asset size:manager.smallSize].image;
         NSInteger count = assets.count;
         KYAlbum *album = [[KYAlbum alloc] initWithAlbum:obj
                                                   count:count
@@ -202,20 +211,74 @@
 -(KYAsset *)getImageInfo:(PHAsset *)asset
                     size:(CGSize)imageSeize
 {
+    if (!asset) {
+        return nil;
+    }
     __block KYAsset *image = nil;
-    //同步获取图片（self.imageOption）
-    [self.imageManager requestImageForAsset:asset
-                                 targetSize:imageSeize
-                                contentMode:PHImageContentModeDefault
-                                    options:self.imageOption
-                              resultHandler:^(UIImage * _Nullable result, NSDictionary * _Nullable info) {
-                                  image = [[KYAsset alloc] initWithAsset:asset
-                                                                   image:result
-                                                                    info:info];
-                              }];
+    [self.imageManager requestImageDataForAsset:asset
+                                        options:self.imageOption
+                                  resultHandler:^(NSData * _Nullable imageData, NSString * _Nullable dataUTI, UIImageOrientation orientation, NSDictionary * _Nullable info) {
+        BOOL isInICloud = [info[PHImageResultIsInCloudKey] boolValue];
+        if (imageData) {
+            UIImage *img = [UIImage imageWithData:imageData];
+            image = [[KYAsset alloc] initWithAsset:asset
+                                             image:img
+                                         isInCloud:isInICloud
+                                              info:info];
+            return;
+        }
+        if (imageData == nil && isInICloud) {
+            [self.imageManager requestImageForAsset:asset
+                                         targetSize:imageSeize
+                                        contentMode:PHImageContentModeDefault
+                                            options:self.imageOption
+                                      resultHandler:^(UIImage * _Nullable result, NSDictionary * _Nullable info) {
+                image = [[KYAsset alloc] initWithAsset:asset
+                                                 image:result
+                                             isInCloud:isInICloud
+                                                  info:info];
+            }];
+            return;
+        }
+    }];
+    
     return image;
 }
 
++(UIImage *)requestImageWithAsset:(KYAsset *)asset size:(CGSize)size{
+    __block UIImage *retImg = nil;
+    KYPhotoSourceManager *manager = [KYPhotoSourceManager shareInstance];
+    //同步获取图片（self.imageOption）
+    PHImageRequestOptions *option = [[PHImageRequestOptions alloc] init];
+    option.synchronous = YES;
+    option.resizeMode = PHImageRequestOptionsResizeModeFast;
+    [manager.imageManager requestImageForAsset:asset.asset
+                                    targetSize:size
+                                   contentMode:PHImageContentModeDefault
+                                       options:option
+                                 resultHandler:^(UIImage * _Nullable result, NSDictionary * _Nullable info) {
+        if (result) {
+            retImg = result;
+            return;
+        }
+        //从icloud同步图片
+        if(!result && [info objectForKey:PHImageResultIsInCloudKey]){
+            option.networkAccessAllowed = YES;
+            !asset.pullImageFromICloud ? : asset.pullImageFromICloud(asset,YES);
+            [manager.imageManager requestImageDataForAsset:asset.asset
+                                                   options:option
+                                             resultHandler:^(NSData * _Nullable imageData, NSString * _Nullable dataUTI, UIImageOrientation orientation, NSDictionary * _Nullable info) {
+                !asset.pullImageFromICloud ? : asset.pullImageFromICloud(asset,NO);
+                if (imageData == nil) {
+                    return;
+                }
+                retImg = [UIImage resizeImageData:imageData size:size];
+            }];
+        }
+        
+    }];
+    return retImg;
+}
 
 
 @end
