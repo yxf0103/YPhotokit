@@ -15,10 +15,9 @@
 }
 
 -(instancetype)initWithAsset:(PHAsset *)asset image:(UIImage *)image isInCloud:(BOOL)isInCloud info:(NSDictionary *)info{
-    self = [super init];
+    self = [super initWithImg:image];
     if (self) {
         _asset = asset;
-        _image = image;
         _isInCloud = isInCloud;
         _imageInfo = info;
     }

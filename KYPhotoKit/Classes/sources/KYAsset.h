@@ -5,17 +5,14 @@
 //  Created by yxf on 2018/5/3.
 //
 
-#import <Foundation/Foundation.h>
+#import "KYPhotoSource.h"
 #import <UIKit/UIKit.h>
 #import <Photos/Photos.h>
 
-@interface KYAsset : NSObject
+@interface KYAsset : KYPhotoSource
 
 /** asset*/
 @property(nonatomic,strong)PHAsset *asset;
-
-/** image,通过asset获取的一个大小为50*50的图片*/
-@property(nonatomic,strong)UIImage *image;
 
 /** big image*/
 @property(nonatomic,strong)UIImage *bigImage;

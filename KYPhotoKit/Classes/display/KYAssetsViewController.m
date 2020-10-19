@@ -10,8 +10,8 @@
 #import "KYAssetCell.h"
 #import "KYPhotoNaviViewController.h"
 #import "KYHud.h"
+#import "KYDisplayMacro.h"
 
-#define KYAssetMargin 5
 
 @implementation KYAssetviewModel
 
@@ -62,7 +62,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     layout.sectionInset = UIEdgeInsetsMake(KYAssetMargin, KYAssetMargin, KYAssetMargin, KYAssetMargin);
-    CGFloat length = ([UIScreen mainScreen].bounds.size.width - 4 * KYAssetMargin) / 3.0;
+    CGFloat length = KYAssetItemLength;
     layout.itemSize = CGSizeMake(length, length);
     layout.minimumInteritemSpacing = 0;
     layout.minimumLineSpacing = KYAssetMargin;
@@ -80,7 +80,8 @@
     if (_album) {
         __weak typeof(self) ws = self;
         [self startLoadingData];
-        [KYPhotoSourceManager getAssetsFromAlbum:_album imageSize:CGSizeMake(200, 200) complete:^(NSArray<KYAsset *> *assets) {
+        CGFloat width = KYAssetItemLength * KYSCREENSCALE;
+        [KYPhotoSourceManager getAssetsFromAlbum:_album imageSize:CGSizeMake(width, width) complete:^(NSArray<KYAsset *> *assets) {
             [ws loadDataComplete];
             ws.assets = assets;
             [ws.assetCollectionView reloadData];

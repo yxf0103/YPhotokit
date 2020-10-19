@@ -7,6 +7,7 @@
 
 #import "KYPhotoSourceManager.h"
 #import "UIImage+SYExtension.h"
+#import "KYPhotoSourceCache.h"
 
 
 @interface KYPhotoSourceManager ()
@@ -89,7 +90,7 @@
 }
 
 -(CGSize)smallSize{
-    if (_smallSize == NULL || CGSizeEqualToSize(_smallSize, CGSizeZero)) {
+    if (CGSizeEqualToSize(_smallSize, CGSizeZero)) {
         _smallSize = CGSizeMake(150, 150);
     }
     return _smallSize;
@@ -189,6 +190,9 @@
                                                                                                options:manager.collectionFetchOption];
     [collections enumerateObjectsUsingBlock:^(PHAssetCollection * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         PHFetchResult<PHAsset *> *assets = [manager fetchResultFromAlbum:obj];
+        if (assets.count == 0) {
+            return;
+        }
         PHAsset *asset = assets.lastObject;
         UIImage *cover = [manager getImageInfo:asset size:manager.smallSize].image;
         NSInteger count = assets.count;
@@ -219,12 +223,21 @@
                                         options:self.imageOption
                                   resultHandler:^(NSData * _Nullable imageData, NSString * _Nullable dataUTI, UIImageOrientation orientation, NSDictionary * _Nullable info) {
         BOOL isInICloud = [info[PHImageResultIsInCloudKey] boolValue];
+        UIImage *cacheImg = [KYPhotoSourceCache imageWithAssetUrl:asset.localIdentifier];
+        if (cacheImg) {
+            image = [[KYAsset alloc] initWithAsset:asset
+                                             image:cacheImg
+                                         isInCloud:isInICloud
+                                              info:info];
+            return;
+        }
         if (imageData) {
             UIImage *img = [UIImage imageWithData:imageData];
             image = [[KYAsset alloc] initWithAsset:asset
                                              image:img
                                          isInCloud:isInICloud
                                               info:info];
+            [KYPhotoSourceCache addAssetsImage:img url:asset.localIdentifier];
             return;
         }
         if (imageData == nil && isInICloud) {
@@ -237,6 +250,7 @@
                                                  image:result
                                              isInCloud:isInICloud
                                                   info:info];
+                [KYPhotoSourceCache addAssetsImage:result url:asset.localIdentifier];
             }];
             return;
         }

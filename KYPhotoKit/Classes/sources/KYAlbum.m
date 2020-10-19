@@ -16,11 +16,10 @@
 -(instancetype)initWithAlbum:(PHAssetCollection *)album
                        count:(NSInteger)count
                        image:(UIImage *)image{
-    self = [super init];
+    self = [super initWithImg:image];
     if (self) {
         self.count = count;
         self.album = album;
-        self.coverImage = image;
     }
     return self;
 }

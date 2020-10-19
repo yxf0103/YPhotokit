@@ -24,7 +24,7 @@
       "KYPhotoKit/Assets/**/*"
     ]
   },
-  "prefix_header_contents": "#import<KYPhotoKit/SYPhotoHeader.h>",
+  "prefix_header_contents": "#import<KYPhotoKit/KYPhotoKit.h>",
   "subspecs": [
     {
       "name": "base",

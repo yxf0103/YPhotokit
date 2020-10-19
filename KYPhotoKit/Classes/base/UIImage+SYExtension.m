@@ -49,4 +49,25 @@
     return retImage;
 }
 
++(UIImage *)cropImgFromIamge:(UIImage *)image inRect:(CGRect)rect{
+    CGFloat scale = KYSCREENSCALE;
+    CGFloat x = rect.origin.x * scale;
+    CGFloat y = rect.origin.y * scale;
+    CGFloat width = rect.size.width * scale;
+    CGFloat height = rect.size.height * scale;
+    if (image.size.width < width || image.size.height < height) {
+        CGFloat frameScale = MAX(width / image.size.width, height / image.size.height);
+        x = x / frameScale;
+        y = y / frameScale;
+        width = width / frameScale;
+        height = height / frameScale;
+    }
+    CGRect drawRect = CGRectMake(x, y, width, height);
+    
+    CGImageRef imgRef = CGImageCreateWithImageInRect(image.CGImage, drawRect);
+    UIImage *retImg = [UIImage imageWithCGImage:imgRef];
+    CGImageRelease(imgRef);
+    return retImg;
+}
+
 @end

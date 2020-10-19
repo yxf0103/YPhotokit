@@ -10,4 +10,4 @@
 #endif
 #endif
 
-#import<KYPhotoKit/SYPhotoHeader.h>
+#import<KYPhotoKit/KYPhotoKit.h>

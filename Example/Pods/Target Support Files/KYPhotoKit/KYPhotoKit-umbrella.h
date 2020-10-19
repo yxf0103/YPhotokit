@@ -11,15 +11,17 @@
 #endif
 
 #import "KYPhotoHeader.h"
+#import "KYPhotoKit.h"
 #import "KYPhotoSourceTool.h"
-#import "SYPhotoHeader.h"
 #import "UIImage+SYExtension.h"
 #import "KYAlbumCell.h"
 #import "KYAlbumsViewController.h"
 #import "KYAssetCell.h"
 #import "KYAssetsViewController.h"
+#import "KYDisplayMacro.h"
 #import "KYPhotoLoadingDataProtocol.h"
 #import "KYPhotoNaviViewController.h"
+#import "KYPhotoSource+Display.h"
 #import "KYHud.h"
 #import "KYImageScannerCell.h"
 #import "KYImageScannerViewController.h"
@@ -29,6 +31,9 @@
 #import "KYScannerPresentModel.h"
 #import "KYAlbum.h"
 #import "KYAsset.h"
+#import "KYPhotoSource.h"
+#import "KYPhotoSourceCache+Memory.h"
+#import "KYPhotoSourceCache.h"
 #import "KYPhotoSourceManager.h"
 
 FOUNDATION_EXPORT double KYPhotoKitVersionNumber;

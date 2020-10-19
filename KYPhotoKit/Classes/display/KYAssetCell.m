@@ -7,6 +7,7 @@
 
 #import "KYAssetCell.h"
 #import "KYAsset.h"
+#import "KYPhotoSource+Display.h"
 
 NSString * const KYAssetCellIdentifier = @"KYAssetCellIdentifier";
 
@@ -44,7 +45,7 @@ NSString * const KYAssetCellIdentifier = @"KYAssetCellIdentifier";
 
 -(void)setAsset:(KYAsset *)asset{
     _asset = asset;
-    _ky_imgView.image = asset.image;
+    _ky_imgView.image = asset.displayImage;
 }
 
 -(void)selectBtnClicked:(UIButton *)btn{

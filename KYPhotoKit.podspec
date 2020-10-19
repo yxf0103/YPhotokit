@@ -60,7 +60,7 @@ Pod::Spec.new do |s|
    s.resource_bundles = {
      'KYPhotoKit' => ['KYPhotoKit/Assets/**/*']
    }
-   s.prefix_header_contents = "#import<KYPhotoKit/SYPhotoHeader.h>"
+   s.prefix_header_contents = "#import<KYPhotoKit/KYPhotoKit.h>"
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
