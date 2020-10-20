@@ -9,6 +9,7 @@
 #import "KYAsset.h"
 #import "KYPhotoSource+Display.h"
 #import "KYTagBtn.h"
+#import "KYAsset+Action.h"
 
 NSString * const KYAssetCellIdentifier = @"KYAssetCellIdentifier";
 
@@ -54,12 +55,19 @@ NSString * const KYAssetCellIdentifier = @"KYAssetCellIdentifier";
 
 -(void)setAsset:(KYAsset *)asset{
     _asset = asset;
+    __weak typeof(self) ws = self;
+    asset.numChanged = ^(KYAsset * _Nonnull asset) {
+        ws.selectBtn.number = asset.number;
+    };
+    asset.selectChanged = ^(KYAsset * _Nonnull asset) {
+        !ws.bindSelectAction ? : ws.bindSelectAction(asset,asset.selected);
+    };
     [asset setImageToImgView:_ky_imgView];
+    _selectBtn.number = asset.number;
 }
 
 -(void)selectBtnClicked:(KYTagBtn *)btn{
-    btn.selected = !btn.isSelected;
-    btn.number = btn.isSelected;
+    _asset.selected = !_asset.selected;
 }
 
 @end

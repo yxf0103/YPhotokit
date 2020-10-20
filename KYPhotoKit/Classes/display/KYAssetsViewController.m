@@ -11,7 +11,7 @@
 #import "KYPhotoNaviViewController.h"
 #import "KYHud.h"
 #import "KYDisplayMacro.h"
-
+#import "KYAsset+Action.h"
 
 @implementation KYAssetviewModel
 
@@ -33,8 +33,12 @@
 
 @property (nonatomic,weak)KYHud *hud;
 
+///选中的图片
+@property (nonatomic,strong)NSMutableArray *selArray;
 
 @end
+
+static NSInteger const ky_max_sel_asset_num = 9;
 
 @implementation KYAssetsViewController
 
@@ -113,11 +117,39 @@
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     KYAssetCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:KYAssetCellIdentifier forIndexPath:indexPath];
     cell.asset = _assets[indexPath.item];
+    __weak typeof(self) ws = self;
+    cell.bindSelectAction = ^(KYAsset *asset, BOOL isSelected) {
+        [ws asset:asset selChanged:isSelected];
+    };
     return cell;
 }
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     return _assets.count;
+}
+
+#pragma mark - custom func
+-(void)asset:(KYAsset *)asset selChanged:(BOOL)isSelected{
+    if (isSelected) {
+        if (self.selArray.count >= ky_max_sel_asset_num) {
+            asset.selected = NO;
+            return;
+        }
+        [self.selArray addObject:asset];
+        asset.number = self.selArray.count;
+        return;
+    }
+    NSInteger index = [self.selArray indexOfObject:asset];
+    if (index == NSNotFound) {
+        KYLog(@"错误:找不到:%ld",(long)_selArray.count);
+        return;
+    }
+    for (NSInteger i=index+1; i<self.selArray.count; i++) {
+        KYAsset *nextAsset = self.selArray[i];
+        nextAsset.number -= 1;
+    };
+    [self.selArray removeObject:asset];
+    asset.number = 0;
 }
 
 #pragma mark - KYPhotoLoadingDataProtocol
@@ -141,6 +173,13 @@
         _hud = hud;
     }
     return _hud;
+}
+
+-(NSMutableArray *)selArray{
+    if (!_selArray) {
+        _selArray = [NSMutableArray array];
+    }
+    return _selArray;
 }
 
 #pragma mark - KYImageScannerViewControllerDelegate

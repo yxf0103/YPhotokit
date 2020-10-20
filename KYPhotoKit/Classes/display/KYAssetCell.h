@@ -16,6 +16,8 @@ UIKIT_EXTERN NSString * const KYAssetCellIdentifier;
 /*图片*/
 @property (nonatomic,strong)KYAsset *asset;
 
+@property (nonatomic,copy)void (^bindSelectAction)(KYAsset *asset,BOOL isSelected);
+
 @property (nonatomic,weak,readonly)UIImageView *ky_imgView;
 
 @end

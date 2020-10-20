@@ -16,7 +16,7 @@ char *asset_display = "asset_display";
 @implementation KYPhotoSource (Display)
 
 -(UIImage *)displayImage{
-    return objc_getAssociatedObject(self, asset_display);;
+    return objc_getAssociatedObject(self, asset_display);
 }
 
 -(void)setDisplayImage:(UIImage *)displayImage{

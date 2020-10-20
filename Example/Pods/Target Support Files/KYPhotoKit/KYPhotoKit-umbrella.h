@@ -16,6 +16,7 @@
 #import "UIImage+SYExtension.h"
 #import "KYAlbumCell.h"
 #import "KYAlbumsViewController.h"
+#import "KYAsset+Action.h"
 #import "KYAssetCell.h"
 #import "KYAssetsViewController.h"
 #import "KYDisplayMacro.h"
