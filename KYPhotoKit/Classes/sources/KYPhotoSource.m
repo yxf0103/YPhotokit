@@ -6,12 +6,16 @@
 //
 
 #import "KYPhotoSource.h"
+#import "KYPhotoSourceCache+Memory.h"
 
-@implementation KYPhotoSource
+@implementation KYPhotoSource{
+    NSString *_imgId;
+}
 
--(instancetype)initWithImg:(UIImage *)image{
+-(instancetype)initWithImg:(UIImage *)image identifier:(nonnull NSString *)identifier{
     if (self = [super init]) {
         _image = image;
+        _imgId = identifier;
     }
     return self;
 }

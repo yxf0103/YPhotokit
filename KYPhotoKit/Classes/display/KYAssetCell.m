@@ -8,15 +8,18 @@
 #import "KYAssetCell.h"
 #import "KYAsset.h"
 #import "KYPhotoSource+Display.h"
+#import "KYTagBtn.h"
 
 NSString * const KYAssetCellIdentifier = @"KYAssetCellIdentifier";
 
-@interface KYAssetCell ()
+@interface KYAssetCell (){
+    CAShapeLayer *_maskLayer;
+}
 
 /*image*/
 @property (nonatomic,weak)UIImageView *ky_imgView;
 
-@property (nonatomic,weak)UIButton *selectBtn;
+@property (nonatomic,weak)KYTagBtn *selectBtn;
 
 @end
 
@@ -26,14 +29,18 @@ NSString * const KYAssetCellIdentifier = @"KYAssetCellIdentifier";
     if (self = [super initWithFrame:frame]) {
         UIImageView *imgView = [[UIImageView alloc] init];
         [self.contentView addSubview:imgView];
+        imgView.contentMode = UIViewContentModeScaleAspectFill;
         _ky_imgView = imgView;
         
-        UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+        KYTagBtn *btn = [KYTagBtn tagBtn];
         [self.contentView addSubview:btn];
         btn.frame = CGRectMake(0, 0, 40, 40);
         [btn addTarget:self action:@selector(selectBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
         _selectBtn = btn;
         
+        CAShapeLayer *layer = [CAShapeLayer layer];
+        self.contentView.layer.mask = layer;
+        _maskLayer = layer;
     }
     return self;
 }
@@ -41,15 +48,18 @@ NSString * const KYAssetCellIdentifier = @"KYAssetCellIdentifier";
 -(void)layoutSubviews{
     [super layoutSubviews];
     _ky_imgView.frame = self.contentView.bounds;
+    _maskLayer.path = [UIBezierPath bezierPathWithRect:self.contentView.bounds].CGPath;
+    [_asset setImageToImgView:_ky_imgView];
 }
 
 -(void)setAsset:(KYAsset *)asset{
     _asset = asset;
-    _ky_imgView.image = asset.displayImage;
+    [asset setImageToImgView:_ky_imgView];
 }
 
--(void)selectBtnClicked:(UIButton *)btn{
-    
+-(void)selectBtnClicked:(KYTagBtn *)btn{
+    btn.selected = !btn.isSelected;
+    btn.number = btn.isSelected;
 }
 
 @end

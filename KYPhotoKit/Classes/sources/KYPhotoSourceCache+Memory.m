@@ -31,6 +31,9 @@ typedef NS_ENUM(NSUInteger, KYPhotoSourceCacheType) {
 
 
 +(void)addImage:(UIImage *)image identifier:(NSString *)identifier type:(KYPhotoSourceCacheType)type{
+    if (!image || !identifier || identifier.length == 0) {
+        return;
+    }
     NSCache *cache = [self cacheWithType:type];
     [cache setObject:image forKey:identifier];
 }

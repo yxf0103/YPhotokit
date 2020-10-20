@@ -51,12 +51,14 @@ NSString * const KYAlbumCellIdentifier = @"KYAlbumCellIdentifier";
     CGFloat dy = 10;
     CGFloat dh = CGRectGetHeight(self.contentView.frame) - 20;
     _albumDetailLabel.frame = CGRectMake(dx, dy, dw, dh);
+    
+    [_album setImageToImgView:_coverImgView];
 }
 
 
 -(void)setAlbum:(KYAlbum *)album{
     _album = album;
-    _coverImgView.image = album.displayImage;
+    [album setImageToImgView:_coverImgView];
     _albumDetailLabel.text = [NSString stringWithFormat:@"%@(%zd)",album.album.localizedTitle,album.count];
 }
 

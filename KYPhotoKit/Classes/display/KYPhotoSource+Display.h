@@ -12,7 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface KYPhotoSource (Display)
 
-@property (nonatomic,strong)UIImage *displayImage;
+@property (nonatomic,weak)UIImage *displayImage;
+
+-(void)setImageToImgView:(UIImageView *)imgView;
 
 @end
 

@@ -11,6 +11,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface KYTagBtn : UIButton
 
+@property (nonatomic,assign)NSInteger number;
+
++(instancetype)tagBtn;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -16,7 +16,7 @@
 -(instancetype)initWithAlbum:(PHAssetCollection *)album
                        count:(NSInteger)count
                        image:(UIImage *)image{
-    self = [super initWithImg:image];
+    self = [super initWithImg:image identifier:album.localIdentifier];
     if (self) {
         self.count = count;
         self.album = album;
