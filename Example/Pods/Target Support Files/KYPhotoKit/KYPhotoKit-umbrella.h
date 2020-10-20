@@ -22,6 +22,7 @@
 #import "KYPhotoLoadingDataProtocol.h"
 #import "KYPhotoNaviViewController.h"
 #import "KYPhotoSource+Display.h"
+#import "KYTagBtn.h"
 #import "KYHud.h"
 #import "KYImageScannerCell.h"
 #import "KYImageScannerViewController.h"
