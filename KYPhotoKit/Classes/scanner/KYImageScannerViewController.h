@@ -21,7 +21,7 @@
 @property (nonatomic,strong)NSArray *images;
 
 /*delegate*/
-@property (nonatomic,weak)id<KYImageScannerViewControllerDelegate> ky_delegate;
+@property (nonatomic,weak)id<KYImageScannerViewControllerDelegate> scannerDelegate;
 
 /*index*/
 @property (nonatomic,assign)NSInteger index;

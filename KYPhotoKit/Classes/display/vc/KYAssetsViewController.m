@@ -28,9 +28,6 @@
 /*assets*/
 @property (nonatomic,strong)NSArray *assets;
 
-/*hide status bar*/
-@property (nonatomic,assign)BOOL hideBar;
-
 @property (nonatomic,weak)KYHud *hud;
 
 ///选中的图片
@@ -59,6 +56,8 @@ static NSInteger const ky_max_sel_asset_num = 9;
     [self setupUI];
     
     [self loadData];
+    
+    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
 }
 #pragma mark - ui
 -(void)setupUI{
@@ -106,11 +105,10 @@ static NSInteger const ky_max_sel_asset_num = 9;
         viewmodel.originFrame = frame;
         [assetviewModels addObject:viewmodel];
     }
-    KYPhotoNaviViewController *naviVc = (KYPhotoNaviViewController *)self.navigationController;
-    if ([naviVc.ky_delegate respondsToSelector:@selector(assetsViewController:allAssets:selectAssetAtIndex:)]) {
-        [naviVc.ky_delegate assetsViewController:self
-                                       allAssets:assetviewModels
-                              selectAssetAtIndex:indexPath.item];
+    if ([_assetDelegate respondsToSelector:@selector(assetsViewController:allAssets:selectAssetAtIndex:)]) {
+        [_assetDelegate assetsViewController:self
+                                   allAssets:assetviewModels
+                          selectAssetAtIndex:indexPath.item];
     }
 }
 
@@ -161,10 +159,6 @@ static NSInteger const ky_max_sel_asset_num = 9;
 }
 
 #pragma mark - getter
--(BOOL)prefersStatusBarHidden{
-    return self.hideBar;
-}
-
 -(KYHud *)hud{
     if (!_hud) {
         KYHud *hud = [[KYHud alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
@@ -183,17 +177,9 @@ static NSInteger const ky_max_sel_asset_num = 9;
 }
 
 #pragma mark - KYImageScannerViewControllerDelegate
--(void)scannerVcWillPresent:(KYImageScannerViewController *)scannerVc{
-    if (self.hideBar) { return;}
-    self.hideBar = YES;
-    [self setNeedsStatusBarAppearanceUpdate];
-}
+-(void)scannerVcWillPresent:(KYImageScannerViewController *)scannerVc{}
 
--(void)scannerVcWillDismiss:(KYImageScannerViewController *)scannerVc{
-    if (!self.hideBar) { return;}
-    self.hideBar = NO;
-    [self setNeedsStatusBarAppearanceUpdate];
-}
+-(void)scannerVcWillDismiss:(KYImageScannerViewController *)scannerVc{}
 
 - (CGRect)scannerVc:(KYImageScannerViewController *)scannerVc dismissAtIndex:(NSInteger)index{
     KYAssetCell *cell = (KYAssetCell *)[_assetCollectionView cellForItemAtIndexPath:[NSIndexPath indexPathForItem:index inSection:0]];

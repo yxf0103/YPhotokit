@@ -22,10 +22,21 @@
 
 @end
 
+@class KYAssetsViewController;
+@protocol KYAssetsViewControllerDelegate<NSObject>
+
+@optional
+-(void)assetsViewController:(KYAssetsViewController *)assetVc
+                  allAssets:(NSArray<KYAssetviewModel *> *)assets
+         selectAssetAtIndex:(NSInteger)index;
+
+@end
 
 @interface KYAssetsViewController : UIViewController<KYPhotoLoadingDataProtocol,KYImageScannerViewControllerDelegate>
 
--(instancetype)initWithAlbum:(KYAlbum *)album;
+@property (nonatomic,weak)id<KYAssetsViewControllerDelegate> assetDelegate;
 
+
+-(instancetype)initWithAlbum:(KYAlbum *)album;
 
 @end

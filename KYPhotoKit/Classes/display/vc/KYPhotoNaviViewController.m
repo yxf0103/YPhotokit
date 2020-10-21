@@ -28,6 +28,7 @@
     KYAlbum *album = [KYPhotoSourceManager getMyCameraAlbum];
     KYAssetsViewController *assetVc = [[KYAssetsViewController alloc] initWithAlbum:album];
     [photoVc pushViewController:assetVc animated:NO];
+    photoVc.assetVc = assetVc;
     return photoVc;
 }
 

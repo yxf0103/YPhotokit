@@ -58,8 +58,18 @@
     [popbackBtn addTarget:self action:@selector(popBackBtnClicked) forControlEvents:UIControlEventTouchUpInside];
 }
 
--(BOOL)prefersStatusBarHidden{
-    return YES;
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    if ([_scannerDelegate respondsToSelector:@selector(scannerVcWillPresent:)]) {
+        [_scannerDelegate scannerVcWillPresent:self];
+    }
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    if ([_scannerDelegate respondsToSelector:@selector(scannerVcWillDismiss:)]) {
+        [_scannerDelegate scannerVcWillDismiss:self];
+    }
 }
 
 #pragma mark - action
@@ -67,29 +77,6 @@
     KYScannerPresentModel *model = [self.transitioningDelegate animationControllerForDismissedController:self];
     model.popBack = YES;
     [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-#pragma mark - show
-//-(void)viewWillDisappear:(BOOL)animated{
-//    [super viewWillDisappear:animated];
-//    [self showStatusBar];
-//}
-//
-//-(void)viewWillAppear:(BOOL)animated{
-//    [super viewWillAppear:animated];
-//    [self hideStatusBar];
-//}
-#pragma mark - custom func
--(void)hideStatusBar{
-    if ([self.ky_delegate respondsToSelector:@selector(scannerVcWillPresent:)]) {
-        [self.ky_delegate scannerVcWillPresent:self];
-    }
-}
-
--(void)showStatusBar{
-    if ([self.ky_delegate respondsToSelector:@selector(scannerVcWillDismiss:)]) {
-        [self.ky_delegate scannerVcWillDismiss:self];
-    }
 }
 
 #pragma mark - UICollectionViewDelegate,UICollectionViewDataSource
@@ -106,21 +93,21 @@
 
 #pragma mark - KYImageScannerCellDelegate
 -(void)imgScannerCell:(KYImageScannerCell *)cell alphaChangedWithRate:(CGFloat)rate{
-    if (rate == 1) {
-        [self hideStatusBar];
-    }else{
-        [self showStatusBar];
-    }
-    self.view.superview.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:rate];
+//    if (rate == 1) {
+//        [self hideStatusBar];
+//    }else{
+//        [self showStatusBar];
+//    }
+//    self.view.superview.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:rate];
 }
 
 -(void)imgScannerCell:(KYImageScannerCell *)cell dismissWithImg:(UIImage *)image windowFrame:(CGRect)windowFrame{
     KYScannerPresentModel *model = [self.transitioningDelegate animationControllerForDismissedController:self];
     model.touchImage = image;
     model.touchFrame = windowFrame;
-    if ([self.ky_delegate respondsToSelector:@selector(scannerVc:dismissAtIndex:)]) {
+    if ([_scannerDelegate respondsToSelector:@selector(scannerVc:dismissAtIndex:)]) {
         NSInteger index = [_imageCollectionView indexPathForCell:cell].item;
-        model.destFrame = [self.ky_delegate scannerVc:self dismissAtIndex:index];
+        model.destFrame = [_scannerDelegate scannerVc:self dismissAtIndex:index];
     }
     model.popBack = NO;
     [self dismissViewControllerAnimated:YES completion:nil];

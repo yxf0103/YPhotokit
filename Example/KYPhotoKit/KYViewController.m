@@ -15,9 +15,8 @@
 #import "KYScannerPresentModel.h"
 #import "KYPhotoSourceManager.h"
 
-@interface KYViewController ()<UIViewControllerTransitioningDelegate,KYPhotoNaviViewControllerDelegate>
+@interface KYViewController ()<UIViewControllerTransitioningDelegate,KYAssetsViewControllerDelegate>
 
-/**/
 @property (nonatomic,strong)KYScannerPresentModel *presentModel;
 
 @end
@@ -34,26 +33,26 @@
     [btn setTitle:@"相册" forState:UIControlStateNormal];
     btn.backgroundColor = [UIColor blueColor];
     btn.frame = CGRectMake(100, 200, 80, 30);
-
+    [[UIApplication sharedApplication] setStatusBarHidden:NO animated:UIStatusBarAnimationFade];
 }
 
 #pragma mark - getter
 -(KYScannerPresentModel *)presentModel{
     if (!_presentModel) {
         _presentModel = [[KYScannerPresentModel alloc] init];
-//        _presentModel.modalType = KYScannerPresentPop;
         _presentModel.modalType = KYScannerPresentPush;
     }
     return _presentModel;
 }
 
+#pragma mark - action
 -(void)showImages{
     [KYPhotoSourceManager requestSystemPhotoLibAuth:^(PHAuthorizationStatus statu) {
         dispatch_sync(dispatch_get_main_queue(), ^{
             if (statu == PHAuthorizationStatusAuthorized) {
                 KYPhotoNaviViewController *navi = [KYPhotoNaviViewController photoNavicontroller];
-                navi.ky_delegate = self;
                 navi.modalPresentationStyle = UIModalPresentationFullScreen;
+                navi.assetVc.assetDelegate = self;
                 [self presentViewController:navi animated:YES completion:nil];
             }else{
                 NSLog(@"相册未授权");
@@ -62,7 +61,7 @@
     }];
 }
 
-#pragma mark - KYPhotoNaviViewControllerDelegate
+#pragma mark - KYAssetsViewControllerDelegate
 -(void)assetsViewController:(KYAssetsViewController *)assetVc allAssets:(NSArray<KYAssetviewModel *> *)assets selectAssetAtIndex:(NSInteger)index{
     NSMutableArray<KYScannerImage *> *scannerimgs = [NSMutableArray array];
     [assets enumerateObjectsUsingBlock:^(KYAssetviewModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
@@ -75,7 +74,7 @@
     imgVc.modalPresentationStyle = UIModalPresentationCustom;
     imgVc.transitioningDelegate = self;
     imgVc.modalPresentationCapturesStatusBarAppearance = YES;
-    imgVc.ky_delegate = assetVc;
+    imgVc.scannerDelegate = assetVc;
     imgVc.images = scannerimgs;
     imgVc.index = index;
     
@@ -88,10 +87,12 @@
 
 #pragma mark - UIViewControllerTransitioningDelegate
 -(id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed{
+    self.presentModel.isPresent = YES;
     return self.presentModel;
 }
 
 -(id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source{
+    self.presentModel.isPresent = NO;
     return self.presentModel;
 }
 
