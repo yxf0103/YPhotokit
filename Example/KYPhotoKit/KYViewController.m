@@ -74,6 +74,7 @@
     KYImageScannerViewController *imgVc = [[KYImageScannerViewController alloc] init];
     imgVc.modalPresentationStyle = UIModalPresentationCustom;
     imgVc.transitioningDelegate = self;
+    imgVc.modalPresentationCapturesStatusBarAppearance = YES;
     imgVc.ky_delegate = assetVc;
     imgVc.images = scannerimgs;
     imgVc.index = index;

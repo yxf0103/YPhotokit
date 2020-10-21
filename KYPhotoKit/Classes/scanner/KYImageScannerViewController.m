@@ -58,6 +58,10 @@
     [popbackBtn addTarget:self action:@selector(popBackBtnClicked) forControlEvents:UIControlEventTouchUpInside];
 }
 
+-(BOOL)prefersStatusBarHidden{
+    return YES;
+}
+
 #pragma mark - action
 -(void)popBackBtnClicked{
     KYScannerPresentModel *model = [self.transitioningDelegate animationControllerForDismissedController:self];
@@ -66,15 +70,15 @@
 }
 
 #pragma mark - show
--(void)viewWillDisappear:(BOOL)animated{
-    [super viewWillDisappear:animated];
-    [self showStatusBar];
-}
-
--(void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    [self hideStatusBar];
-}
+//-(void)viewWillDisappear:(BOOL)animated{
+//    [super viewWillDisappear:animated];
+//    [self showStatusBar];
+//}
+//
+//-(void)viewWillAppear:(BOOL)animated{
+//    [super viewWillAppear:animated];
+//    [self hideStatusBar];
+//}
 #pragma mark - custom func
 -(void)hideStatusBar{
     if ([self.ky_delegate respondsToSelector:@selector(scannerVcWillPresent:)]) {
