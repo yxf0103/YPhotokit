@@ -58,7 +58,7 @@ static NSInteger const ky_max_sel_asset_num = 9;
 }
 #pragma mark - ui
 -(void)setupUI{
-    self.title = _album.album.localizedTitle;
+    self.navigationItem.title = _album.album.localizedTitle;
     self.view.backgroundColor = [UIColor whiteColor];
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     layout.sectionInset = UIEdgeInsetsMake(KYAssetMargin, KYAssetMargin, KYAssetMargin, KYAssetMargin);
@@ -80,8 +80,7 @@ static NSInteger const ky_max_sel_asset_num = 9;
     if (_album) {
         __weak typeof(self) ws = self;
         [self startLoadingData];
-        CGFloat width = KYAssetItemLength * KYSCREENSCALE;
-        [KYPhotoSourceManager getAssetsFromAlbum:_album imageSize:CGSizeMake(width, width) complete:^(NSArray<KYAsset *> *assets) {
+        [KYPhotoSourceManager getAssetsFromAlbum:_album complete:^(NSArray<KYAsset *> * _Nullable assets) {
             [ws loadDataComplete];
             ws.assets = assets;
             [ws.assetCollectionView reloadData];

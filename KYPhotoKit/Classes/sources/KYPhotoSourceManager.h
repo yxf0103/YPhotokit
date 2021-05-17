@@ -13,24 +13,24 @@
 
 @class KYAlbum,KYAsset;
 
-typedef void(^KYGetAlbumsBlock)(NSArray<KYAlbum *> *albums);
-typedef void(^KYGetAssetsBlock)(NSArray<KYAsset *> *assets);
-typedef void(^KYGetImagesBlock)(NSArray<UIImage *> *images);
+typedef void(^KYGetAlbumsBlock)(NSArray<KYAlbum *> * _Nullable albums);
+typedef void(^KYGetAssetsBlock)(NSArray<KYAsset *> *_Nullable assets);
+typedef void(^KYGetImagesBlock)(NSArray<UIImage *> *_Nullable images);
 typedef void(^KYGetImageBlock)(UIImage *_Nullable image);
 
 @interface KYPhotoSourceManager : NSObject
 
 /** imageManager*/
-@property(nonatomic,strong,readonly)PHImageManager *imageManager;
+@property(nonatomic,strong,readonly)PHImageManager *_Nullable imageManager;
 
 /** PHImageRequestOptions,一次只能读取一张图片*/
-@property(nonatomic,strong,readonly)PHImageRequestOptions *imageOption;
+@property(nonatomic,strong,readonly)PHImageRequestOptions *_Nullable imageOption;
 
 /** image PHFetchOptions,根据creationDate生序排序*/
-@property(nonatomic,strong,readonly)PHFetchOptions *imagefetchOption;
+@property(nonatomic,strong,readonly)PHFetchOptions *_Nullable imagefetchOption;
 
 /** collection PHFetchOptions,根据endDate生序排序*/
-@property(nonatomic,strong,readonly)PHFetchOptions *collectionFetchOption;
+@property(nonatomic,strong,readonly)PHFetchOptions *_Nullable collectionFetchOption;
 
 /*
  系统相册访问权限
@@ -45,25 +45,22 @@ typedef void(^KYGetImageBlock)(UIImage *_Nullable image);
 @property (nonatomic,assign)CGSize smallSize;
 
 #pragma mark - 初始化
-+(instancetype)shareInstance;
++(instancetype _Nullable )shareInstance;
 
 /**
  请求系统相册访问权限
 
  @param auth 用户授权结果
  */
-+(void)requestSystemPhotoLibAuth:(void(^)(PHAuthorizationStatus statu))auth;
++(void)requestSystemPhotoLibAuth:(void(^_Nullable)(PHAuthorizationStatus statu))auth;
 
-#pragma mark - func
-#pragma mark - convenient func
+#pragma mark - 相册
 /**
  获取所有相册信息,异步
 
  @param complete 包含相册信息的回调,主线程
  */
-+(void)getAllAlbums:(KYGetAlbumsBlock)complete;
-
-#pragma mark - diy func
++(void)getAllAlbums:(KYGetAlbumsBlock _Nullable )complete;
 
 /**
  获取某个相册里面的所有图片信息,异步
@@ -71,30 +68,39 @@ typedef void(^KYGetImageBlock)(UIImage *_Nullable image);
  @param album 相册
  @param complete 包含图片信息的回调,主线程
  */
-+(void)getAssetsFromAlbum:(KYAlbum *)album imageSize:(CGSize)size complete:(KYGetAssetsBlock)complete;
++(void)getAssetsFromAlbum:(KYAlbum *_Nullable)album complete:(KYGetAssetsBlock _Nullable)complete;
 
 /**
  获取我的相册里的图片信息,异步
  
- @param size 图片大小
  @param complete 回调,主线程
  */
-+(void)getMyCameraAssetsWithSize:(CGSize)size complete:(KYGetAssetsBlock)complete;
++(void)getMyCameraAssetsComplete:(KYGetAssetsBlock _Nullable)complete;
 
 /**
  获取我的相册
 
  @return 我的相册
  */
-+(KYAlbum *)getMyCameraAlbum;
++(KYAlbum *_Nullable)getMyCameraAlbum;
 
+#pragma mark - 相片
 ///获取本地图片
-+(void)getLocalImage:(KYAsset *)asset size:(CGSize)size complete:(KYGetImageBlock)complete;
++(void)getLocalImage:(KYAsset *_Nullable)asset
+                size:(CGSize)size
+            complete:(KYGetImageBlock _Nullable)complete;
 ///获取icloud里面的图片
-+(void)getCloudImage:(KYAsset *)asset size:(CGSize)size complete:(KYGetImageBlock)complete;
++(void)getCloudImage:(KYAsset *_Nullable)asset
+                size:(CGSize)size
+            complete:(KYGetImageBlock _Nullable)complete;
+
+///获取缩略图,先获取本地图片，再获取icloud图片
++(void)getThumImage:(KYAsset *_Nullable)asset
+           complete:(KYGetImageBlock _Nullable)complete;
+
 ///获取原图,先获取本地图片，再获取icloud图片
-+(void)getOriginImage:(KYAsset *)asset
-             progress:(void(^)(double progress))progress
-             complete:(KYGetImageBlock)complete;
++(void)getOriginImage:(KYAsset *_Nullable)asset
+             progress:(void(^_Nullable)(double progress))progress
+             complete:(KYGetImageBlock _Nullable)complete;
 
 @end

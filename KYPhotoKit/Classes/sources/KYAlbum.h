@@ -13,10 +13,10 @@
 
 /** album*/
 @property(nonatomic,strong,readonly)PHAssetCollection *album;
+@property (nonatomic,strong)NSArray *assets;
 
-/** count*/
-@property(nonatomic,assign)NSInteger count;
+-(instancetype)initWithAlbum:(PHAssetCollection *)album assets:(NSArray *)assets; NS_DESIGNATED_INITIALIZER;
 
--(instancetype)initWithAlbum:(PHAssetCollection *)album; NS_DESIGNATED_INITIALIZER;
+-(NSInteger)count;
 
 @end

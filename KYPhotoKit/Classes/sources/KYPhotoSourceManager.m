@@ -109,51 +109,37 @@
 }
 
 
-+(void)getAssetsFromAlbum:(KYAlbum *)album imageSize:(CGSize)size complete:(KYGetAssetsBlock)complete{
-    dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        KYPhotoSourceManager *manager = [KYPhotoSourceManager shareInstance];
-        PHFetchResult<PHAsset *> *result = [manager fetchResultFromAlbum:album.album];
-        __block NSMutableArray *images = [NSMutableArray array];
-        [result enumerateObjectsUsingBlock:^(PHAsset * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-            KYAsset *asset = [[KYAsset alloc] initWithAsset:obj];
-            [images addObject:asset];
-        }];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            complete(images);
-        });
-    });
++(void)getAssetsFromAlbum:(KYAlbum *)album complete:(KYGetAssetsBlock)complete{
+    NSArray *arr = [self __getAssetsFromAlbum:album.album];
+    complete(arr);
 }
 
-+(void)getMyCameraAssetsWithSize:(CGSize)size complete:(KYGetAssetsBlock)complete{
++(NSArray *)__getAssetsFromAlbum:(PHAssetCollection *)album{
+    KYPhotoSourceManager *manager = [KYPhotoSourceManager shareInstance];
+    PHFetchResult<PHAsset *> *result = [manager fetchResultFromAlbum:album];
+    __block NSMutableArray *images = [NSMutableArray array];
+    [result enumerateObjectsUsingBlock:^(PHAsset * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        KYAsset *asset = [[KYAsset alloc] initWithAsset:obj];
+        [images addObject:asset];
+    }];
+    return images;
+}
+
++(void)getMyCameraAssetsComplete:(KYGetAssetsBlock)complete{
     // 获得相机胶卷
     KYAlbum *album = [self getMyCameraAlbum];
-    return [self getAssetsFromAlbum:album imageSize:size complete:complete];
+    return [self getAssetsFromAlbum:album complete:complete];
 }
 
 +(KYAlbum *)getMyCameraAlbum{
     PHAssetCollection *cameraRoll = [PHAssetCollection fetchAssetCollectionsWithType:PHAssetCollectionTypeSmartAlbum
                                                                              subtype:PHAssetCollectionSubtypeSmartAlbumUserLibrary
                                                                              options:nil].lastObject;
-    KYAlbum *album = [[KYAlbum alloc] initWithAlbum:cameraRoll];
-    KYPhotoSourceManager *manager = [KYPhotoSourceManager shareInstance];
-    PHFetchResult<PHAsset *> *assets = [manager fetchResultFromAlbum:cameraRoll];
-    album.count = assets.count;
+    NSArray *assetArr = [self __getAssetsFromAlbum:cameraRoll];
+    KYAlbum *album = [[KYAlbum alloc] initWithAlbum:cameraRoll assets:assetArr];
     return album;
 }
 
-+(UIImage *)maxImageForAsset:(KYAsset *)asset{
-    __block UIImage *bigImage = nil;
-    KYPhotoSourceManager *manager = [KYPhotoSourceManager shareInstance];
-    //同步获取图片（self.imageOption）
-    [manager.imageManager requestImageForAsset:asset.asset
-                                    targetSize:PHImageManagerMaximumSize
-                                   contentMode:PHImageContentModeDefault
-                                       options:manager.imageOption
-                                 resultHandler:^(UIImage * _Nullable result, NSDictionary * _Nullable info) {
-                                     bigImage = result;
-                                 }];
-    return bigImage;
-}
 
 #pragma mark - custom func
 //获取系统相册
@@ -166,9 +152,8 @@
                                                                                                subtype:subType
                                                                                                options:manager.collectionFetchOption];
     [collections enumerateObjectsUsingBlock:^(PHAssetCollection * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        PHFetchResult<PHAsset *> *assets = [manager fetchResultFromAlbum:obj];
-        KYAlbum *album = [[KYAlbum alloc] initWithAlbum:obj];
-        album.count = assets.count;
+        NSArray *assets = [self __getAssetsFromAlbum:obj];
+        KYAlbum *album = [[KYAlbum alloc] initWithAlbum:obj assets:assets];
         [collectionsArray addObject:album];
     }];
     return collectionsArray;
@@ -187,6 +172,17 @@
 
 +(void)getCloudImage:(KYAsset *)asset size:(CGSize)size complete:(KYGetImageBlock)complete{
     [self getImage:asset allowNetwork:YES size:size progress:nil complete:complete];
+}
+
++(void)getThumImage:(KYAsset *)asset complete:(KYGetImageBlock)complete{
+    CGSize size = CGSizeMake(200, 200);
+    [self getLocalImage:asset size:size complete:^(UIImage * _Nullable image) {
+        if (image) {
+            complete(image);
+            return;
+        }
+        [self getCloudImage:asset size:size complete:complete];
+    }];
 }
 
 +(void)getOriginImage:(KYAsset *)asset progress:(void (^)(double))progress complete:(KYGetImageBlock)complete{

@@ -11,6 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface KYPhotoSource : NSObject
 
+@property (nonatomic,copy)void (^thumImageChanged)(UIImage *image);
+
 ///资源ID
 -(NSString *)sourceId;
 

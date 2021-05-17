@@ -41,7 +41,7 @@
 -(void)setupUI{
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"关闭" style:UIBarButtonItemStyleDone target:self action:@selector(dismiss)];
     
-    UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, KYNAVIHEIGHT, KYSCREENWIDTH, KYSCREENHEIGHT - KYNAVIHEIGHT) style:UITableViewStylePlain];
     [tableView registerClass:[KYAlbumCell class] forCellReuseIdentifier:KYAlbumCellIdentifier];
     [self.view addSubview:tableView];
     _albumsTableView = tableView;

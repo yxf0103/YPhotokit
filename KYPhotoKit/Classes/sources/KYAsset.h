@@ -20,7 +20,7 @@
 ///从icloud同步图片
 @property (nonatomic,assign,readonly)BOOL inCloud;
 @property (nonatomic,copy)void (^inCloudStatusChanged)(BOOL inCloud);
-@property (nonatomic,copy)void (^thumImageChanged)(UIImage *image);
+@property (nonatomic,assign)BOOL isLoading;
 
 
 -(instancetype)initWithAsset:(PHAsset *)asset; NS_DESIGNATED_INITIALIZER;

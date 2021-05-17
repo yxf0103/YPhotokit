@@ -16,6 +16,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 +(UIImage *)cropImgFromIamge:(UIImage *)image inRect:(CGRect)rect;
 
++(UIImage *)imageFromColor:(UIColor *)color;
++(UIImage *)defaultImage;
+
 @end
 
 NS_ASSUME_NONNULL_END

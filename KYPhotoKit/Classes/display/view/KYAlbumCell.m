@@ -7,6 +7,7 @@
 
 #import "KYAlbumCell.h"
 #import "KYAlbum.h"
+#import "UIImage+SYExtension.h"
 
 NSString * const KYAlbumCellIdentifier = @"KYAlbumCellIdentifier";
 
@@ -55,7 +56,11 @@ NSString * const KYAlbumCellIdentifier = @"KYAlbumCellIdentifier";
 
 -(void)setAlbum:(KYAlbum *)album{
     _album = album;
-    _coverImgView.image = album.thumImage;
+    __weak typeof(self) ws = self;
+    album.thumImageChanged = ^(UIImage * _Nonnull image) {
+        ws.coverImgView.image = image ? : [UIImage defaultImage];
+    };
+    _coverImgView.image = album.thumImage ? : [UIImage defaultImage];
     _albumDetailLabel.text = [NSString stringWithFormat:@"%@(%zd)",album.album.localizedTitle,album.count];
 }
 

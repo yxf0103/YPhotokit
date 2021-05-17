@@ -41,7 +41,7 @@
 
 -(void)setThumImage:(UIImage *)thumImage{
     _thumImage = thumImage;
-    !_thumImageChanged ? : _thumImageChanged(thumImage);
+    !self.thumImageChanged ? : self.thumImageChanged(thumImage);
 }
 
 

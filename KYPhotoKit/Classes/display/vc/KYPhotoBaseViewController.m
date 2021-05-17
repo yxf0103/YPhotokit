@@ -31,23 +31,35 @@
     titleLabel.textColor = KYColorRGB(0xD8D8D8);
     titleLabel.font = [UIFont systemFontOfSize:17];
     titleLabel.frame = CGRectMake((KYSCREENWIDTH - 100) / 2, KYNAVIHEIGHT - 44, 100, 44);
+    titleLabel.textAlignment = NSTextAlignmentCenter;
     _naviTitleLabel = titleLabel;
     self.showStatusBar = YES;
     
     if ([self.navigationController.viewControllers indexOfObject:self] > 0) {
-        UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-        UIImage *image = [KYPhotoSourceTool imageWithName:@"navigationbar_icon_back_white" type:@"png"];
-        [btn setImage:image forState:UIControlStateNormal];
-        [btn addTarget:self action:@selector(leftBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
+        UIButton *btn = [self btnWithAction:@selector(leftBtnClicked:)
+                                        img:@"navigationbar_icon_back_white"];
         btn.frame = CGRectMake(10, KYNAVIHEIGHT - 44, 44, 44);
-        btn.imageEdgeInsets = UIEdgeInsetsMake(7, 7, 7, 7);
         [view addSubview:btn];
     }
+    
+    UIButton *disBtn = [self btnWithAction:@selector(dismissBtnClicked:)
+                                       img:@"publish_icon_close_white"];
+    disBtn.frame = CGRectMake(KYSCREENWIDTH - 10 - 44, KYNAVIHEIGHT - 44, 44, 44);
+    [view addSubview:disBtn];
     
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    _naviTitleLabel.text = self.title;
+    _naviTitleLabel.text = self.title ? : self.navigationItem.title;
+}
+
+-(UIButton *)btnWithAction:(SEL)action img:(NSString *)img{
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    UIImage *image = [KYPhotoSourceTool imageWithName:img type:@"png"];
+    [btn setImage:image forState:UIControlStateNormal];
+    [btn addTarget:self action:action forControlEvents:UIControlEventTouchUpInside];
+    btn.imageEdgeInsets = UIEdgeInsetsMake(7, 7, 7, 7);
+    return btn;
 }
 
 
@@ -71,6 +83,8 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-
+-(void)dismissBtnClicked:(UIButton *)btn{
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+}
 
 @end
