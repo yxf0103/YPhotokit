@@ -16,9 +16,9 @@
 #import "UIImage+SYExtension.h"
 #import "KYDisplayMacro.h"
 #import "KYAsset+Action.h"
-#import "KYPhotoSource+Display.h"
 #import "KYAlbumsViewController.h"
 #import "KYAssetsViewController.h"
+#import "KYPhotoBaseViewController.h"
 #import "KYPhotoLoadingDataProtocol.h"
 #import "KYPhotoNaviViewController.h"
 #import "KYAlbumCell.h"
@@ -34,8 +34,6 @@
 #import "KYAlbum.h"
 #import "KYAsset.h"
 #import "KYPhotoSource.h"
-#import "KYPhotoSourceCache+Memory.h"
-#import "KYPhotoSourceCache.h"
 #import "KYPhotoSourceManager.h"
 
 FOUNDATION_EXPORT double KYPhotoKitVersionNumber;

@@ -11,10 +11,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface KYPhotoSource : NSObject
 
-///缩略图
-@property(nonatomic,strong)UIImage *image;
+///资源ID
+-(NSString *)sourceId;
 
--(instancetype)initWithImg:(UIImage *)image identifier:(NSString *)identifier;
+///缩略图
+-(UIImage *)thumImage;
 
 @end
 

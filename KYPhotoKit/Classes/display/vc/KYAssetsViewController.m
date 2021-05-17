@@ -22,7 +22,6 @@
 /*album*/
 @property (nonatomic,strong)KYAlbum *album;
 
-/*图片信息表格*/
 @property (nonatomic,weak)UICollectionView *assetCollectionView;
 
 /*assets*/
@@ -56,12 +55,10 @@ static NSInteger const ky_max_sel_asset_num = 9;
     [self setupUI];
     
     [self loadData];
-    
-    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
 }
 #pragma mark - ui
 -(void)setupUI{
-    self.navigationItem.title = _album.album.localizedTitle;
+    self.title = _album.album.localizedTitle;
     self.view.backgroundColor = [UIColor whiteColor];
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     layout.sectionInset = UIEdgeInsetsMake(KYAssetMargin, KYAssetMargin, KYAssetMargin, KYAssetMargin);
@@ -69,7 +66,7 @@ static NSInteger const ky_max_sel_asset_num = 9;
     layout.itemSize = CGSizeMake(length, length);
     layout.minimumInteritemSpacing = 0;
     layout.minimumLineSpacing = KYAssetMargin;
-    UICollectionView *assetView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
+    UICollectionView *assetView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, KYNAVIHEIGHT, KYSCREENWIDTH, KYSCREENHEIGHT - KYNAVIHEIGHT) collectionViewLayout:layout];
     [self.view addSubview:assetView];
     [assetView registerClass:[KYAssetCell class] forCellWithReuseIdentifier:KYAssetCellIdentifier];
     _assetCollectionView = assetView;
@@ -90,6 +87,13 @@ static NSInteger const ky_max_sel_asset_num = 9;
             [ws.assetCollectionView reloadData];
         }];
     }
+}
+
+-(NSArray *)selectedArray{
+    if (!_selArray) {
+        return nil;
+    }
+    return [NSArray arrayWithArray:_selArray];
 }
 
 #pragma mark - UICollectionViewDataSource,UICollectionViewDelegateFlowLayout
@@ -177,9 +181,13 @@ static NSInteger const ky_max_sel_asset_num = 9;
 }
 
 #pragma mark - KYImageScannerViewControllerDelegate
--(void)scannerVcWillPresent:(KYImageScannerViewController *)scannerVc{}
+-(void)scannerVcWillPresent:(KYImageScannerViewController *)scannerVc{
+    self.showStatusBar = NO;
+}
 
--(void)scannerVcWillDismiss:(KYImageScannerViewController *)scannerVc{}
+-(void)scannerVcWillDismiss:(KYImageScannerViewController *)scannerVc{
+    self.showStatusBar = YES;
+}
 
 - (CGRect)scannerVc:(KYImageScannerViewController *)scannerVc dismissAtIndex:(NSInteger)index{
     KYAssetCell *cell = (KYAssetCell *)[_assetCollectionView cellForItemAtIndexPath:[NSIndexPath indexPathForItem:index inSection:0]];

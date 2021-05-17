@@ -66,7 +66,7 @@
     NSMutableArray<KYScannerImage *> *scannerimgs = [NSMutableArray array];
     [assets enumerateObjectsUsingBlock:^(KYAssetviewModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         KYScannerImage *image = [[KYScannerImage alloc] init];
-        image.originImage = obj.asset.image;
+        image.originImage = obj.asset.thumImage;
         image.originFrame = obj.originFrame;
         [scannerimgs addObject:image];
     }];
@@ -87,12 +87,10 @@
 
 #pragma mark - UIViewControllerTransitioningDelegate
 -(id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed{
-    self.presentModel.isPresent = YES;
     return self.presentModel;
 }
 
 -(id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source{
-    self.presentModel.isPresent = NO;
     return self.presentModel;
 }
 

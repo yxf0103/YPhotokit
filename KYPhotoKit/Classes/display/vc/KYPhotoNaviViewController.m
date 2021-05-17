@@ -12,12 +12,6 @@
 
 @interface KYPhotoNaviViewController ()
 
-/*appearance*/
-@property (nonatomic,strong)UIColor *bgColor;
-
-/*tint*/
-@property (nonatomic,strong)UIColor *tintColor;
-
 @end
 
 @implementation KYPhotoNaviViewController
@@ -32,23 +26,14 @@
     return photoVc;
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
+-(void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated{
+    if (self.viewControllers.count > 0) {
+        viewController.hidesBottomBarWhenPushed = YES;
+    }
+    [super pushViewController:viewController animated:animated];
 }
 
--(void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    self.tintColor = [UINavigationBar appearance].tintColor;
-    self.bgColor = [UINavigationBar appearance].backgroundColor;
-    [[UINavigationBar appearance] setBackgroundColor:[UIColor redColor]];
-    [[UINavigationBar appearance] setBarTintColor:[UIColor whiteColor]];
-}
 
--(void)viewWillDisappear:(BOOL)animated{
-    [super viewWillDisappear:animated];
-    [[UINavigationBar appearance] setBackgroundColor:self.bgColor];
-    [[UINavigationBar appearance] setBarTintColor:self.tintColor];
-}
 
 
 @end

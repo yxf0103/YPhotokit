@@ -16,6 +16,7 @@
 typedef void(^KYGetAlbumsBlock)(NSArray<KYAlbum *> *albums);
 typedef void(^KYGetAssetsBlock)(NSArray<KYAsset *> *assets);
 typedef void(^KYGetImagesBlock)(NSArray<UIImage *> *images);
+typedef void(^KYGetImageBlock)(UIImage *_Nullable image);
 
 @interface KYPhotoSourceManager : NSObject
 
@@ -62,14 +63,6 @@ typedef void(^KYGetImagesBlock)(NSArray<UIImage *> *images);
  */
 +(void)getAllAlbums:(KYGetAlbumsBlock)complete;
 
-/**
- 获取某个相册里面的所有图片,异步
-
- @param album 相册
- @param complete 包含图片的回调,主线程
- */
-+(void)getImagesFromAlbum:(KYAlbum *)album imageSize:(CGSize)size complete:(KYGetImagesBlock)complete;
-
 #pragma mark - diy func
 
 /**
@@ -95,12 +88,13 @@ typedef void(^KYGetImagesBlock)(NSArray<UIImage *> *images);
  */
 +(KYAlbum *)getMyCameraAlbum;
 
-/**
- 获取asset的最大图片
-
- @param asset 相册图片信息集
- @return 图片
- */
-+(UIImage *)maxImageForAsset:(KYAsset *)asset;
+///获取本地图片
++(void)getLocalImage:(KYAsset *)asset size:(CGSize)size complete:(KYGetImageBlock)complete;
+///获取icloud里面的图片
++(void)getCloudImage:(KYAsset *)asset size:(CGSize)size complete:(KYGetImageBlock)complete;
+///获取原图,先获取本地图片，再获取icloud图片
++(void)getOriginImage:(KYAsset *)asset
+             progress:(void(^)(double progress))progress
+             complete:(KYGetImageBlock)complete;
 
 @end

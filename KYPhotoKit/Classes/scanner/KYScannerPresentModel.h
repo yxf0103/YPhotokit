@@ -16,7 +16,6 @@ typedef NS_ENUM(NSUInteger, KYScannerPresentType) {
 
 /*animation type,default:KYScannerPresentPop*/
 @property (nonatomic,assign)KYScannerPresentType modalType;
-@property (nonatomic,assign)BOOL isPresent;
 
 /*touch view frame*/
 @property (nonatomic,assign)CGRect touchFrame;

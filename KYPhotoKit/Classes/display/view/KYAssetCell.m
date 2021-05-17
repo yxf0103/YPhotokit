@@ -7,7 +7,6 @@
 
 #import "KYAssetCell.h"
 #import "KYAsset.h"
-#import "KYPhotoSource+Display.h"
 #import "KYTagBtn.h"
 #import "KYAsset+Action.h"
 
@@ -50,7 +49,6 @@ NSString * const KYAssetCellIdentifier = @"KYAssetCellIdentifier";
     [super layoutSubviews];
     _ky_imgView.frame = self.contentView.bounds;
     _maskLayer.path = [UIBezierPath bezierPathWithRect:self.contentView.bounds].CGPath;
-    [_asset setImageToImgView:_ky_imgView];
 }
 
 -(void)setAsset:(KYAsset *)asset{
@@ -62,7 +60,13 @@ NSString * const KYAssetCellIdentifier = @"KYAssetCellIdentifier";
     asset.selectChanged = ^(KYAsset * _Nonnull asset) {
         !ws.bindSelectAction ? : ws.bindSelectAction(asset,asset.selected);
     };
-    [asset setImageToImgView:_ky_imgView];
+    _asset.inCloudStatusChanged = ^(BOOL inCloud) {
+        KYLog(@"in cloud changed");
+    };
+    _asset.thumImageChanged = ^(UIImage *image) {
+        ws.ky_imgView.image = image;
+    };
+    _ky_imgView.image = _asset.thumImage;
     _selectBtn.number = asset.number;
 }
 

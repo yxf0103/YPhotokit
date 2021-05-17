@@ -14,20 +14,15 @@
 /** asset*/
 @property(nonatomic,strong)PHAsset *asset;
 
-/** big image*/
-@property(nonatomic,strong)UIImage *bigImage;
-
 /** image info 与asset关系不大*/
 @property(nonatomic,strong)NSDictionary *imageInfo;
 
 ///从icloud同步图片
-@property (nonatomic,strong)void (^pullImageFromICloud)(KYAsset *asset,BOOL isBegin);
-@property (nonatomic,assign,readonly)BOOL isInCloud;
+@property (nonatomic,assign,readonly)BOOL inCloud;
+@property (nonatomic,copy)void (^inCloudStatusChanged)(BOOL inCloud);
+@property (nonatomic,copy)void (^thumImageChanged)(UIImage *image);
 
 
--(instancetype)initWithAsset:(PHAsset *)asset
-                       image:(UIImage *)image
-                   isInCloud:(BOOL)isInCloud
-                        info:(NSDictionary *)info NS_DESIGNATED_INITIALIZER;
+-(instancetype)initWithAsset:(PHAsset *)asset; NS_DESIGNATED_INITIALIZER;
 
 @end

@@ -7,7 +7,8 @@
 
 #import <UIKit/UIKit.h>
 #import "KYPhotoLoadingDataProtocol.h"
+#import "KYPhotoBaseViewController.h"
 
-@interface KYAlbumsViewController : UIViewController<KYPhotoLoadingDataProtocol>
+@interface KYAlbumsViewController : KYPhotoBaseViewController<KYPhotoLoadingDataProtocol>
 
 @end

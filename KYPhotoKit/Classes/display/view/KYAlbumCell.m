@@ -7,7 +7,6 @@
 
 #import "KYAlbumCell.h"
 #import "KYAlbum.h"
-#import "KYPhotoSource+Display.h"
 
 NSString * const KYAlbumCellIdentifier = @"KYAlbumCellIdentifier";
 
@@ -51,14 +50,12 @@ NSString * const KYAlbumCellIdentifier = @"KYAlbumCellIdentifier";
     CGFloat dy = 10;
     CGFloat dh = CGRectGetHeight(self.contentView.frame) - 20;
     _albumDetailLabel.frame = CGRectMake(dx, dy, dw, dh);
-    
-    [_album setImageToImgView:_coverImgView];
 }
 
 
 -(void)setAlbum:(KYAlbum *)album{
     _album = album;
-    [album setImageToImgView:_coverImgView];
+    _coverImgView.image = album.thumImage;
     _albumDetailLabel.text = [NSString stringWithFormat:@"%@(%zd)",album.album.localizedTitle,album.count];
 }
 

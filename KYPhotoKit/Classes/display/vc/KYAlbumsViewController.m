@@ -22,6 +22,13 @@
 
 @implementation KYAlbumsViewController
 
+-(instancetype)init{
+    if (self = [super init]) {
+        self.navigationItem.title = @"相册";
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -32,7 +39,6 @@
 
 #pragma mark - ui
 -(void)setupUI{
-    self.navigationItem.title = @"照片";
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"关闭" style:UIBarButtonItemStyleDone target:self action:@selector(dismiss)];
     
     UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];

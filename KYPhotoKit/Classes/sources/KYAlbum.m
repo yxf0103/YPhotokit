@@ -7,21 +7,32 @@
 
 #import "KYAlbum.h"
 
+@interface KYAlbum ()
+
+@property(nonatomic,strong)PHAssetCollection *album;
+
+@end
+
 @implementation KYAlbum
 
 -(instancetype)init{
-    return [self initWithAlbum:nil count:0 image:nil];
+    return [self initWithAlbum:nil];
 }
 
--(instancetype)initWithAlbum:(PHAssetCollection *)album
-                       count:(NSInteger)count
-                       image:(UIImage *)image{
-    self = [super initWithImg:image identifier:album.localIdentifier];
+-(instancetype)initWithAlbum:(PHAssetCollection *)album {
+    self = [super init];
     if (self) {
-        self.count = count;
-        self.album = album;
+        _album = album;
     }
     return self;
+}
+
+-(UIImage *)thumImage{
+    return nil;
+}
+
+-(NSString *)sourceId{
+    return _album.localIdentifier;
 }
 
 @end

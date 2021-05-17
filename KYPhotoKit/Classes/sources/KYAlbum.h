@@ -12,13 +12,11 @@
 @interface KYAlbum : KYPhotoSource
 
 /** album*/
-@property(nonatomic,strong)PHAssetCollection *album;
+@property(nonatomic,strong,readonly)PHAssetCollection *album;
 
 /** count*/
 @property(nonatomic,assign)NSInteger count;
 
--(instancetype)initWithAlbum:(PHAssetCollection *)album
-                       count:(NSInteger)count
-                       image:(UIImage *)image NS_DESIGNATED_INITIALIZER;
+-(instancetype)initWithAlbum:(PHAssetCollection *)album; NS_DESIGNATED_INITIALIZER;
 
 @end

@@ -9,6 +9,7 @@
 #import "KYAlbum.h"
 #import "KYPhotoLoadingDataProtocol.h"
 #import "KYImageScannerViewController.h"
+#import "KYPhotoBaseViewController.h"
 
 @class KYAsset;
 
@@ -32,11 +33,15 @@
 
 @end
 
-@interface KYAssetsViewController : UIViewController<KYPhotoLoadingDataProtocol,KYImageScannerViewControllerDelegate>
+@interface KYAssetsViewController : KYPhotoBaseViewController<KYPhotoLoadingDataProtocol,KYImageScannerViewControllerDelegate>
 
 @property (nonatomic,weak)id<KYAssetsViewControllerDelegate> assetDelegate;
-
+@property (nonatomic,weak,readonly)UICollectionView *assetCollectionView;
+///全部图片
+@property (nonatomic,strong,readonly)NSArray *assets;
 
 -(instancetype)initWithAlbum:(KYAlbum *)album;
+
+-(NSArray *)selectedArray;
 
 @end
