@@ -135,11 +135,8 @@ static NSInteger const ky_max_sel_asset_num = 9;
         viewmodel.originFrame = frame;
         [assetviewModels addObject:viewmodel];
     }
-    if ([_assetDelegate respondsToSelector:@selector(assetsViewController:allAssets:selectAssetAtIndex:)]) {
-        [_assetDelegate assetsViewController:self
-                                   allAssets:assetviewModels
-                          selectAssetAtIndex:indexPath.item];
-    }
+    KYPhotoNaviViewController *naviVc = (KYPhotoNaviViewController *)self.navigationController;
+    [naviVc.photoDelegate photoVc:naviVc subVc:self selectIndex:indexPath.item allAssets:assetviewModels];
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
@@ -187,7 +184,8 @@ static NSInteger const ky_max_sel_asset_num = 9;
         return;
     }
     [self.navigationController dismissViewControllerAnimated:YES completion:nil];
-    [_assetDelegate assetsVc:self sendImgs:self.selArray];
+    KYPhotoNaviViewController *naviVc = (KYPhotoNaviViewController *)self.navigationController;
+    [naviVc.photoDelegate photoVc:naviVc sendImgs:self.selArray];
 }
 
 #pragma mark - KYPhotoLoadingDataProtocol

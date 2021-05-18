@@ -6,11 +6,26 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "KYAssetsViewController.h"
+
+@class KYPhotoNaviViewController,KYAssetviewModel,KYAsset;
+@protocol KYImageScannerViewControllerDelegate;
+
+@protocol KYPhotoNaviViewControllerDelegate <NSObject>
+
+///查看图片详情
+-(void)photoVc:(KYPhotoNaviViewController *)photoVc
+         subVc:(id<KYImageScannerViewControllerDelegate>)subVc
+   selectIndex:(NSInteger)index
+     allAssets:(NSArray<KYAssetviewModel *> *)assets;
+
+///发送图片
+-(void)photoVc:(KYPhotoNaviViewController *)photoVc sendImgs:(NSArray<KYAsset *> *)imgArr;
+
+@end
 
 @interface KYPhotoNaviViewController : UINavigationController
 
-@property (nonatomic,weak)KYAssetsViewController *assetVc;
+@property (nonatomic,weak)id<KYPhotoNaviViewControllerDelegate> photoDelegate;
 
 +(instancetype)photoNavicontroller;
 

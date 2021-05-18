@@ -15,7 +15,7 @@
 #import <KYPhotoKit/KYPhotoSourceManager.h>
 #import <KYPhotoKit/KYAsset+Action.h>
 
-@interface KYViewController ()<UIViewControllerTransitioningDelegate,KYAssetsViewControllerDelegate>
+@interface KYViewController ()<UIViewControllerTransitioningDelegate,KYPhotoNaviViewControllerDelegate>
 
 @property (nonatomic,strong)KYScannerPresentModel *presentModel;
 
@@ -51,7 +51,7 @@
             if (statu == PHAuthorizationStatusAuthorized) {
                 KYPhotoNaviViewController *navi = [KYPhotoNaviViewController photoNavicontroller];
                 navi.modalPresentationStyle = UIModalPresentationFullScreen;
-                navi.assetVc.assetDelegate = self;
+                navi.photoDelegate = self;
                 [self presentViewController:navi animated:YES completion:nil];
             }else{
                 NSLog(@"相册未授权");
@@ -60,8 +60,11 @@
     }];
 }
 
-#pragma mark - KYAssetsViewControllerDelegate
--(void)assetsViewController:(KYAssetsViewController *)assetVc allAssets:(NSArray<KYAssetviewModel *> *)assets selectAssetAtIndex:(NSInteger)index{
+#pragma mark - KYPhotoNaviViewControllerDelegate
+-(void)photoVc:(KYPhotoNaviViewController *)photoVc
+         subVc:(id<KYImageScannerViewControllerDelegate>)subVc
+   selectIndex:(NSInteger)index
+     allAssets:(NSArray<KYAssetviewModel *> *)assets{
     NSMutableArray<KYScannerImage *> *scannerimgs = [NSMutableArray array];
     [assets enumerateObjectsUsingBlock:^(KYAssetviewModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         KYScannerImage *image = [[KYScannerImage alloc] init];
@@ -74,7 +77,7 @@
     imgVc.modalPresentationStyle = UIModalPresentationCustom;
     imgVc.transitioningDelegate = self;
     imgVc.modalPresentationCapturesStatusBarAppearance = YES;
-    imgVc.scannerDelegate = assetVc;
+    imgVc.scannerDelegate = subVc;
     imgVc.images = scannerimgs;
     imgVc.index = index;
     
@@ -82,10 +85,10 @@
     self.presentModel.destFrame = scannerimgs[index].destFrame;
     self.presentModel.touchImage = scannerimgs[index].originImage;
     
-    [assetVc presentViewController:imgVc animated:YES completion:nil];
+    [photoVc presentViewController:imgVc animated:YES completion:nil];
 }
 
--(void)assetsVc:(KYAssetsViewController *)assetVc sendImgs:(NSArray<KYAssetviewModel *> *)imgArr{
+-(void)photoVc:(KYPhotoNaviViewController *)photoVc sendImgs:(NSArray<KYAsset *> *)imgArr{
     
 }
 

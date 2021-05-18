@@ -23,23 +23,10 @@
 
 @end
 
-@class KYAssetsViewController;
-@protocol KYAssetsViewControllerDelegate<NSObject>
-
-@optional
--(void)assetsViewController:(KYAssetsViewController *)assetVc
-                  allAssets:(NSArray<KYAssetviewModel *> *)assets
-         selectAssetAtIndex:(NSInteger)index;
-
--(void)assetsVc:(KYAssetsViewController *)assetVc sendImgs:(NSArray<KYAssetviewModel *> *)imgArr;
-
-@end
-
 @interface KYAssetsViewController : KYPhotoBaseViewController<
 KYPhotoLoadingDataProtocol,
 KYImageScannerViewControllerDelegate>
 
-@property (nonatomic,weak)id<KYAssetsViewControllerDelegate> assetDelegate;
 @property (nonatomic,weak,readonly)UICollectionView *assetCollectionView;
 ///全部图片
 @property (nonatomic,strong,readonly)NSArray *assets;
