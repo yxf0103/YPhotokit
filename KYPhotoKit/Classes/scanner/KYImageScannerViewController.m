@@ -10,14 +10,20 @@
 #import "KYScanerLayout.h"
 #import "KYScannerPresentModel.h"
 #import "KYPhotoSourceTool.h"
+#import "KYScannerImage.h"
 
 #define KYScannerMargin 10
 
 @interface KYImageScannerViewController ()<UICollectionViewDelegateFlowLayout,
 UICollectionViewDataSource,
-KYImageScannerCellDelegate>
+KYImageScannerCellDelegate>{
+    UIButton *_selBtn;
+    UIButton *_sendBtn;
+}
 
 @property (nonatomic,weak)UICollectionView *imageCollectionView;
+
+@property (nonatomic,strong)KYScannerImage *currentImg;
 
 @end
 
@@ -42,24 +48,65 @@ KYImageScannerCellDelegate>
     collectionView.pagingEnabled = YES;
     collectionView.backgroundColor = [UIColor clearColor];
     _imageCollectionView = collectionView;
+    [self addTopView];
+//    [self addBottomview];
+    
     [collectionView reloadData];
     if (_images.count > _index) {
         collectionView.contentOffset = CGPointMake(_index * (width + KYScannerMargin), 0);
+        _currentImg = _images[_index];
+        _selBtn.selected = _currentImg.imgSelected;
     }
-    
-    //controll
-    UIView *topBar = [[UIView alloc] initWithFrame:CGRectMake(0, 0, width, 64)];
-    topBar.backgroundColor = [[UIColor grayColor] colorWithAlphaComponent:0.6];
+}
+
+-(void)addTopView{
+    UIView *topBar = [[UIView alloc] initWithFrame:CGRectMake(0, 0, KYSCREENWIDTH, 64)];
+    topBar.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.8];
     [self.view addSubview:topBar];
     
-    UIButton *popbackBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    UIButton *popbackBtn = [self btnWithImg:@"navigationbar_icon_back_white"
+                                     selImg:@""
+                                     action:@selector(popBackBtnClicked)];
     [topBar addSubview:popbackBtn];
-    UIImage *image = [KYPhotoSourceTool imageWithName:@"navigationbar_icon_back_white"
-                                                 type:@"png"];
-    [popbackBtn setImage:image forState:UIControlStateNormal];
     popbackBtn.frame = CGRectMake(10, 20, 44, 44);
-    popbackBtn.imageEdgeInsets = UIEdgeInsetsMake(7, 7, 7, 7);
-    [popbackBtn addTarget:self action:@selector(popBackBtnClicked) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIButton *selBtn = [self btnWithImg:@"tag_normal"
+                                 selImg:@"tag_sel"
+                                 action:@selector(selectBtnClicked:)];
+    [topBar addSubview:selBtn];
+    selBtn.frame = CGRectMake(KYSCREENWIDTH - 10 - 44, 20, 44, 44);
+    _selBtn = selBtn;
+}
+
+-(void)addBottomview{
+    CGFloat bottomHeight = KYTABBARHEIGHT;
+    UIView *bottomView = [[UIView alloc] initWithFrame:CGRectMake(0, KYSCREENHEIGHT - bottomHeight, KYSCREENWIDTH, bottomHeight)];
+    [self.view addSubview:bottomView];
+    bottomView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.8];
+    UIButton *sendBtn = [UIButton buttonWithType:UIButtonTypeSystem];
+    [bottomView addSubview:sendBtn];
+    [sendBtn setTitle:@"发送" forState:UIControlStateNormal];
+    [sendBtn setTitleColor:KYColorRGB(0xff6542) forState:UIControlStateNormal];
+    [sendBtn setTitleColor:KYColorRGB(0xe5e5ea) forState:UIControlStateDisabled];
+    sendBtn.frame = CGRectMake(KYSCREENWIDTH - 10 - 45, 10, 45, 30);
+    [sendBtn addTarget:self action:@selector(sendBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
+    sendBtn.enabled = NO;
+    _sendBtn = sendBtn;
+}
+
+-(UIButton *)btnWithImg:(NSString *)img selImg:(NSString *)selImg action:(SEL)action{
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    UIImage *image = [KYPhotoSourceTool imageWithName:img
+                                                 type:@"png"];
+    [btn setImage:image forState:UIControlStateNormal];
+    if (selImg.length > 0) {
+        image = [KYPhotoSourceTool imageWithName:selImg
+                                            type:@"png"];
+        [btn setImage:image forState:UIControlStateSelected];
+    }
+    btn.imageEdgeInsets = UIEdgeInsetsMake(7, 7, 7, 7);
+    [btn addTarget:self action:action forControlEvents:UIControlEventTouchUpInside];
+    return btn;
 }
 
 -(BOOL)prefersStatusBarHidden{
@@ -73,6 +120,20 @@ KYImageScannerCellDelegate>
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+-(void)selectBtnClicked:(UIButton *)btn{
+    btn.selected = !btn.isSelected;
+    _currentImg.imgSelected = btn.isSelected;
+    NSInteger index = [_images indexOfObject:_currentImg];
+    if (index == NSNotFound) {
+        return;
+    }
+    [_scannerDelegate scannerVc:self selectItem:index status:_currentImg.imgSelected];
+}
+
+-(void)sendBtnClicked:(UIButton *)btn{
+    
+}
+
 #pragma mark - UICollectionViewDelegate,UICollectionViewDataSource
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     return _images.count;
@@ -84,6 +145,20 @@ KYImageScannerCellDelegate>
     cell.delegate = self;
     return cell;
 }
+
+-(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    [self scrollViewDidEndScrollingAnimation:scrollView];
+}
+
+-(void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView{
+    NSInteger index = (scrollView.contentOffset.x + 10) / KYSCREENWIDTH;
+    if (index < 0 || index >= _images.count) {
+        return;
+    }
+    _currentImg = _images[index];
+    _selBtn.selected = _currentImg.imgSelected;
+}
+
 
 #pragma mark - KYImageScannerCellDelegate
 -(void)imgScannerCell:(KYImageScannerCell *)cell alphaChangedWithRate:(CGFloat)rate{

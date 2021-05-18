@@ -23,6 +23,7 @@
 @property (nonatomic,strong)KYAlbum *album;
 
 @property (nonatomic,weak)UICollectionView *assetCollectionView;
+@property (nonatomic,weak)UIButton *sendBtn;
 
 /*assets*/
 @property (nonatomic,strong)NSArray *assets;
@@ -60,13 +61,28 @@ static NSInteger const ky_max_sel_asset_num = 9;
 -(void)setupUI{
     self.navigationItem.title = _album.album.localizedTitle;
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    CGFloat bottomHeight = KYTABBARHEIGHT;
+    UIView *bottomView = [[UIView alloc] initWithFrame:CGRectMake(0, KYSCREENHEIGHT - bottomHeight, KYSCREENWIDTH, bottomHeight)];
+    [self.view addSubview:bottomView];
+    bottomView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.8];
+    UIButton *sendBtn = [UIButton buttonWithType:UIButtonTypeSystem];
+    [bottomView addSubview:sendBtn];
+    [sendBtn setTitle:@"发送" forState:UIControlStateNormal];
+    [sendBtn setTitleColor:KYColorRGB(0xff6542) forState:UIControlStateNormal];
+    [sendBtn setTitleColor:KYColorRGB(0xe5e5ea) forState:UIControlStateDisabled];
+    sendBtn.frame = CGRectMake(KYSCREENWIDTH - 10 - 45, 10, 45, 30);
+    [sendBtn addTarget:self action:@selector(sendBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
+    sendBtn.enabled = NO;
+    _sendBtn = sendBtn;
+    
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     layout.sectionInset = UIEdgeInsetsMake(KYAssetMargin, KYAssetMargin, KYAssetMargin, KYAssetMargin);
     CGFloat length = KYAssetItemLength;
     layout.itemSize = CGSizeMake(length, length);
     layout.minimumInteritemSpacing = 0;
     layout.minimumLineSpacing = KYAssetMargin;
-    UICollectionView *assetView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, KYNAVIHEIGHT, KYSCREENWIDTH, KYSCREENHEIGHT - KYNAVIHEIGHT) collectionViewLayout:layout];
+    UICollectionView *assetView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, KYNAVIHEIGHT, KYSCREENWIDTH, KYSCREENHEIGHT - KYNAVIHEIGHT - bottomHeight) collectionViewLayout:layout];
     [self.view addSubview:assetView];
     [assetView registerClass:[KYAssetCell class] forCellWithReuseIdentifier:KYAssetCellIdentifier];
     _assetCollectionView = assetView;
@@ -88,11 +104,22 @@ static NSInteger const ky_max_sel_asset_num = 9;
     }
 }
 
--(NSArray *)selectedArray{
-    if (!_selArray) {
-        return nil;
+#pragma mark - getter
+-(KYHud *)hud{
+    if (!_hud) {
+        KYHud *hud = [[KYHud alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
+        hud.center = CGPointMake(KYSCREENWIDTH / 2, KYNAVIHEIGHT + 200);
+        [self.view addSubview:hud];
+        _hud = hud;
     }
-    return [NSArray arrayWithArray:_selArray];
+    return _hud;
+}
+
+-(NSMutableArray *)selArray{
+    if (!_selArray) {
+        _selArray = [NSMutableArray array];
+    }
+    return _selArray;
 }
 
 #pragma mark - UICollectionViewDataSource,UICollectionViewDelegateFlowLayout
@@ -138,6 +165,7 @@ static NSInteger const ky_max_sel_asset_num = 9;
         }
         [self.selArray addObject:asset];
         asset.number = self.selArray.count;
+        _sendBtn.enabled = self.selArray.count > 0;
         return;
     }
     NSInteger index = [self.selArray indexOfObject:asset];
@@ -151,6 +179,15 @@ static NSInteger const ky_max_sel_asset_num = 9;
     };
     [self.selArray removeObject:asset];
     asset.number = 0;
+    _sendBtn.enabled = self.selArray.count > 0;
+}
+
+-(void)sendBtnClicked:(UIButton *)btn{
+    if (self.selArray.count == 0) {
+        return;
+    }
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+    [_assetDelegate assetsVc:self sendImgs:self.selArray];
 }
 
 #pragma mark - KYPhotoLoadingDataProtocol
@@ -161,24 +198,6 @@ static NSInteger const ky_max_sel_asset_num = 9;
     [self.hud stopAnimation];
 }
 
-#pragma mark - getter
--(KYHud *)hud{
-    if (!_hud) {
-        KYHud *hud = [[KYHud alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
-        hud.center = CGPointMake(KYSCREENWIDTH / 2, KYNAVIHEIGHT + 200);
-        [self.view addSubview:hud];
-        _hud = hud;
-    }
-    return _hud;
-}
-
--(NSMutableArray *)selArray{
-    if (!_selArray) {
-        _selArray = [NSMutableArray array];
-    }
-    return _selArray;
-}
-
 #pragma mark - KYImageScannerViewControllerDelegate
 -(void)scannerVc:(KYImageScannerViewController *)scannerVc alphaChanged:(double)alpha{
     self.showStatusBar = alpha > 0.3;
@@ -187,6 +206,11 @@ static NSInteger const ky_max_sel_asset_num = 9;
 - (CGRect)scannerVc:(KYImageScannerViewController *)scannerVc dismissAtIndex:(NSInteger)index{
     KYAssetCell *cell = (KYAssetCell *)[_assetCollectionView cellForItemAtIndexPath:[NSIndexPath indexPathForItem:index inSection:0]];
     return [_assetCollectionView convertRect:cell.frame toView:[UIApplication sharedApplication].keyWindow];
+}
+
+-(void)scannerVc:(KYImageScannerViewController *)scannerVc selectItem:(NSInteger)index status:(BOOL)selected{
+    KYAsset *asset = _assets[index];
+    asset.selected = selected;
 }
 
 @end

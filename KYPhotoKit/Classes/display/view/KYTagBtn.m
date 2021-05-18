@@ -7,9 +7,7 @@
 
 #import "KYTagBtn.h"
 
-@interface KYTagBtn (){
-    CAShapeLayer *_maskLayer;
-}
+@interface KYTagBtn ()
 
 @end
 
@@ -17,11 +15,11 @@
 
 +(instancetype)tagBtn{
     KYTagBtn *btn = [KYTagBtn buttonWithType:UIButtonTypeCustom];
-    [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [btn setBackgroundColor:[UIColor blueColor]];
-    CAShapeLayer *maskLayer = [CAShapeLayer layer];
-    btn.layer.mask = maskLayer;
-    btn->_maskLayer = maskLayer;
+    UIImage *image = [KYPhotoSourceTool imageWithName:@"tag_normal" type:@"png"];
+    [btn setImage:image forState:UIControlStateNormal];
+    [btn setTitleColor:KYColorRGB(0xff6542) forState:UIControlStateNormal];
+    btn.titleLabel.font = [UIFont systemFontOfSize:17];
+    btn.titleLabel.textAlignment = NSTextAlignmentCenter;
     return btn;
 }
 
@@ -30,16 +28,19 @@
         return;
     }
     _number = number;
-    [self setTitle:@(number).stringValue forState:UIControlStateNormal];
+    NSString *title = @"";
+    if (number > 0) {
+        title = @(number).stringValue;
+    }
+    [self setTitle:title forState:UIControlStateNormal];
 }
 
 -(void)layoutSubviews{
     [super layoutSubviews];
-    CGFloat radius = CGRectGetWidth(self.bounds) / 2;
-    if (radius == 0) {
-        return;
-    }
-    _maskLayer.path = [UIBezierPath bezierPathWithRoundedRect:self.bounds cornerRadius:radius].CGPath;
+    CGFloat width = CGRectGetWidth(self.bounds);
+    CGFloat height = CGRectGetHeight(self.bounds);
+    self.imageView.frame = CGRectMake(5, 5, width - 10, height - 10);
+    self.titleLabel.frame = self.bounds;
 }
 
 @end

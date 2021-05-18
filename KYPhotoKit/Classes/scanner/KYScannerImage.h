@@ -19,4 +19,7 @@
 /*destination frame in window*/
 @property (nonatomic,assign,readonly)CGRect destFrame;
 
+///选中状态
+@property (nonatomic,assign)BOOL imgSelected;
+
 @end

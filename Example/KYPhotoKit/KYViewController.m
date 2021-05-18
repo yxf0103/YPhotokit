@@ -7,13 +7,13 @@
 //
 
 #import "KYViewController.h"
-#import "KYPhotoNaviViewController.h"
-#import "KYAssetsViewController.h"
-#import "KYImageScannerViewController.h"
-#import "KYScannerImage.h"
-#import "KYAsset.h"
-#import "KYScannerPresentModel.h"
-#import "KYPhotoSourceManager.h"
+#import <KYPhotoKit/KYPhotoNaviViewController.h>
+#import <KYPhotoKit/KYAssetsViewController.h>
+#import <KYPhotoKit/KYImageScannerViewController.h>
+#import <KYPhotoKit/KYScannerImage.h>
+#import <KYPhotoKit/KYScannerPresentModel.h>
+#import <KYPhotoKit/KYPhotoSourceManager.h>
+#import <KYPhotoKit/KYAsset+Action.h>
 
 @interface KYViewController ()<UIViewControllerTransitioningDelegate,KYAssetsViewControllerDelegate>
 
@@ -67,6 +67,7 @@
         KYScannerImage *image = [[KYScannerImage alloc] init];
         image.originImage = obj.asset.thumImage;
         image.originFrame = obj.originFrame;
+        image.imgSelected = obj.asset.number > 0;
         [scannerimgs addObject:image];
     }];
     KYImageScannerViewController *imgVc = [[KYImageScannerViewController alloc] init];
@@ -82,6 +83,10 @@
     self.presentModel.touchImage = scannerimgs[index].originImage;
     
     [assetVc presentViewController:imgVc animated:YES completion:nil];
+}
+
+-(void)assetsVc:(KYAssetsViewController *)assetVc sendImgs:(NSArray<KYAssetviewModel *> *)imgArr{
+    
 }
 
 #pragma mark - UIViewControllerTransitioningDelegate

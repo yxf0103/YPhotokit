@@ -111,6 +111,7 @@ NSString * const KYAssetCellIdentifier = @"KYAssetCellIdentifier";
     _cloudBtn.center = CGPointMake(CGRectGetWidth(_cloudView.frame) / 2,
                                    CGRectGetHeight(_cloudView.frame) / 2);
     _maskLayer.path = [UIBezierPath bezierPathWithRect:self.contentView.bounds].CGPath;
+    _selectBtn.frame = CGRectMake(CGRectGetWidth(self.contentView.bounds) - 40, 0, 40, 40);
 }
 
 -(void)setAsset:(KYAsset *)asset{

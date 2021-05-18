@@ -10,8 +10,17 @@
 @class KYImageScannerViewController;
 
 @protocol KYImageScannerViewControllerDelegate<NSObject>
+
+///scannerVc alpha changed
 -(void)scannerVc:(KYImageScannerViewController *)scannerVc alphaChanged:(double)alpha;
+
+///dismiss scanner
 -(CGRect)scannerVc:(KYImageScannerViewController *)scannerVc dismissAtIndex:(NSInteger)index;
+
+///selected status changed at index
+-(void)scannerVc:(KYImageScannerViewController *)scannerVc
+      selectItem:(NSInteger)index
+          status:(BOOL)selected;
 @end
 
 @interface KYImageScannerViewController : UIViewController

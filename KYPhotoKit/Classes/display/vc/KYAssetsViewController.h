@@ -31,9 +31,13 @@
                   allAssets:(NSArray<KYAssetviewModel *> *)assets
          selectAssetAtIndex:(NSInteger)index;
 
+-(void)assetsVc:(KYAssetsViewController *)assetVc sendImgs:(NSArray<KYAssetviewModel *> *)imgArr;
+
 @end
 
-@interface KYAssetsViewController : KYPhotoBaseViewController<KYPhotoLoadingDataProtocol,KYImageScannerViewControllerDelegate>
+@interface KYAssetsViewController : KYPhotoBaseViewController<
+KYPhotoLoadingDataProtocol,
+KYImageScannerViewControllerDelegate>
 
 @property (nonatomic,weak)id<KYAssetsViewControllerDelegate> assetDelegate;
 @property (nonatomic,weak,readonly)UICollectionView *assetCollectionView;
