@@ -26,6 +26,16 @@
     return photoVc;
 }
 
+-(BOOL)prefersStatusBarHidden{
+    UIViewController *topVC = self.topViewController;
+    return [topVC prefersStatusBarHidden];
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    UIViewController *topVC = self.topViewController;
+    return [topVC preferredStatusBarStyle];
+}
+
 -(void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated{
     if (self.viewControllers.count > 0) {
         viewController.hidesBottomBarWhenPushed = YES;

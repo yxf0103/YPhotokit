@@ -180,12 +180,8 @@ static NSInteger const ky_max_sel_asset_num = 9;
 }
 
 #pragma mark - KYImageScannerViewControllerDelegate
--(void)scannerVcWillPresent:(KYImageScannerViewController *)scannerVc{
-    self.showStatusBar = NO;
-}
-
--(void)scannerVcWillDismiss:(KYImageScannerViewController *)scannerVc{
-    self.showStatusBar = YES;
+-(void)scannerVc:(KYImageScannerViewController *)scannerVc alphaChanged:(double)alpha{
+    self.showStatusBar = alpha > 0.3;
 }
 
 - (CGRect)scannerVc:(KYImageScannerViewController *)scannerVc dismissAtIndex:(NSInteger)index{

@@ -66,6 +66,8 @@ NSString * const KYAssetCellIdentifier = @"KYAssetCellIdentifier";
     [cloudBtn addTarget:self action:@selector(cloudBtnClicked:)
        forControlEvents:UIControlEventTouchUpInside];
     _cloudBtn = cloudBtn;
+    _cloudBtn.center = CGPointMake(CGRectGetWidth(_cloudView.frame) / 2,
+                                   CGRectGetHeight(_cloudView.frame) / 2);
 }
 
 -(void)addLoadingLayer{
@@ -121,7 +123,7 @@ NSString * const KYAssetCellIdentifier = @"KYAssetCellIdentifier";
         !ws.bindSelectAction ? : ws.bindSelectAction(asset,asset.selected);
     };
     _asset.inCloudStatusChanged = ^(BOOL inCloud) {
-        
+        inCloud ? [ws showCloudView] : (ws.cloudView.hidden = YES);
     };
     _asset.thumImageChanged = ^(UIImage *image) {
         ws.ky_imgView.image = image;
@@ -133,10 +135,7 @@ NSString * const KYAssetCellIdentifier = @"KYAssetCellIdentifier";
         _cloudView.hidden = YES;
         return;
     }
-    if (_cloudView == nil) {
-        [self addCloudview];
-    }
-    _cloudView.hidden = NO;
+    [self showCloudView];
     if (asset.isLoading) {
         _cloudBtn.hidden = YES;
         [self showLoadingLayer];
@@ -157,6 +156,13 @@ NSString * const KYAssetCellIdentifier = @"KYAssetCellIdentifier";
 }
 
 //MARK: custom func
+-(void)showCloudView{
+    if (_cloudView == nil) {
+        [self addCloudview];
+    }
+    _cloudView.hidden = NO;
+}
+
 -(void)showLoadingLayer{
     if (_loadingLayer == nil) {
         [self addLoadingLayer];

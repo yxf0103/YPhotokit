@@ -33,7 +33,6 @@
     [btn setTitle:@"相册" forState:UIControlStateNormal];
     btn.backgroundColor = [UIColor blueColor];
     btn.frame = CGRectMake(100, 200, 80, 30);
-    [[UIApplication sharedApplication] setStatusBarHidden:NO animated:UIStatusBarAnimationFade];
 }
 
 #pragma mark - getter

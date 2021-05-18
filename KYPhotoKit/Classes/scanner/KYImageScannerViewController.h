@@ -10,8 +10,7 @@
 @class KYImageScannerViewController;
 
 @protocol KYImageScannerViewControllerDelegate<NSObject>
--(void)scannerVcWillPresent:(KYImageScannerViewController *)scannerVc;
--(void)scannerVcWillDismiss:(KYImageScannerViewController *)scannerVc;
+-(void)scannerVc:(KYImageScannerViewController *)scannerVc alphaChanged:(double)alpha;
 -(CGRect)scannerVc:(KYImageScannerViewController *)scannerVc dismissAtIndex:(NSInteger)index;
 @end
 

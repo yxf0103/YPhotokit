@@ -9,10 +9,13 @@
 #import "KYImageScannerCell.h"
 #import "KYScanerLayout.h"
 #import "KYScannerPresentModel.h"
+#import "KYPhotoSourceTool.h"
 
 #define KYScannerMargin 10
 
-@interface KYImageScannerViewController ()<UICollectionViewDelegateFlowLayout,UICollectionViewDataSource,KYImageScannerCellDelegate>
+@interface KYImageScannerViewController ()<UICollectionViewDelegateFlowLayout,
+UICollectionViewDataSource,
+KYImageScannerCellDelegate>
 
 @property (nonatomic,weak)UICollectionView *imageCollectionView;
 
@@ -46,30 +49,21 @@
     
     //controll
     UIView *topBar = [[UIView alloc] initWithFrame:CGRectMake(0, 0, width, 64)];
-    topBar.backgroundColor = [[UIColor grayColor] colorWithAlphaComponent:0.8];
+    topBar.backgroundColor = [[UIColor grayColor] colorWithAlphaComponent:0.6];
     [self.view addSubview:topBar];
     
     UIButton *popbackBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [topBar addSubview:popbackBtn];
-    popbackBtn.frame = CGRectMake(20, 7, 60, 40);
-    popbackBtn.backgroundColor = [UIColor redColor];
-    [popbackBtn setTitle:@"返回" forState:UIControlStateNormal];
-    [popbackBtn setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    UIImage *image = [KYPhotoSourceTool imageWithName:@"navigationbar_icon_back_white"
+                                                 type:@"png"];
+    [popbackBtn setImage:image forState:UIControlStateNormal];
+    popbackBtn.frame = CGRectMake(10, 20, 44, 44);
+    popbackBtn.imageEdgeInsets = UIEdgeInsetsMake(7, 7, 7, 7);
     [popbackBtn addTarget:self action:@selector(popBackBtnClicked) forControlEvents:UIControlEventTouchUpInside];
 }
 
--(void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    if ([_scannerDelegate respondsToSelector:@selector(scannerVcWillPresent:)]) {
-        [_scannerDelegate scannerVcWillPresent:self];
-    }
-}
-
--(void)viewWillDisappear:(BOOL)animated{
-    [super viewWillDisappear:animated];
-    if ([_scannerDelegate respondsToSelector:@selector(scannerVcWillDismiss:)]) {
-        [_scannerDelegate scannerVcWillDismiss:self];
-    }
+-(BOOL)prefersStatusBarHidden{
+    return YES;
 }
 
 #pragma mark - action
@@ -93,12 +87,8 @@
 
 #pragma mark - KYImageScannerCellDelegate
 -(void)imgScannerCell:(KYImageScannerCell *)cell alphaChangedWithRate:(CGFloat)rate{
-//    if (rate == 1) {
-//        [self hideStatusBar];
-//    }else{
-//        [self showStatusBar];
-//    }
-//    self.view.superview.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:rate];
+    self.view.superview.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:rate];
+    [_scannerDelegate scannerVc:self alphaChanged:rate];
 }
 
 -(void)imgScannerCell:(KYImageScannerCell *)cell dismissWithImg:(UIImage *)image windowFrame:(CGRect)windowFrame{
