@@ -132,6 +132,16 @@ KYImageScannerCellDelegate>{
 
 -(void)sendBtnClicked:(UIButton *)btn{
     
+    UIViewController *parentVC = self.presentingViewController;
+    UIViewController *bottomVC;
+    while (parentVC) {
+        bottomVC = parentVC;
+        parentVC = parentVC.presentingViewController;
+    }
+    [bottomVC dismissViewControllerAnimated:YES completion:nil];
+    
+    //发送图片
+    
 }
 
 #pragma mark - UICollectionViewDelegate,UICollectionViewDataSource

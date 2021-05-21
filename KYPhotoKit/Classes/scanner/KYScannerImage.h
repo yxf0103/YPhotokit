@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import <KYPhotoKit/KYAsset.h>
 
 @interface KYScannerImage : NSObject
 
@@ -21,5 +22,8 @@
 
 ///选中状态
 @property (nonatomic,assign)BOOL imgSelected;
+
+///图片
+@property (nonatomic,strong)KYAsset *asset;
 
 @end

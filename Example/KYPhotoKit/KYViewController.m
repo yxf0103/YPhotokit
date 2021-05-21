@@ -71,6 +71,7 @@
         image.originImage = obj.asset.thumImage;
         image.originFrame = obj.originFrame;
         image.imgSelected = obj.asset.number > 0;
+        image.asset = obj.asset;
         [scannerimgs addObject:image];
     }];
     KYImageScannerViewController *imgVc = [[KYImageScannerViewController alloc] init];
