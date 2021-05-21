@@ -33,7 +33,7 @@ pod 'KYPhotoKit'
 +(void)getAssetsFromAlbum:(KYAlbum *)album complete:(KYGetAssetsBlock)complete
 ```
 `可以使用自定义UI来展示这里的图片和相册资源，也可以使用本kit的图片浏览器 `
-### 2.展示资源
+### 2.展示相册列表和图片列表
 ```
 [KYPhotoSourceManager requestSystemPhotoLibAuth:^(PHAuthorizationStatus statu) {
     dispatch_sync(dispatch_get_main_queue(), ^{
