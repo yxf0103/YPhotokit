@@ -8,6 +8,9 @@ an iOS photos libary with system photos.
 [![Platform](https://img.shields.io/cocoapods/p/KYPhotoKit.svg?style=flat)](https://cocoapods.org/pods/KYPhotoKit)
 
 ## Example
+<video id="video" controls="" preload="none">
+<source id="mp4" src="https://v.youku.com/v_show/id_XNTE1ODY4MzY2OA==.html" type="video/mp4">
+</video>
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
