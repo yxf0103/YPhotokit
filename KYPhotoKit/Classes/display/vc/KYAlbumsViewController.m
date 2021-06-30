@@ -9,6 +9,7 @@
 #import "KYAlbumCell.h"
 #import "KYPhotoSourceManager.h"
 #import "KYAssetsViewController.h"
+#import "KYPhotoConfig.h"
 
 @interface KYAlbumsViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -55,9 +56,20 @@
     __weak typeof(self) ws = self;
     [self startLoadingData];
     [KYPhotoSourceManager getAllAlbums:^(NSArray<KYAlbum *> *albums) {
+        NSMutableArray *retArr = [NSMutableArray array];
+        KYPhotoConfig *config = [KYPhotoConfig shareConfig];
+        if (config.showEmptyAlbum) {
+            [retArr addObjectsFromArray:albums];
+        }else{
+            [albums enumerateObjectsUsingBlock:^(KYAlbum * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                if (obj.count > 0) {
+                    [retArr addObject:obj];
+                }
+            }];
+        }
         __strong typeof(ws) ss = ws;
         [ss loadDataComplete];
-        ss.albums = albums;
+        ss.albums = retArr;
         [ss.albumsTableView reloadData];
     }];
 }

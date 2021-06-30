@@ -121,13 +121,14 @@ KYImageScannerCellDelegate>{
 }
 
 -(void)selectBtnClicked:(UIButton *)btn{
-    btn.selected = !btn.isSelected;
-    _currentImg.imgSelected = btn.isSelected;
     NSInteger index = [_images indexOfObject:_currentImg];
     if (index == NSNotFound) {
         return;
     }
-    [_scannerDelegate scannerVc:self selectItem:index status:_currentImg.imgSelected];
+    if ([_scannerDelegate scannerVc:self shouldChangeItemStateAtIndex:index]) {
+        btn.selected = !btn.isSelected;
+        _currentImg.imgSelected = btn.isSelected;
+    }
 }
 
 -(void)sendBtnClicked:(UIButton *)btn{

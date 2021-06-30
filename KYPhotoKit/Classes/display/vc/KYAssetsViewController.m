@@ -12,6 +12,8 @@
 #import "KYHud.h"
 #import "KYDisplayMacro.h"
 #import "KYAsset+Action.h"
+#import "KYPhotoConfig.h"
+#import "KYAssetsViewController+Scanner.h"
 
 @implementation KYAssetviewModel
 
@@ -34,8 +36,6 @@
 @property (nonatomic,strong)NSMutableArray *selArray;
 
 @end
-
-static NSInteger const ky_max_sel_asset_num = 9;
 
 @implementation KYAssetsViewController
 
@@ -68,7 +68,7 @@ static NSInteger const ky_max_sel_asset_num = 9;
     bottomView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.8];
     UIButton *sendBtn = [UIButton buttonWithType:UIButtonTypeSystem];
     [bottomView addSubview:sendBtn];
-    [sendBtn setTitle:@"发送" forState:UIControlStateNormal];
+    [sendBtn setTitle:[KYPhotoConfig shareConfig].doneTitle forState:UIControlStateNormal];
     [sendBtn setTitleColor:KYColorRGB(0xff6542) forState:UIControlStateNormal];
     [sendBtn setTitleColor:KYColorRGB(0xe5e5ea) forState:UIControlStateDisabled];
     sendBtn.frame = CGRectMake(KYSCREENWIDTH - 10 - 45, 10, 45, 30);
@@ -122,6 +122,10 @@ static NSInteger const ky_max_sel_asset_num = 9;
     return _selArray;
 }
 
+-(NSArray *)selectedArray{
+    return _selArray;
+}
+
 #pragma mark - UICollectionViewDataSource,UICollectionViewDelegateFlowLayout
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     NSMutableArray *assetviewModels = [NSMutableArray array];
@@ -136,7 +140,11 @@ static NSInteger const ky_max_sel_asset_num = 9;
         [assetviewModels addObject:viewmodel];
     }
     KYPhotoNaviViewController *naviVc = (KYPhotoNaviViewController *)self.navigationController;
-    [naviVc.photoDelegate photoVc:naviVc subVc:self selectIndex:indexPath.item allAssets:assetviewModels];
+    if ([naviVc.photoDelegate respondsToSelector:@selector(photoVc:subVc:selectIndex:allAssets:)]) {
+        [naviVc.photoDelegate photoVc:naviVc subVc:self selectIndex:indexPath.item allAssets:assetviewModels];
+        return;
+    }
+    [self selectIndex:indexPath.item allAssets:assetviewModels];
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
@@ -156,7 +164,7 @@ static NSInteger const ky_max_sel_asset_num = 9;
 #pragma mark - custom func
 -(void)asset:(KYAsset *)asset selChanged:(BOOL)isSelected{
     if (isSelected) {
-        if (self.selArray.count >= ky_max_sel_asset_num) {
+        if (self.selArray.count >= [KYPhotoConfig shareConfig].maxCount) {
             asset.selected = NO;
             return;
         }
@@ -185,7 +193,7 @@ static NSInteger const ky_max_sel_asset_num = 9;
     }
     [self.navigationController dismissViewControllerAnimated:YES completion:nil];
     KYPhotoNaviViewController *naviVc = (KYPhotoNaviViewController *)self.navigationController;
-    [naviVc.photoDelegate photoVc:naviVc sendImgs:self.selArray];
+    [naviVc.photoDelegate photoVc:naviVc selectImgs:self.selArray];
 }
 
 #pragma mark - KYPhotoLoadingDataProtocol
@@ -206,9 +214,21 @@ static NSInteger const ky_max_sel_asset_num = 9;
     return [_assetCollectionView convertRect:cell.frame toView:[UIApplication sharedApplication].keyWindow];
 }
 
--(void)scannerVc:(KYImageScannerViewController *)scannerVc selectItem:(NSInteger)index status:(BOOL)selected{
+-(BOOL)scannerVc:(KYImageScannerViewController *)scannerVc shouldChangeItemStateAtIndex:(NSInteger)index{
+    if (index < 0 || index >= _assets.count) {
+        return NO;
+    }
     KYAsset *asset = _assets[index];
-    asset.selected = selected;
+    if (asset.selected) {
+        asset.selected = NO;
+        return YES;
+    }
+    if (self.selArray.count >= [KYPhotoConfig shareConfig].maxCount) {
+        return NO;
+    }
+    asset.selected = YES;
+    return YES;
 }
+
 
 @end

@@ -5,7 +5,7 @@
 //  Created by yxf on 2018/5/3.
 //
 
-#import "KYPhotoSource.h"
+#import <KYPhotoKit/KYPhotoSource.h>
 #import <UIKit/UIKit.h>
 #import <Photos/Photos.h>
 
@@ -23,6 +23,6 @@
 @property (nonatomic,assign)BOOL isLoading;
 
 
--(instancetype)initWithAsset:(PHAsset *)asset; NS_DESIGNATED_INITIALIZER;
+-(instancetype)initWithAsset:(PHAsset *)asset NS_DESIGNATED_INITIALIZER;
 
 @end

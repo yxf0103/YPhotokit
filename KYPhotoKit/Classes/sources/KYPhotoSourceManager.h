@@ -8,8 +8,8 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <Photos/Photos.h>
-#import "KYAlbum.h"
-#import "KYAsset.h"
+#import <KYPhotoKit/KYAlbum.h>
+#import <KYPhotoKit/KYAsset.h>
 
 @class KYAlbum,KYAsset;
 

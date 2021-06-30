@@ -18,9 +18,7 @@
 -(CGRect)scannerVc:(KYImageScannerViewController *)scannerVc dismissAtIndex:(NSInteger)index;
 
 ///selected status changed at index
--(void)scannerVc:(KYImageScannerViewController *)scannerVc
-      selectItem:(NSInteger)index
-          status:(BOOL)selected;
+-(BOOL)scannerVc:(KYImageScannerViewController *)scannerVc shouldChangeItemStateAtIndex:(NSInteger)index;
 @end
 
 @interface KYImageScannerViewController : UIViewController

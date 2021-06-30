@@ -12,14 +12,15 @@
 
 @protocol KYPhotoNaviViewControllerDelegate <NSObject>
 
+///选择了图片
+-(void)photoVc:(KYPhotoNaviViewController *)photoVc selectImgs:(NSArray<KYAsset *> *)imgArr;
+
+@optional
 ///查看图片详情
 -(void)photoVc:(KYPhotoNaviViewController *)photoVc
          subVc:(id<KYImageScannerViewControllerDelegate>)subVc
    selectIndex:(NSInteger)index
      allAssets:(NSArray<KYAssetviewModel *> *)assets;
-
-///发送图片
--(void)photoVc:(KYPhotoNaviViewController *)photoVc sendImgs:(NSArray<KYAsset *> *)imgArr;
 
 @end
 

@@ -6,10 +6,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "KYAlbum.h"
-#import "KYPhotoLoadingDataProtocol.h"
-#import "KYImageScannerViewController.h"
-#import "KYPhotoBaseViewController.h"
+#import <KYPhotoKit/KYAlbum.h>
+#import <KYPhotoKit/KYPhotoLoadingDataProtocol.h>
+#import <KYPhotoKit/KYImageScannerViewController.h>
+#import <KYPhotoKit/KYPhotoBaseViewController.h>
 
 @class KYAsset;
 

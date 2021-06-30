@@ -11,6 +11,7 @@
 #import "KYAsset+Action.h"
 #import "KYPhotoSourceTool.h"
 #import "UIImage+SYExtension.h"
+#import "KYPhotoConfig.h"
 
 NSString * const KYAssetCellIdentifier = @"KYAssetCellIdentifier";
 
@@ -21,7 +22,7 @@ NSString * const KYAssetCellIdentifier = @"KYAssetCellIdentifier";
 /*image*/
 @property (nonatomic,weak)UIImageView *ky_imgView;
 
-@property (nonatomic,weak)KYTagBtn *selectBtn;
+@property (nonatomic,weak)UIButton *selectBtn;
 
 @property (nonatomic,weak)UIView *cloudView;
 @property (nonatomic,weak)UIButton *cloudBtn;
@@ -38,7 +39,17 @@ NSString * const KYAssetCellIdentifier = @"KYAssetCellIdentifier";
         imgView.contentMode = UIViewContentModeScaleAspectFill;
         _ky_imgView = imgView;
         
-        KYTagBtn *btn = [KYTagBtn tagBtn];
+        UIButton *btn = nil;
+        if ([KYPhotoConfig shareConfig].selectedType == KYPhotoSelectTypeNumber) {
+            btn = [KYTagBtn tagBtn];
+        }else{
+            btn = [UIButton buttonWithType:UIButtonTypeCustom];
+            [btn setImage:[KYPhotoSourceTool imageWithName:@"tag_normal" type:@"png"]
+                 forState:UIControlStateNormal];
+            [btn setImage:[KYPhotoSourceTool imageWithName:@"tag_sel" type:@"png"]
+                 forState:UIControlStateSelected];
+            [btn setImageEdgeInsets:UIEdgeInsetsMake(5, 5, 5, 5)];
+        }
         [self.contentView addSubview:btn];
         btn.frame = CGRectMake(0, 0, 40, 40);
         [btn addTarget:self action:@selector(selectBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
@@ -118,7 +129,7 @@ NSString * const KYAssetCellIdentifier = @"KYAssetCellIdentifier";
     _asset = asset;
     __weak typeof(self) ws = self;
     asset.numChanged = ^(KYAsset * _Nonnull asset) {
-        ws.selectBtn.number = asset.number;
+        [ws resetSelBtnWithAsset:asset];
     };
     asset.selectChanged = ^(KYAsset * _Nonnull asset) {
         !ws.bindSelectAction ? : ws.bindSelectAction(asset,asset.selected);
@@ -130,7 +141,7 @@ NSString * const KYAssetCellIdentifier = @"KYAssetCellIdentifier";
         ws.ky_imgView.image = image;
     };
     _ky_imgView.image = _asset.thumImage ? : [UIImage defaultImage];
-    _selectBtn.number = asset.number;
+    [self resetSelBtnWithAsset:asset];
     if (!asset.inCloud) {
         [self hideLoadingLayer];
         _cloudView.hidden = YES;
@@ -146,8 +157,17 @@ NSString * const KYAssetCellIdentifier = @"KYAssetCellIdentifier";
     _cloudBtn.hidden = NO;
 }
 
+-(void)resetSelBtnWithAsset:(KYAsset *)asset{
+    if ([_selectBtn isKindOfClass:KYTagBtn.class]) {
+        KYTagBtn *tagBtn = (KYTagBtn *)_selectBtn;
+        tagBtn.number = asset.number;
+        return;
+    }
+    _selectBtn.selected = asset.number > 0;
+}
+
 //MARK: action
--(void)selectBtnClicked:(KYTagBtn *)btn{
+-(void)selectBtnClicked:(UIButton *)btn{
     _asset.selected = !_asset.selected;
 }
 
