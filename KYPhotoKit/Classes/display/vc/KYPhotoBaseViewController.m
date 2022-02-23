@@ -11,6 +11,8 @@
 @interface KYPhotoBaseViewController (){
     UIView *_naviView;
     UILabel *_naviTitleLabel;
+    UIButton *_naviLeftBtn;
+    UIButton *_naviRightBtn;
 }
 
 @end
@@ -40,17 +42,27 @@
                                         img:@"navigationbar_icon_back_white"];
         btn.frame = CGRectMake(10, KYNAVIHEIGHT - 44, 44, 44);
         [view addSubview:btn];
+        _naviLeftBtn = btn;
     }
     
     UIButton *disBtn = [self btnWithAction:@selector(dismissBtnClicked:)
                                        img:@"publish_icon_close_white"];
     disBtn.frame = CGRectMake(KYSCREENWIDTH - 10 - 44, KYNAVIHEIGHT - 44, 44, 44);
     [view addSubview:disBtn];
+    _naviRightBtn = disBtn;
     
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     _naviTitleLabel.text = self.title ? : self.navigationItem.title;
+}
+
+-(void)viewDidLayoutSubviews{
+    [super viewDidLayoutSubviews];
+    _naviView.frame = CGRectMake(0, 0, KYSCREENWIDTH, KYNAVIHEIGHT);
+    _naviTitleLabel.frame = CGRectMake((KYSCREENWIDTH - 100) / 2, KYNAVIHEIGHT - 44, 100, 44);
+    _naviLeftBtn.frame = CGRectMake(10, KYNAVIHEIGHT - 44, 44, 44);
+    _naviRightBtn.frame = CGRectMake(KYSCREENWIDTH - 10 - 44, KYNAVIHEIGHT - 44, 44, 44);
 }
 
 -(UIButton *)btnWithAction:(SEL)action img:(NSString *)img{

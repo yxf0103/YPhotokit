@@ -6,6 +6,7 @@
 //
 
 #import "KYPhotoConfig.h"
+#import <KYBaseKit/KYBaseHeader.h>
 
 @implementation KYPhotoConfig
 
@@ -22,7 +23,7 @@
     if (self = [super init]) {
         _showEmptyAlbum = NO;
         _maxCount = 9;
-        _doneTitle = @"发送";
+        _doneTitle = SYLocalizedStringForKey(@"发送",nil);
     }
     return self;
 }

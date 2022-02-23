@@ -1,0 +1,20 @@
+/* 
+  Localizable.strings
+  Pods
+
+  Created by yxf on 2021/9/29.
+  
+*/
+
+//##################################################################################
+//#           ZPPAutoLocalizable            2021-09-29 10:39:59
+//##################################################################################
+
+/* No comment provided by engineer. */
+"关闭" = "关闭";
+
+/* No comment provided by engineer. */
+"发送" = "发送";
+
+/* No comment provided by engineer. */
+"相册" = "相册";

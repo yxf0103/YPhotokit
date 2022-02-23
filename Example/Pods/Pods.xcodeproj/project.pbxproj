@@ -7,87 +7,92 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01E19BEE2C51FC8C02C0CEFD8C719FD9 /* KYScanerLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 51931588D6C24E72A6ED3027BBA13D07 /* KYScanerLayout.m */; };
-		07D03A2FA526265352BD78368B2E720B /* KYPhotoNaviViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 67734AF985555E0488D04932672457CB /* KYPhotoNaviViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		08B2C66E3FA89248E5AB956E9BC7A589 /* KYScannerPresentModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E4B0778B4B54C8F640EC4AF36EFE265 /* KYScannerPresentModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		115CCE85AEA79F9850B64124DEB6F437 /* KYPhotoKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 816DA76D0D167BFF7DFDE49E934F460F /* KYPhotoKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1AA934574D07C3B513B6B54CE57223FB /* Pods-KYPhotoKit_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 69482133EC88853820D828767E9BDD0F /* Pods-KYPhotoKit_Example-dummy.m */; };
-		2293C8D4F88B52218F4A086593BF05C7 /* KYPhotoSourceTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FBF99E74FA4570B189BBE17BE11293C /* KYPhotoSourceTool.m */; };
-		244EF1A0E68D9BF82BB40A75A906ACFA /* KYPhotoTool.m in Sources */ = {isa = PBXBuildFile; fileRef = BF700CA1C8D6CDCD1DE8D67F3DF2EAF7 /* KYPhotoTool.m */; };
-		25FF2728795178D63A227146DA96F8CC /* KYAsset+Action.h in Headers */ = {isa = PBXBuildFile; fileRef = EF361BA63B3C9AF8A9D1FE4F84E44300 /* KYAsset+Action.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		27235D49211C9A6641ACCE4EFE9034BD /* KYAlbumCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7150F15AAED6099B8212CCE9B8AC3639 /* KYAlbumCell.m */; };
-		2B52746139D4F7D90CF5027527C1BA28 /* KYAlbumsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFB01811144446CF5B096EC6FAA3A76 /* KYAlbumsViewController.m */; };
-		2CE98C96BC66FF42FA22A76DECA760C9 /* Pods-KYPhotoKit_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 030083EABE79D6D12DDE1A06A1AECC58 /* Pods-KYPhotoKit_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		31AF6D4D76AF06C984F838935551342C /* KYImageScannerCell.h in Headers */ = {isa = PBXBuildFile; fileRef = AC4F6280DF47FCC51CCA0A0D6BC01CCD /* KYImageScannerCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		350287C2F8C540D55F71AB99EFC69C7A /* publish_icon_close_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A8C5DDFCA5AD5C098F4ED2DECAE65D3 /* publish_icon_close_white.png */; };
-		36743DA2D3BDEF38DE03F58D2366D52F /* KYAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B76E5A50A13D25578E868C3B24E119 /* KYAsset.m */; };
-		39AC5080F952C6F31C17635BEE412681 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		3D9E9CA8CDC1B4501EFB95D11C053197 /* tag_sel.png in Resources */ = {isa = PBXBuildFile; fileRef = 0037C1C256DDA6C755FF1CFD299F555B /* tag_sel.png */; };
-		4689800711D2DAACF98AB733B1E65C43 /* KYPhotoSourceManager.h in Headers */ = {isa = PBXBuildFile; fileRef = C50AF1903B1AD5F8B4E7294D59D9AC4A /* KYPhotoSourceManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		49BCE3896A9B4FD28E27F52D7885E27A /* KYPhotoSourceTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D70C2266ABC792C69B6827491A6FECA /* KYPhotoSourceTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4B2E27D89D17C5F66318924DEC642E54 /* KYPhotoSourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C9F51C3CED3FC3CCEC51EF8374010B /* KYPhotoSourceManager.m */; };
-		4BBCA2E3928A17AE012156A1789892AB /* UIImage+SYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A8C4EE8D1EE0CF62F602C09F04ADF7B3 /* UIImage+SYExtension.m */; };
-		4CEB2F2E64CC947EE0BADE15B0437ADC /* KYAssetCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BFA6A99D8CCAA2471DEF655C5353A0F /* KYAssetCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		52392BFB7E6B9E35BBC5A332BBC86F4E /* KYTagBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 80C06993960ECD2A4E96E30159E89FA2 /* KYTagBtn.m */; };
-		546F4498A8D394394616DDB849182CF4 /* KYPhotoBaseViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A74B1353C2378D51D9D4EE55983C2437 /* KYPhotoBaseViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		549449423F2E70F795AB5EE7283E8FA7 /* KYPhotoKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 68E0D57E48BDCFA203AA69203BF81784 /* KYPhotoKit.bundle */; };
-		56E4D95ED78763210B73225DC825D86B /* KYAssetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE674495206837104506A97FF2AA40C6 /* KYAssetCell.m */; };
-		6BA6F8F8699B1301CBA6D8C5BCF0D038 /* KYAssetsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 90C005ED5BB21478DBEF2524E3A97C2B /* KYAssetsViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6CF780F253442DF3A9522C6CDDE62C1F /* KYPhotoNaviViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52F3956BC4F1E9828BFA51B6947C8CEE /* KYPhotoNaviViewController.m */; };
-		6D4B16F2267DFE2855A129BCECA2F7D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		7791F90B5B2EA19BE9E1A6DEB35F4BAF /* KYPhotoSource.h in Headers */ = {isa = PBXBuildFile; fileRef = B14174C41FAC8381C9706A82F574C573 /* KYPhotoSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		82EFA28EFA1B3207C036D0FF61CF001B /* KYPhotoHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C96CA988376C82908862CAF443676C5 /* KYPhotoHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		845BFA1B45D6612896232151D0EBC238 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		8668560486D605406006F5AFC60BCD79 /* navigationbar_icon_back_white.png in Resources */ = {isa = PBXBuildFile; fileRef = D7B45CC8E7FC947B65E9330B8FCE08AE /* navigationbar_icon_back_white.png */; };
-		8B1526E681DD8308391A2D6A61D01577 /* KYScannerImage.m in Sources */ = {isa = PBXBuildFile; fileRef = CB8B45197225B754EFC2D5201B429097 /* KYScannerImage.m */; };
-		93811907CCF30152E3E9C40347A60BEA /* KYPhotoKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D27BD2037DBB4073C2DB238088DE7DCF /* KYPhotoKit-dummy.m */; };
-		9410C8E6691E7D8139CC2D8A89E235C9 /* KYScannerImage.h in Headers */ = {isa = PBXBuildFile; fileRef = DE4488C548BC71F87FD3021A094E0921 /* KYScannerImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		94476D374B53F267B4DFEBC8E905D6E1 /* KYAsset.h in Headers */ = {isa = PBXBuildFile; fileRef = CB2D81B16CEC872C1E8055D6D68076BF /* KYAsset.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		955727D5DC1267C11EB113E8EE22E539 /* KYHud.h in Headers */ = {isa = PBXBuildFile; fileRef = 68C0CEE59188299F7C5ABC244B8B750E /* KYHud.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		957B944BD6557C7C49CF65A96358FEDC /* KYDisplayMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A76EE856440D4ABA1482D46F756F6CF /* KYDisplayMacro.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9F309022A4847E67AE019160F41812EC /* KYHud.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F2BAFEDACAC1CB3A1EFC3E2C9D9BFE /* KYHud.m */; };
-		9FA3496B51296561AEC1E54E9B55A544 /* KYImageScannerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CC38A29F0950AFF7284022752823F5FE /* KYImageScannerCell.m */; };
-		A30CA01C7536499D60F13BF06635C005 /* KYScannerPresentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 314169641E5590B1AC806919931E2308 /* KYScannerPresentModel.m */; };
-		A3583D0B5FAA63DC6C585751131A6F41 /* Pods-KYPhotoKit_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F737A0215315449FF85085AB17769F /* Pods-KYPhotoKit_Tests-dummy.m */; };
-		A498EB1096196953D7398F86E0723725 /* KYAssetsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17934402C2FD954FE03FD3D725A917CF /* KYAssetsViewController.m */; };
-		A5A53502BC1A2955569D9CF801BD5579 /* KYPhotoBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCDD2939A3EB995B999B155A2736E09 /* KYPhotoBaseViewController.m */; };
-		BAF4B8EB93EA7D8DA5598C54A19D7DD0 /* KYAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 44186AFAAEE21B0355E4CAA10EBB1E9F /* KYAlbum.m */; };
-		BC9705B6E24B5B8421605A157A2E7D93 /* KYAlbumsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE37A21CD10B90073BBD60DC80B127F /* KYAlbumsViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C0BFF6EA3B4A065105E131D91D8E7046 /* KYScanerLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AE0202ABED3D2E4A6C27A8C5383AB0D /* KYScanerLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C5C42D7E19F664E1BDCDCBD0C3854D13 /* Pods-KYPhotoKit_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C59E2829C7CC5D3DEB62909AD627A31 /* Pods-KYPhotoKit_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CB5CB1F4CD36A70837B5E7D9E81B81CA /* cloud-download.png in Resources */ = {isa = PBXBuildFile; fileRef = 95F85E1E561FE6FB8C4A732A3901BCF7 /* cloud-download.png */; };
-		D2702F524F68440D44B0C3CEE032724F /* navigation_bar_icon_back_black.png in Resources */ = {isa = PBXBuildFile; fileRef = E98622C751C4DF6D78DC696150B8DC83 /* navigation_bar_icon_back_black.png */; };
-		DCE700972B94D6644DF02EC2EE3FB926 /* KYImageScannerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = FE2867011B458601A741A2243237CACD /* KYImageScannerViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DF76C543C5AD1EBCE6209002760B0414 /* KYImageScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 062B22E331CFFAB46C664BC96BC907DB /* KYImageScannerViewController.m */; };
-		E9DD83EBB57A9C7B036303A51441E21B /* KYPhotoLoadingDataProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 00F25BFC0E7746FB7F49A2679C14A70E /* KYPhotoLoadingDataProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F0D97D5305D6758C5D665B6A90F9DAB5 /* KYPhotoSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 422F45C182E497A4C0CF058A3E8ADED4 /* KYPhotoSource.m */; };
-		F117DFB27F8F9512B1E6CAFDB69A66F3 /* KYAlbumCell.h in Headers */ = {isa = PBXBuildFile; fileRef = BB2FFE645F89F5F2F680BCAF184B8E66 /* KYAlbumCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F275B2401B423EF8F9481021D58AFCFA /* KYPhotoKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A3CE901F6236DDF2203F5BA3A7AF7BAD /* KYPhotoKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F2C9A39688A52CCAB77EA6C1A3C06287 /* icon_delete.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E5308367226ED735B9A4FFACB3E8AF2 /* icon_delete.png */; };
-		F5D9526577710C179E33BB2963E34718 /* tag_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = EA9B259BA4025355B184C7000C970303 /* tag_normal.png */; };
-		F65B02839DDB508C8A7E57B471FA991A /* KYTagBtn.h in Headers */ = {isa = PBXBuildFile; fileRef = 762AB6DF01CD2A64774F052C35E48944 /* KYTagBtn.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F762FE6D80EA4E1F2CF65269CEA56C5D /* KYAsset+Action.m in Sources */ = {isa = PBXBuildFile; fileRef = CBA3E2BCC2E0014AC5E271B8900DF0CF /* KYAsset+Action.m */; };
-		FDDECB48414D0415C8D56C5F8F0CA73F /* KYAlbum.h in Headers */ = {isa = PBXBuildFile; fileRef = 3152FAEFB43A270F462F47D8A7F7CDAD /* KYAlbum.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FF12854BA6B150C481179708326B5AFC /* UIImage+SYExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = A70FE0211DB3E75A1982F95EF3129BFE /* UIImage+SYExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FFB4FD32DBD1D1B4F21DF68168620154 /* KYPhotoTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 45821FEE963FC967E18BAC87FA70B845 /* KYPhotoTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		03721920126712E2048E059A9D2F7182 /* KYAssetCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 1938C074E8B02B5540A3FF5F353D0406 /* KYAssetCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0C254E3076B35AE362BB979A92DCF03C /* KYScannerPresentModel.h in Headers */ = {isa = PBXBuildFile; fileRef = ACE3E50D0CC51C31386C77CAC48CD8F1 /* KYScannerPresentModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0DB9AF23FC00A66AD94207AC118A1E10 /* KYPhotoHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = FDC0569D62BF01EC007136708EB6CEE5 /* KYPhotoHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0EC1263C47F6F2FBC9807C42740BE2AB /* KYPhotoKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7538460AAAE3ECBC6BF4595EE0A495E3 /* KYPhotoKit-dummy.m */; };
+		1939E16C70920622A18A20B578BC2FF4 /* KYPhotoLoadingDataProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C82BD1B6A45EE8275880E9F2EBA401E /* KYPhotoLoadingDataProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		211D8B5C93328DE274C916826382DD7F /* KYPhotoConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B15E0067C7DA188CA25754ABD804020 /* KYPhotoConfig.m */; };
+		2495D7DCB8C6FEFECD4D7FC0A1E56852 /* UIImage+SYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E70FB7E5D00E958617DE222432903A84 /* UIImage+SYExtension.m */; };
+		280E77CC861F51EBFBAD7248637E22EF /* KYAssetsViewController+Scanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 773359F0ED7B01071C82DE92092D7D8E /* KYAssetsViewController+Scanner.m */; };
+		3325AEBEAAF2ECADA9D110424F03F403 /* KYPhotoSourceTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 9016A78E40CD5EB4A043EC101B2A48EA /* KYPhotoSourceTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		33A3AEEE584F0466B0AA953DFE74BDAA /* KYAlbumsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6215352FB6544BE9BA7F5A07514F1C81 /* KYAlbumsViewController.m */; };
+		4E8C2DC1B1ED9582CCABFD49F477A767 /* KYPhotoSourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C26826EBF72FF4D50A001A0C57ACEB13 /* KYPhotoSourceManager.m */; };
+		4FD5CEF6ED81D619FE404F4B86D16ADC /* KYAlbumCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AF131A3B4A65AB41CD6F59B5288300D5 /* KYAlbumCell.m */; };
+		5040CFAC3933C66697BA48CCCF3F67EF /* Pods-KYPhotoKit_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 030083EABE79D6D12DDE1A06A1AECC58 /* Pods-KYPhotoKit_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5171F7F4480176DDC70E22FDDC9F2FF5 /* KYAlbumCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CB441FE846A98AEB4C62D4E0CC2DB87 /* KYAlbumCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		553DE6D8B9F10A23DAD8D544DEE67E50 /* KYAssetsViewController+Scanner.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A6ACCEFFF4B76985631162E3B7004C6 /* KYAssetsViewController+Scanner.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		55B821F62EF0442FCCF538765EC4CE19 /* KYScanerLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = D408966FAAB5EFDC13801802A18D3E45 /* KYScanerLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5E2EC6A486270928802470823B511D16 /* publish_icon_close_white.png in Resources */ = {isa = PBXBuildFile; fileRef = D1F50E4C91EAA87E98F1072297068F4C /* publish_icon_close_white.png */; };
+		5F651562A511EFE6D7FDFAA78FCB9A81 /* KYScannerImage.m in Sources */ = {isa = PBXBuildFile; fileRef = FF7CF6E9500B7F174E987EB4A0D38515 /* KYScannerImage.m */; };
+		60BE36D1964938894B4449A07DE3D3EB /* KYImageScannerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 511CBA49627A93CAF16B01BF63B789E5 /* KYImageScannerCell.m */; };
+		626FF13585B84FDDBABA9D4582274AEA /* KYImageScannerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DD286746B13ED326DC0C8AD67CD1B2B /* KYImageScannerViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		69C47AAF5B8E4C7C0C481A25C009E449 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		6E60032785B11DF13DB865117A968261 /* KYHud.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D2FC27380F78C7BBC9AFDBA17FEC747 /* KYHud.m */; };
+		738C5D02E6433AC6DDEA7484BC773A6D /* KYPhotoNaviViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2800BA416C48D50825FA5C13CB5032 /* KYPhotoNaviViewController.m */; };
+		771D6560DA42BC519E22C6BBB1DA2F1D /* KYAssetsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B40814C57F507348ACD78F5B55EB5A23 /* KYAssetsViewController.m */; };
+		79EAEF035095388E2BFFFE63E871C240 /* KYPhotoKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A003FD9314E7A8710AB777AE785D9EF /* KYPhotoKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7E982873A37DFD46F095D196181463F9 /* icon_delete.png in Resources */ = {isa = PBXBuildFile; fileRef = CC0D5A25D4953B1859D4149FB71134BA /* icon_delete.png */; };
+		815452ED4476DD8B5854AE1436536C1D /* KYPhotoSourceTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DEBD58CACB189A3A4B65065D4CEF2E8 /* KYPhotoSourceTool.m */; };
+		8819FE6A316D240F8D683167141A213A /* KYAssetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 941CD51E6FDD1289073703328857F3F8 /* KYAssetCell.m */; };
+		88430B5E7535F1E24190789DBBE67DE9 /* KYTagBtn.h in Headers */ = {isa = PBXBuildFile; fileRef = 162C61F8638EEC23A77E4FEA1E08AB58 /* KYTagBtn.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8960914005BD135C2C7AA2D8BA6290D8 /* KYPhotoSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 86B17DEDBD237850EB5FE44A9CAD7A2B /* KYPhotoSource.m */; };
+		8C0E9016F80FA6D6CAC81276678E8719 /* KYPhotoTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 249FA17C2ABC857A3105734A42E93D75 /* KYPhotoTool.m */; };
+		8D91F171F6A0A8151CD19D1577FDC31A /* KYAssetsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EB9F89BB7CE36483363E45EC75ED322 /* KYAssetsViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		90D81FB242DB1596163ECE973066510E /* KYAsset+Action.h in Headers */ = {isa = PBXBuildFile; fileRef = E72421B3C857492BD8659A611E16D6B6 /* KYAsset+Action.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		924B9ACE359E6A32E95DE82E7F4925BF /* KYPhotoKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 68E0D57E48BDCFA203AA69203BF81784 /* KYPhotoKit.bundle */; };
+		92C43778BDAED658D2D2566A5371007B /* KYPhotoTool.h in Headers */ = {isa = PBXBuildFile; fileRef = A33E48D8D7B768CEA8D43C376DCC60B2 /* KYPhotoTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96567D89A011E340DC8C1F01D7343DA8 /* KYScannerImage.h in Headers */ = {isa = PBXBuildFile; fileRef = DB76D43C8F1E0138E0E1DF510FFFA320 /* KYScannerImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9BFF4581DA40EDEF98671EAE7F1B421F /* KYAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 2329495A2A5218EEAD978B6CF874563B /* KYAlbum.m */; };
+		9C6FF76E7148A3AADEBC332B5EE3A16D /* navigation_bar_icon_back_black.png in Resources */ = {isa = PBXBuildFile; fileRef = FEEC81C9F10676DD7B245FAF8D79A2C1 /* navigation_bar_icon_back_black.png */; };
+		9CF0F209449B748998478C2817AAFD08 /* KYAlbum.h in Headers */ = {isa = PBXBuildFile; fileRef = DA307EF928FDFFD696CEE2EDB8AC67C9 /* KYAlbum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F4B77E7672587C6E1741CC65A9199EB /* KYScannerPresentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8454B7B1D5C16C307A517F807257D982 /* KYScannerPresentModel.m */; };
+		A2355111C37B71E7200085DD8E54EEA6 /* KYPhotoNaviViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = F251216CD5A93D5FE002E1FDCDB0667F /* KYPhotoNaviViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A2BC1A18E76C0F0CF02AA129DEA765B5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		A3AD5ED5C242EC0FFD326D02235F943E /* cloud-download.png in Resources */ = {isa = PBXBuildFile; fileRef = EABA6A20A068E5F144211AA429B379A0 /* cloud-download.png */; };
+		AE4EFDB1C09A22B422D28CDE741EF7E7 /* KYTagBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B50EF0BD5C53E755682CE611DA600D /* KYTagBtn.m */; };
+		B1A9D54568AC158823279C215544B4CE /* Pods-KYPhotoKit_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 69482133EC88853820D828767E9BDD0F /* Pods-KYPhotoKit_Example-dummy.m */; };
+		BA294A9DB67788DAD9466683D9317217 /* KYHud.h in Headers */ = {isa = PBXBuildFile; fileRef = 190E371C54BB71A2D60BE48D4A646F25 /* KYHud.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDB5B88A60A27A5F470884B32027861E /* Pods-KYPhotoKit_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C59E2829C7CC5D3DEB62909AD627A31 /* Pods-KYPhotoKit_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C091ADB19741404057BE0BC01C4A598E /* KYAsset.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F8CB15B400AFF7AD484926DF2383852 /* KYAsset.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C15258324F7D951AD2D2A1D8F693C3F7 /* KYPhotoBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A69FB0CD5F4E2BD229272D7569AEC29 /* KYPhotoBaseViewController.m */; };
+		C192FC3290CCDCC4419FA0709B2101BD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		C39A2A0110AC18C374F82B8FB9038215 /* tag_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = F2BF8BE39719E1DBD94E15D70DD6325E /* tag_normal.png */; };
+		C57A26EB57A5897C9A0921581D3B5EB8 /* KYPhotoSourceManager.h in Headers */ = {isa = PBXBuildFile; fileRef = DB3BC750A3F57CA413E43E6325D38FF7 /* KYPhotoSourceManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CBA91BF4B551CDC74F4660D0503F27BC /* KYAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = DD38E78B28110BA24FB38352F2D1D5AC /* KYAsset.m */; };
+		CE9DFDC4CEDDB018DFAC7D1F100F9202 /* KYDisplayMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = 73AADBB59D20B9CCF16D62D50BE5CE3A /* KYDisplayMacro.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D4898CDF5B4B240ED1D8A49A7C6EEB8B /* KYPhotoBaseViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 639D598007EF24A83C21EE58E75DC4F1 /* KYPhotoBaseViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D4D421A22733AD529B0D7CD5275F1060 /* KYScanerLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = CE857BA293E16FD88FEE2ABEAB9A9508 /* KYScanerLayout.m */; };
+		DE11C322FB5C60AEEBDF9CDA322FDE90 /* KYPhotoConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FE75B38E176430FE5083C89C924713E /* KYPhotoConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E0F2C3D5588711E100BADC2EB707B30D /* KYImageScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B37A3F2C5187E527ECCE345A01557C26 /* KYImageScannerViewController.m */; };
+		E1D5D4F32BD8F4301B5920DAFF749BA2 /* navigationbar_icon_back_white.png in Resources */ = {isa = PBXBuildFile; fileRef = F2F02ADD0B705FD2026E9B1564F5502C /* navigationbar_icon_back_white.png */; };
+		E2F6178EA23EDE10B426CE8BE3DB74B9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8B499414A0D914473C6C3DCF9E56F900 /* Localizable.strings */; };
+		E6FCBA00FA1A61BABF857FA6C234D105 /* tag_sel.png in Resources */ = {isa = PBXBuildFile; fileRef = 55DA3A3C8E6CC428F335E089FB9F1B71 /* tag_sel.png */; };
+		E71A9FC54C16D241D0C0CB868FAE0CD1 /* UIImage+SYExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = C109D642F92E592E2711079B3A9BFDF4 /* UIImage+SYExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E96A049B757604964DB638B0A33FEA96 /* KYPhotoKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3EF2A7FE3BC95DB7C98172093BA8626D /* KYPhotoKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EBDC04033C6C5771D64EEBE5382C4C9A /* KYAlbumsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 64D6E3D73CCA680388874FA5DBA896E2 /* KYAlbumsViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F66EE1FDE66B870CEB6F4CE52CAB53D6 /* Pods-KYPhotoKit_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F737A0215315449FF85085AB17769F /* Pods-KYPhotoKit_Tests-dummy.m */; };
+		F81C6D9E3902B94E7A6C34BC714ED4C1 /* KYPhotoSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 8720F201FDF35F1869C8D1E9ABCAEB60 /* KYPhotoSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F8924A8C074B66A74D984C3FFBDB2102 /* KYAsset+Action.m in Sources */ = {isa = PBXBuildFile; fileRef = F2D6C1C9AB12BEB480CA589C49E2EA18 /* KYAsset+Action.m */; };
+		F96B2616A73C5AE32D47EE8EDAA26728 /* KYImageScannerCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 1003D001FEA35613E0E368734704EFD9 /* KYImageScannerCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5886208F28EB4E79E8E33C60A31E15B6 /* PBXContainerItemProxy */ = {
+		268E8EFA79D57938D63CE02257700F2A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 81CC85C7720E34324C9CF2FC4647B773;
 			remoteInfo = KYPhotoKit;
 		};
-		7476E5253805B94964130DD6C7C80565 /* PBXContainerItemProxy */ = {
+		735AED7221D914EDC688A99C008F4A12 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = C700EC3C6C81A327DCEAC69643056978;
 			remoteInfo = "KYPhotoKit-KYPhotoKit";
 		};
-		DB584136E6091C16563BA5A6A0CBF4F8 /* PBXContainerItemProxy */ = {
+		D476AA7D38405F487E6D963B6C19DE5C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -97,134 +102,160 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0037C1C256DDA6C755FF1CFD299F555B /* tag_sel.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = tag_sel.png; path = KYPhotoKit/Assets/tag_sel.png; sourceTree = "<group>"; };
-		00F25BFC0E7746FB7F49A2679C14A70E /* KYPhotoLoadingDataProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KYPhotoLoadingDataProtocol.h; sourceTree = "<group>"; };
 		030083EABE79D6D12DDE1A06A1AECC58 /* Pods-KYPhotoKit_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-KYPhotoKit_Tests-umbrella.h"; sourceTree = "<group>"; };
-		062B22E331CFFAB46C664BC96BC907DB /* KYImageScannerViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KYImageScannerViewController.m; path = KYPhotoKit/Classes/scanner/KYImageScannerViewController.m; sourceTree = "<group>"; };
-		0AE0202ABED3D2E4A6C27A8C5383AB0D /* KYScanerLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KYScanerLayout.h; path = KYPhotoKit/Classes/scanner/KYScanerLayout.h; sourceTree = "<group>"; };
-		0C96CA988376C82908862CAF443676C5 /* KYPhotoHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KYPhotoHeader.h; path = KYPhotoKit/Classes/base/KYPhotoHeader.h; sourceTree = "<group>"; };
+		0A6ACCEFFF4B76985631162E3B7004C6 /* KYAssetsViewController+Scanner.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KYAssetsViewController+Scanner.h"; sourceTree = "<group>"; };
 		0F0CD34207862F2AA6353B4DAA7D987F /* Pods-KYPhotoKit_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KYPhotoKit_Tests-Info.plist"; sourceTree = "<group>"; };
-		17934402C2FD954FE03FD3D725A917CF /* KYAssetsViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KYAssetsViewController.m; sourceTree = "<group>"; };
-		1A76EE856440D4ABA1482D46F756F6CF /* KYDisplayMacro.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KYDisplayMacro.h; path = KYPhotoKit/Classes/display/KYDisplayMacro.h; sourceTree = "<group>"; };
+		1003D001FEA35613E0E368734704EFD9 /* KYImageScannerCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KYImageScannerCell.h; path = KYPhotoKit/Classes/scanner/KYImageScannerCell.h; sourceTree = "<group>"; };
+		162C61F8638EEC23A77E4FEA1E08AB58 /* KYTagBtn.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KYTagBtn.h; sourceTree = "<group>"; };
+		190E371C54BB71A2D60BE48D4A646F25 /* KYHud.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KYHud.h; path = KYPhotoKit/Classes/hud/KYHud.h; sourceTree = "<group>"; };
+		1938C074E8B02B5540A3FF5F353D0406 /* KYAssetCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KYAssetCell.h; sourceTree = "<group>"; };
 		1C5DA9BE46CB940E46EB6017A5D87E22 /* Pods-KYPhotoKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KYPhotoKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		1DE37A21CD10B90073BBD60DC80B127F /* KYAlbumsViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KYAlbumsViewController.h; sourceTree = "<group>"; };
-		270E8AC1ADE3C52FFB13EA14FD9590E3 /* KYPhotoKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KYPhotoKit.debug.xcconfig; sourceTree = "<group>"; };
+		1DD286746B13ED326DC0C8AD67CD1B2B /* KYImageScannerViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KYImageScannerViewController.h; path = KYPhotoKit/Classes/scanner/KYImageScannerViewController.h; sourceTree = "<group>"; };
+		1DEBD58CACB189A3A4B65065D4CEF2E8 /* KYPhotoSourceTool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KYPhotoSourceTool.m; path = KYPhotoKit/Classes/base/KYPhotoSourceTool.m; sourceTree = "<group>"; };
+		2329495A2A5218EEAD978B6CF874563B /* KYAlbum.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KYAlbum.m; path = KYPhotoKit/Classes/sources/KYAlbum.m; sourceTree = "<group>"; };
+		249FA17C2ABC857A3105734A42E93D75 /* KYPhotoTool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KYPhotoTool.m; path = KYPhotoKit/Classes/scanner/KYPhotoTool.m; sourceTree = "<group>"; };
+		2532CB2DA4BAF5BBDB4FDEE7DC7278FA /* KYPhotoKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KYPhotoKit-prefix.pch"; sourceTree = "<group>"; };
+		27547834CD8A651DB95CDB19099CB0F2 /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2BA22804EF9BB58649A6FF755F7654BA /* Pods-KYPhotoKit_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-KYPhotoKit_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		2BFA6A99D8CCAA2471DEF655C5353A0F /* KYAssetCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KYAssetCell.h; sourceTree = "<group>"; };
 		2C59E2829C7CC5D3DEB62909AD627A31 /* Pods-KYPhotoKit_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-KYPhotoKit_Example-umbrella.h"; sourceTree = "<group>"; };
-		2E15B87AA27A2F7C46369B5401D95D98 /* KYPhotoKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = KYPhotoKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		309A718789271E3EC861917859636948 /* KYPhotoKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KYPhotoKit-prefix.pch"; sourceTree = "<group>"; };
-		314169641E5590B1AC806919931E2308 /* KYScannerPresentModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KYScannerPresentModel.m; path = KYPhotoKit/Classes/scanner/KYScannerPresentModel.m; sourceTree = "<group>"; };
-		3152FAEFB43A270F462F47D8A7F7CDAD /* KYAlbum.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KYAlbum.h; path = KYPhotoKit/Classes/sources/KYAlbum.h; sourceTree = "<group>"; };
-		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		2F8CB15B400AFF7AD484926DF2383852 /* KYAsset.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KYAsset.h; path = KYPhotoKit/Classes/sources/KYAsset.h; sourceTree = "<group>"; };
+		2FE75B38E176430FE5083C89C924713E /* KYPhotoConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KYPhotoConfig.h; sourceTree = "<group>"; };
 		3803F5005C88399FF030F0BC50C5C389 /* Pods-KYPhotoKit_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KYPhotoKit_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		3E6C0C00F2AA91360CF3C5E6821646B2 /* KYPhotoKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "KYPhotoKit-Info.plist"; sourceTree = "<group>"; };
-		422F45C182E497A4C0CF058A3E8ADED4 /* KYPhotoSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KYPhotoSource.m; path = KYPhotoKit/Classes/sources/KYPhotoSource.m; sourceTree = "<group>"; };
-		42B76E5A50A13D25578E868C3B24E119 /* KYAsset.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KYAsset.m; path = KYPhotoKit/Classes/sources/KYAsset.m; sourceTree = "<group>"; };
-		438F65B24E4103EF270800A7A4B230C6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		44186AFAAEE21B0355E4CAA10EBB1E9F /* KYAlbum.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KYAlbum.m; path = KYPhotoKit/Classes/sources/KYAlbum.m; sourceTree = "<group>"; };
-		45821FEE963FC967E18BAC87FA70B845 /* KYPhotoTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KYPhotoTool.h; path = KYPhotoKit/Classes/scanner/KYPhotoTool.h; sourceTree = "<group>"; };
-		4E5308367226ED735B9A4FFACB3E8AF2 /* icon_delete.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = icon_delete.png; path = KYPhotoKit/Assets/icon_delete.png; sourceTree = "<group>"; };
-		51931588D6C24E72A6ED3027BBA13D07 /* KYScanerLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KYScanerLayout.m; path = KYPhotoKit/Classes/scanner/KYScanerLayout.m; sourceTree = "<group>"; };
-		52F3956BC4F1E9828BFA51B6947C8CEE /* KYPhotoNaviViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KYPhotoNaviViewController.m; sourceTree = "<group>"; };
-		55F2BAFEDACAC1CB3A1EFC3E2C9D9BFE /* KYHud.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KYHud.m; path = KYPhotoKit/Classes/hud/KYHud.m; sourceTree = "<group>"; };
-		58C9F51C3CED3FC3CCEC51EF8374010B /* KYPhotoSourceManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KYPhotoSourceManager.m; path = KYPhotoKit/Classes/sources/KYPhotoSourceManager.m; sourceTree = "<group>"; };
-		5D70C2266ABC792C69B6827491A6FECA /* KYPhotoSourceTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KYPhotoSourceTool.h; path = KYPhotoKit/Classes/base/KYPhotoSourceTool.h; sourceTree = "<group>"; };
+		3EF2A7FE3BC95DB7C98172093BA8626D /* KYPhotoKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KYPhotoKit-umbrella.h"; sourceTree = "<group>"; };
+		4E2800BA416C48D50825FA5C13CB5032 /* KYPhotoNaviViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KYPhotoNaviViewController.m; sourceTree = "<group>"; };
+		4E5014A9EFF4051D474DF97EC5DDBAD2 /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = "pt-PT.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		4EB9F89BB7CE36483363E45EC75ED322 /* KYAssetsViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KYAssetsViewController.h; sourceTree = "<group>"; };
+		511CBA49627A93CAF16B01BF63B789E5 /* KYImageScannerCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KYImageScannerCell.m; path = KYPhotoKit/Classes/scanner/KYImageScannerCell.m; sourceTree = "<group>"; };
+		55DA3A3C8E6CC428F335E089FB9F1B71 /* tag_sel.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = tag_sel.png; path = KYPhotoKit/Assets/tag_sel.png; sourceTree = "<group>"; };
+		5C82BD1B6A45EE8275880E9F2EBA401E /* KYPhotoLoadingDataProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KYPhotoLoadingDataProtocol.h; sourceTree = "<group>"; };
+		5D2FC27380F78C7BBC9AFDBA17FEC747 /* KYHud.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KYHud.m; path = KYPhotoKit/Classes/hud/KYHud.m; sourceTree = "<group>"; };
+		6215352FB6544BE9BA7F5A07514F1C81 /* KYAlbumsViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KYAlbumsViewController.m; sourceTree = "<group>"; };
 		62F737A0215315449FF85085AB17769F /* Pods-KYPhotoKit_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-KYPhotoKit_Tests-dummy.m"; sourceTree = "<group>"; };
-		67734AF985555E0488D04932672457CB /* KYPhotoNaviViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KYPhotoNaviViewController.h; sourceTree = "<group>"; };
-		68C0CEE59188299F7C5ABC244B8B750E /* KYHud.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KYHud.h; path = KYPhotoKit/Classes/hud/KYHud.h; sourceTree = "<group>"; };
-		68E0D57E48BDCFA203AA69203BF81784 /* KYPhotoKit.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = KYPhotoKit.bundle; path = "KYPhotoKit-KYPhotoKit.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		639D598007EF24A83C21EE58E75DC4F1 /* KYPhotoBaseViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KYPhotoBaseViewController.h; sourceTree = "<group>"; };
+		642450467422D17F7D416D73544E7AAC /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		64D6E3D73CCA680388874FA5DBA896E2 /* KYAlbumsViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KYAlbumsViewController.h; sourceTree = "<group>"; };
+		68E0D57E48BDCFA203AA69203BF81784 /* KYPhotoKit.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KYPhotoKit.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		69482133EC88853820D828767E9BDD0F /* Pods-KYPhotoKit_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-KYPhotoKit_Example-dummy.m"; sourceTree = "<group>"; };
+		6A003FD9314E7A8710AB777AE785D9EF /* KYPhotoKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KYPhotoKit.h; path = KYPhotoKit/Classes/base/KYPhotoKit.h; sourceTree = "<group>"; };
+		6C6BDB9B9AEE0CC4C8463915C5A1FC53 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		6DF427B5C62411267C9DBB9AF50FC581 /* Pods-KYPhotoKit_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KYPhotoKit_Example-Info.plist"; sourceTree = "<group>"; };
 		6E936B7D5221317AA5C1561C7E84928D /* Pods-KYPhotoKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KYPhotoKit_Example.release.xcconfig"; sourceTree = "<group>"; };
-		6FBF99E74FA4570B189BBE17BE11293C /* KYPhotoSourceTool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KYPhotoSourceTool.m; path = KYPhotoKit/Classes/base/KYPhotoSourceTool.m; sourceTree = "<group>"; };
+		700BA6DA0E48B9D32D86020E50B9AF36 /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		706BD2C312CA0C9232750B95A44C95CB /* Pods-KYPhotoKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KYPhotoKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		7150F15AAED6099B8212CCE9B8AC3639 /* KYAlbumCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KYAlbumCell.m; sourceTree = "<group>"; };
 		717184FD6A58984C6AFC26E0F985B362 /* Pods-KYPhotoKit_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-KYPhotoKit_Tests.modulemap"; sourceTree = "<group>"; };
-		762AB6DF01CD2A64774F052C35E48944 /* KYTagBtn.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KYTagBtn.h; sourceTree = "<group>"; };
-		76C2CFE198E183AF1EA411627165A513 /* ResourceBundle-KYPhotoKit-KYPhotoKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-KYPhotoKit-KYPhotoKit-Info.plist"; sourceTree = "<group>"; };
-		7A8C5DDFCA5AD5C098F4ED2DECAE65D3 /* publish_icon_close_white.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = publish_icon_close_white.png; path = KYPhotoKit/Assets/publish_icon_close_white.png; sourceTree = "<group>"; };
-		80C06993960ECD2A4E96E30159E89FA2 /* KYTagBtn.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KYTagBtn.m; sourceTree = "<group>"; };
-		816DA76D0D167BFF7DFDE49E934F460F /* KYPhotoKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KYPhotoKit.h; path = KYPhotoKit/Classes/base/KYPhotoKit.h; sourceTree = "<group>"; };
-		8663653EA6477F5C743E56D7D74156A3 /* KYPhotoKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KYPhotoKit.framework; path = KYPhotoKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8AFB01811144446CF5B096EC6FAA3A76 /* KYAlbumsViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KYAlbumsViewController.m; sourceTree = "<group>"; };
-		8E4B0778B4B54C8F640EC4AF36EFE265 /* KYScannerPresentModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KYScannerPresentModel.h; path = KYPhotoKit/Classes/scanner/KYScannerPresentModel.h; sourceTree = "<group>"; };
-		90C005ED5BB21478DBEF2524E3A97C2B /* KYAssetsViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KYAssetsViewController.h; sourceTree = "<group>"; };
-		95F85E1E561FE6FB8C4A732A3901BCF7 /* cloud-download.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "cloud-download.png"; path = "KYPhotoKit/Assets/cloud-download.png"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		73AADBB59D20B9CCF16D62D50BE5CE3A /* KYDisplayMacro.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KYDisplayMacro.h; path = KYPhotoKit/Classes/display/KYDisplayMacro.h; sourceTree = "<group>"; };
+		7538460AAAE3ECBC6BF4595EE0A495E3 /* KYPhotoKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KYPhotoKit-dummy.m"; sourceTree = "<group>"; };
+		773359F0ED7B01071C82DE92092D7D8E /* KYAssetsViewController+Scanner.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KYAssetsViewController+Scanner.m"; sourceTree = "<group>"; };
+		7A1B80F86E61FF8F2FB3EDF2201B190D /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7B72A341406A83A4FA15F2D17EAE6E00 /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7CB441FE846A98AEB4C62D4E0CC2DB87 /* KYAlbumCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KYAlbumCell.h; sourceTree = "<group>"; };
+		7D67086E6300FB0AF2D351E09E6A92DD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		7FC13460EE220962E30C406B3626C7FC /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8454B7B1D5C16C307A517F807257D982 /* KYScannerPresentModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KYScannerPresentModel.m; path = KYPhotoKit/Classes/scanner/KYScannerPresentModel.m; sourceTree = "<group>"; };
+		8663653EA6477F5C743E56D7D74156A3 /* KYPhotoKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KYPhotoKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		86B17DEDBD237850EB5FE44A9CAD7A2B /* KYPhotoSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KYPhotoSource.m; path = KYPhotoKit/Classes/sources/KYPhotoSource.m; sourceTree = "<group>"; };
+		8720F201FDF35F1869C8D1E9ABCAEB60 /* KYPhotoSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KYPhotoSource.h; path = KYPhotoKit/Classes/sources/KYPhotoSource.h; sourceTree = "<group>"; };
+		8A69FB0CD5F4E2BD229272D7569AEC29 /* KYPhotoBaseViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KYPhotoBaseViewController.m; sourceTree = "<group>"; };
+		8B15E0067C7DA188CA25754ABD804020 /* KYPhotoConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KYPhotoConfig.m; sourceTree = "<group>"; };
+		8E3B710CB31EFF0923C64663E5E6F8CD /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		9016A78E40CD5EB4A043EC101B2A48EA /* KYPhotoSourceTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KYPhotoSourceTool.h; path = KYPhotoKit/Classes/base/KYPhotoSourceTool.h; sourceTree = "<group>"; };
+		90B50EF0BD5C53E755682CE611DA600D /* KYTagBtn.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KYTagBtn.m; sourceTree = "<group>"; };
+		941CD51E6FDD1289073703328857F3F8 /* KYAssetCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KYAssetCell.m; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A295A251B3151E2BEB86C631EA1AE096 /* Pods-KYPhotoKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KYPhotoKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		A3CE901F6236DDF2203F5BA3A7AF7BAD /* KYPhotoKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KYPhotoKit-umbrella.h"; sourceTree = "<group>"; };
-		A70FE0211DB3E75A1982F95EF3129BFE /* UIImage+SYExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+SYExtension.h"; path = "KYPhotoKit/Classes/base/UIImage+SYExtension.h"; sourceTree = "<group>"; };
-		A74B1353C2378D51D9D4EE55983C2437 /* KYPhotoBaseViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KYPhotoBaseViewController.h; sourceTree = "<group>"; };
-		A8C4EE8D1EE0CF62F602C09F04ADF7B3 /* UIImage+SYExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+SYExtension.m"; path = "KYPhotoKit/Classes/base/UIImage+SYExtension.m"; sourceTree = "<group>"; };
-		AC4F6280DF47FCC51CCA0A0D6BC01CCD /* KYImageScannerCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KYImageScannerCell.h; path = KYPhotoKit/Classes/scanner/KYImageScannerCell.h; sourceTree = "<group>"; };
-		ACCDD2939A3EB995B999B155A2736E09 /* KYPhotoBaseViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KYPhotoBaseViewController.m; sourceTree = "<group>"; };
-		B14174C41FAC8381C9706A82F574C573 /* KYPhotoSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KYPhotoSource.h; path = KYPhotoKit/Classes/sources/KYPhotoSource.h; sourceTree = "<group>"; };
+		A33E48D8D7B768CEA8D43C376DCC60B2 /* KYPhotoTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KYPhotoTool.h; path = KYPhotoKit/Classes/scanner/KYPhotoTool.h; sourceTree = "<group>"; };
+		A44C3670D94DB15A7A666B692383B1BF /* KYPhotoKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = KYPhotoKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		AA986F52437DE320DAA9CB8F82A039F5 /* KYPhotoKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KYPhotoKit.release.xcconfig; sourceTree = "<group>"; };
+		ACE3E50D0CC51C31386C77CAC48CD8F1 /* KYScannerPresentModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KYScannerPresentModel.h; path = KYPhotoKit/Classes/scanner/KYScannerPresentModel.h; sourceTree = "<group>"; };
+		AF131A3B4A65AB41CD6F59B5288300D5 /* KYAlbumCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KYAlbumCell.m; sourceTree = "<group>"; };
+		B37A3F2C5187E527ECCE345A01557C26 /* KYImageScannerViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KYImageScannerViewController.m; path = KYPhotoKit/Classes/scanner/KYImageScannerViewController.m; sourceTree = "<group>"; };
+		B40814C57F507348ACD78F5B55EB5A23 /* KYAssetsViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KYAssetsViewController.m; sourceTree = "<group>"; };
 		B7ED7126D0EA4971B2F4F111CFFA2148 /* Pods-KYPhotoKit_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KYPhotoKit_Example-frameworks.sh"; sourceTree = "<group>"; };
-		BB2FFE645F89F5F2F680BCAF184B8E66 /* KYAlbumCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KYAlbumCell.h; sourceTree = "<group>"; };
-		BB4D83BE8C2FD5632F662EF8EC1C6240 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		BE674495206837104506A97FF2AA40C6 /* KYAssetCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KYAssetCell.m; sourceTree = "<group>"; };
-		BF700CA1C8D6CDCD1DE8D67F3DF2EAF7 /* KYPhotoTool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KYPhotoTool.m; path = KYPhotoKit/Classes/scanner/KYPhotoTool.m; sourceTree = "<group>"; };
-		C50AF1903B1AD5F8B4E7294D59D9AC4A /* KYPhotoSourceManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KYPhotoSourceManager.h; path = KYPhotoKit/Classes/sources/KYPhotoSourceManager.h; sourceTree = "<group>"; };
-		CB2D81B16CEC872C1E8055D6D68076BF /* KYAsset.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KYAsset.h; path = KYPhotoKit/Classes/sources/KYAsset.h; sourceTree = "<group>"; };
-		CB8B45197225B754EFC2D5201B429097 /* KYScannerImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KYScannerImage.m; path = KYPhotoKit/Classes/scanner/KYScannerImage.m; sourceTree = "<group>"; };
-		CBA3E2BCC2E0014AC5E271B8900DF0CF /* KYAsset+Action.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KYAsset+Action.m"; sourceTree = "<group>"; };
-		CC38A29F0950AFF7284022752823F5FE /* KYImageScannerCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KYImageScannerCell.m; path = KYPhotoKit/Classes/scanner/KYImageScannerCell.m; sourceTree = "<group>"; };
-		CC92AFF168FF60F60FF6C7DB0EAEC613 /* Pods_KYPhotoKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_KYPhotoKit_Example.framework; path = "Pods-KYPhotoKit_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D14EC1B399276AC46F18F8679186EBD2 /* KYPhotoKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = KYPhotoKit.modulemap; sourceTree = "<group>"; };
-		D27BD2037DBB4073C2DB238088DE7DCF /* KYPhotoKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KYPhotoKit-dummy.m"; sourceTree = "<group>"; };
-		D4012C59E9A97EE56E864A7340ABCD75 /* Pods_KYPhotoKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_KYPhotoKit_Tests.framework; path = "Pods-KYPhotoKit_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D7B45CC8E7FC947B65E9330B8FCE08AE /* navigationbar_icon_back_white.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = navigationbar_icon_back_white.png; path = KYPhotoKit/Assets/navigationbar_icon_back_white.png; sourceTree = "<group>"; };
-		DE4488C548BC71F87FD3021A094E0921 /* KYScannerImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KYScannerImage.h; path = KYPhotoKit/Classes/scanner/KYScannerImage.h; sourceTree = "<group>"; };
-		E98622C751C4DF6D78DC696150B8DC83 /* navigation_bar_icon_back_black.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = navigation_bar_icon_back_black.png; path = KYPhotoKit/Assets/navigation_bar_icon_back_black.png; sourceTree = "<group>"; };
-		EA9B259BA4025355B184C7000C970303 /* tag_normal.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = tag_normal.png; path = KYPhotoKit/Assets/tag_normal.png; sourceTree = "<group>"; };
-		EBB094533ED95F3B662DFD91E743F30A /* KYPhotoKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KYPhotoKit.release.xcconfig; sourceTree = "<group>"; };
-		EF361BA63B3C9AF8A9D1FE4F84E44300 /* KYAsset+Action.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KYAsset+Action.h"; sourceTree = "<group>"; };
+		C109D642F92E592E2711079B3A9BFDF4 /* UIImage+SYExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+SYExtension.h"; path = "KYPhotoKit/Classes/base/UIImage+SYExtension.h"; sourceTree = "<group>"; };
+		C26826EBF72FF4D50A001A0C57ACEB13 /* KYPhotoSourceManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KYPhotoSourceManager.m; path = KYPhotoKit/Classes/sources/KYPhotoSourceManager.m; sourceTree = "<group>"; };
+		CC0D5A25D4953B1859D4149FB71134BA /* icon_delete.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = icon_delete.png; path = KYPhotoKit/Assets/icon_delete.png; sourceTree = "<group>"; };
+		CC92AFF168FF60F60FF6C7DB0EAEC613 /* Pods_KYPhotoKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KYPhotoKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE857BA293E16FD88FEE2ABEAB9A9508 /* KYScanerLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KYScanerLayout.m; path = KYPhotoKit/Classes/scanner/KYScanerLayout.m; sourceTree = "<group>"; };
+		D1CC7237B1D99F612A9BF368DCD5D474 /* ResourceBundle-KYPhotoKit-KYPhotoKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-KYPhotoKit-KYPhotoKit-Info.plist"; sourceTree = "<group>"; };
+		D1F50E4C91EAA87E98F1072297068F4C /* publish_icon_close_white.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = publish_icon_close_white.png; path = KYPhotoKit/Assets/publish_icon_close_white.png; sourceTree = "<group>"; };
+		D4012C59E9A97EE56E864A7340ABCD75 /* Pods_KYPhotoKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KYPhotoKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D408966FAAB5EFDC13801802A18D3E45 /* KYScanerLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KYScanerLayout.h; path = KYPhotoKit/Classes/scanner/KYScanerLayout.h; sourceTree = "<group>"; };
+		D48E0E98CCC3CDB6C47B37CB59D1B2C6 /* KYPhotoKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KYPhotoKit.debug.xcconfig; sourceTree = "<group>"; };
+		DA307EF928FDFFD696CEE2EDB8AC67C9 /* KYAlbum.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KYAlbum.h; path = KYPhotoKit/Classes/sources/KYAlbum.h; sourceTree = "<group>"; };
+		DB3BC750A3F57CA413E43E6325D38FF7 /* KYPhotoSourceManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KYPhotoSourceManager.h; path = KYPhotoKit/Classes/sources/KYPhotoSourceManager.h; sourceTree = "<group>"; };
+		DB76D43C8F1E0138E0E1DF510FFFA320 /* KYScannerImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KYScannerImage.h; path = KYPhotoKit/Classes/scanner/KYScannerImage.h; sourceTree = "<group>"; };
+		DD38E78B28110BA24FB38352F2D1D5AC /* KYAsset.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KYAsset.m; path = KYPhotoKit/Classes/sources/KYAsset.m; sourceTree = "<group>"; };
+		E70FB7E5D00E958617DE222432903A84 /* UIImage+SYExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+SYExtension.m"; path = "KYPhotoKit/Classes/base/UIImage+SYExtension.m"; sourceTree = "<group>"; };
+		E72421B3C857492BD8659A611E16D6B6 /* KYAsset+Action.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KYAsset+Action.h"; sourceTree = "<group>"; };
+		EABA6A20A068E5F144211AA429B379A0 /* cloud-download.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "cloud-download.png"; path = "KYPhotoKit/Assets/cloud-download.png"; sourceTree = "<group>"; };
+		EB961A59139F551E1D4FF8C43268E6A6 /* KYPhotoKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = KYPhotoKit.modulemap; sourceTree = "<group>"; };
 		F0419960A2A6973B5EA2F3395EFD1B25 /* Pods-KYPhotoKit_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-KYPhotoKit_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		F251216CD5A93D5FE002E1FDCDB0667F /* KYPhotoNaviViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KYPhotoNaviViewController.h; sourceTree = "<group>"; };
+		F2BF8BE39719E1DBD94E15D70DD6325E /* tag_normal.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = tag_normal.png; path = KYPhotoKit/Assets/tag_normal.png; sourceTree = "<group>"; };
+		F2D6C1C9AB12BEB480CA589C49E2EA18 /* KYAsset+Action.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KYAsset+Action.m"; sourceTree = "<group>"; };
+		F2F02ADD0B705FD2026E9B1564F5502C /* navigationbar_icon_back_white.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = navigationbar_icon_back_white.png; path = KYPhotoKit/Assets/navigationbar_icon_back_white.png; sourceTree = "<group>"; };
 		F4E42E6024625BF3BB5CF5D58963DDAB /* Pods-KYPhotoKit_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KYPhotoKit_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		FE2867011B458601A741A2243237CACD /* KYImageScannerViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KYImageScannerViewController.h; path = KYPhotoKit/Classes/scanner/KYImageScannerViewController.h; sourceTree = "<group>"; };
+		FDC0569D62BF01EC007136708EB6CEE5 /* KYPhotoHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KYPhotoHeader.h; path = KYPhotoKit/Classes/base/KYPhotoHeader.h; sourceTree = "<group>"; };
+		FE5D7D10DBA6F192786A105799859891 /* KYPhotoKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "KYPhotoKit-Info.plist"; sourceTree = "<group>"; };
 		FE836F110C6CA311A5EF9BCBED6982C9 /* Pods-KYPhotoKit_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-KYPhotoKit_Example.modulemap"; sourceTree = "<group>"; };
+		FEEC81C9F10676DD7B245FAF8D79A2C1 /* navigation_bar_icon_back_black.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = navigation_bar_icon_back_black.png; path = KYPhotoKit/Assets/navigation_bar_icon_back_black.png; sourceTree = "<group>"; };
+		FF7CF6E9500B7F174E987EB4A0D38515 /* KYScannerImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KYScannerImage.m; path = KYPhotoKit/Classes/scanner/KYScannerImage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2ADE3E173717C38DB2EE99AA681FD006 /* Frameworks */ = {
+		3C1C3A1BC5B4E92CB7FB80C77CD6B055 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D4B16F2267DFE2855A129BCECA2F7D9 /* Foundation.framework in Frameworks */,
+				69C47AAF5B8E4C7C0C481A25C009E449 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6B03676B8266744904CC6AD580150135 /* Frameworks */ = {
+		A9B2F0E74DCC4CE02187BEA46146A644 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				845BFA1B45D6612896232151D0EBC238 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8E2296271D05F9F161A40EBAB7D28A85 /* Frameworks */ = {
+		B597E03A14DA72440BEE00811D3FF6B4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39AC5080F952C6F31C17635BEE412681 /* Foundation.framework in Frameworks */,
+				C192FC3290CCDCC4419FA0709B2101BD /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CE21535C660DA811EE4737C28864E39C /* Frameworks */ = {
+		D46F55EE512FD7D246594F41E6AD234C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2BC1A18E76C0F0CF02AA129DEA765B5 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		031364A499AB2BB928D14ED8939C8C2A /* view */ = {
+			isa = PBXGroup;
+			children = (
+				7CB441FE846A98AEB4C62D4E0CC2DB87 /* KYAlbumCell.h */,
+				AF131A3B4A65AB41CD6F59B5288300D5 /* KYAlbumCell.m */,
+				1938C074E8B02B5540A3FF5F353D0406 /* KYAssetCell.h */,
+				941CD51E6FDD1289073703328857F3F8 /* KYAssetCell.m */,
+				162C61F8638EEC23A77E4FEA1E08AB58 /* KYTagBtn.h */,
+				90B50EF0BD5C53E755682CE611DA600D /* KYTagBtn.m */,
+			);
+			name = view;
+			path = KYPhotoKit/Classes/display/view;
+			sourceTree = "<group>";
+		};
 		1D48C1E9D25991C0F0F6C4C89CDC1F78 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				AED68BA2E254A133A419D052FFFC7D00 /* KYPhotoKit */,
+				955A8BAA8A771E92DF2157F299FA6B08 /* KYPhotoKit */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -240,71 +271,47 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		23AE2BCD9D33D8D995CB514E59B99B4D /* sources */ = {
+		3A03F4B9CAA52C05824AA15AF07D1B65 /* vc */ = {
 			isa = PBXGroup;
 			children = (
-				3152FAEFB43A270F462F47D8A7F7CDAD /* KYAlbum.h */,
-				44186AFAAEE21B0355E4CAA10EBB1E9F /* KYAlbum.m */,
-				CB2D81B16CEC872C1E8055D6D68076BF /* KYAsset.h */,
-				42B76E5A50A13D25578E868C3B24E119 /* KYAsset.m */,
-				B14174C41FAC8381C9706A82F574C573 /* KYPhotoSource.h */,
-				422F45C182E497A4C0CF058A3E8ADED4 /* KYPhotoSource.m */,
-				C50AF1903B1AD5F8B4E7294D59D9AC4A /* KYPhotoSourceManager.h */,
-				58C9F51C3CED3FC3CCEC51EF8374010B /* KYPhotoSourceManager.m */,
+				64D6E3D73CCA680388874FA5DBA896E2 /* KYAlbumsViewController.h */,
+				6215352FB6544BE9BA7F5A07514F1C81 /* KYAlbumsViewController.m */,
+				4EB9F89BB7CE36483363E45EC75ED322 /* KYAssetsViewController.h */,
+				B40814C57F507348ACD78F5B55EB5A23 /* KYAssetsViewController.m */,
+				0A6ACCEFFF4B76985631162E3B7004C6 /* KYAssetsViewController+Scanner.h */,
+				773359F0ED7B01071C82DE92092D7D8E /* KYAssetsViewController+Scanner.m */,
+				639D598007EF24A83C21EE58E75DC4F1 /* KYPhotoBaseViewController.h */,
+				8A69FB0CD5F4E2BD229272D7569AEC29 /* KYPhotoBaseViewController.m */,
+				5C82BD1B6A45EE8275880E9F2EBA401E /* KYPhotoLoadingDataProtocol.h */,
+				F251216CD5A93D5FE002E1FDCDB0667F /* KYPhotoNaviViewController.h */,
+				4E2800BA416C48D50825FA5C13CB5032 /* KYPhotoNaviViewController.m */,
 			);
-			name = sources;
+			name = vc;
+			path = KYPhotoKit/Classes/display/vc;
 			sourceTree = "<group>";
 		};
-		2BFBBB52B5D2C64A0961068B0D2DFCAC /* scanner */ = {
+		4A6955F32D0FAB5326C1F36BD38B0BFE /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				AC4F6280DF47FCC51CCA0A0D6BC01CCD /* KYImageScannerCell.h */,
-				CC38A29F0950AFF7284022752823F5FE /* KYImageScannerCell.m */,
-				FE2867011B458601A741A2243237CACD /* KYImageScannerViewController.h */,
-				062B22E331CFFAB46C664BC96BC907DB /* KYImageScannerViewController.m */,
-				45821FEE963FC967E18BAC87FA70B845 /* KYPhotoTool.h */,
-				BF700CA1C8D6CDCD1DE8D67F3DF2EAF7 /* KYPhotoTool.m */,
-				0AE0202ABED3D2E4A6C27A8C5383AB0D /* KYScanerLayout.h */,
-				51931588D6C24E72A6ED3027BBA13D07 /* KYScanerLayout.m */,
-				DE4488C548BC71F87FD3021A094E0921 /* KYScannerImage.h */,
-				CB8B45197225B754EFC2D5201B429097 /* KYScannerImage.m */,
-				8E4B0778B4B54C8F640EC4AF36EFE265 /* KYScannerPresentModel.h */,
-				314169641E5590B1AC806919931E2308 /* KYScannerPresentModel.m */,
-			);
-			name = scanner;
-			sourceTree = "<group>";
-		};
-		2E53E8415A1DBD5C7CF68075B1352F40 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				D14EC1B399276AC46F18F8679186EBD2 /* KYPhotoKit.modulemap */,
-				D27BD2037DBB4073C2DB238088DE7DCF /* KYPhotoKit-dummy.m */,
-				3E6C0C00F2AA91360CF3C5E6821646B2 /* KYPhotoKit-Info.plist */,
-				309A718789271E3EC861917859636948 /* KYPhotoKit-prefix.pch */,
-				A3CE901F6236DDF2203F5BA3A7AF7BAD /* KYPhotoKit-umbrella.h */,
-				270E8AC1ADE3C52FFB13EA14FD9590E3 /* KYPhotoKit.debug.xcconfig */,
-				EBB094533ED95F3B662DFD91E743F30A /* KYPhotoKit.release.xcconfig */,
-				76C2CFE198E183AF1EA411627165A513 /* ResourceBundle-KYPhotoKit-KYPhotoKit-Info.plist */,
+				EB961A59139F551E1D4FF8C43268E6A6 /* KYPhotoKit.modulemap */,
+				7538460AAAE3ECBC6BF4595EE0A495E3 /* KYPhotoKit-dummy.m */,
+				FE5D7D10DBA6F192786A105799859891 /* KYPhotoKit-Info.plist */,
+				2532CB2DA4BAF5BBDB4FDEE7DC7278FA /* KYPhotoKit-prefix.pch */,
+				3EF2A7FE3BC95DB7C98172093BA8626D /* KYPhotoKit-umbrella.h */,
+				D48E0E98CCC3CDB6C47B37CB59D1B2C6 /* KYPhotoKit.debug.xcconfig */,
+				AA986F52437DE320DAA9CB8F82A039F5 /* KYPhotoKit.release.xcconfig */,
+				D1CC7237B1D99F612A9BF368DCD5D474 /* ResourceBundle-KYPhotoKit-KYPhotoKit-Info.plist */,
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/KYPhotoKit";
 			sourceTree = "<group>";
 		};
-		500CB3A0773C5B17424BD9FB950584AB /* vc */ = {
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				1DE37A21CD10B90073BBD60DC80B127F /* KYAlbumsViewController.h */,
-				8AFB01811144446CF5B096EC6FAA3A76 /* KYAlbumsViewController.m */,
-				90C005ED5BB21478DBEF2524E3A97C2B /* KYAssetsViewController.h */,
-				17934402C2FD954FE03FD3D725A917CF /* KYAssetsViewController.m */,
-				A74B1353C2378D51D9D4EE55983C2437 /* KYPhotoBaseViewController.h */,
-				ACCDD2939A3EB995B999B155A2736E09 /* KYPhotoBaseViewController.m */,
-				00F25BFC0E7746FB7F49A2679C14A70E /* KYPhotoLoadingDataProtocol.h */,
-				67734AF985555E0488D04932672457CB /* KYPhotoNaviViewController.h */,
-				52F3956BC4F1E9828BFA51B6947C8CEE /* KYPhotoNaviViewController.m */,
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
 			);
-			name = vc;
-			path = KYPhotoKit/Classes/display/vc;
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		735CC66496E02EB157A4EE2A245F3273 /* Targets Support Files */ = {
@@ -316,13 +323,63 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		945CAF8D3F61E64C7F05A643E578FF93 /* display */ = {
+		756689C684DEA2684C917F23B9132F25 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				1A76EE856440D4ABA1482D46F756F6CF /* KYDisplayMacro.h */,
-				ABE440F4C7AD9EF22A3FB2C2A8A8884E /* model */,
-				500CB3A0773C5B17424BD9FB950584AB /* vc */,
-				C987B5BB6140DF012884312DB2DF242F /* view */,
+				EABA6A20A068E5F144211AA429B379A0 /* cloud-download.png */,
+				CC0D5A25D4953B1859D4149FB71134BA /* icon_delete.png */,
+				8B499414A0D914473C6C3DCF9E56F900 /* Localizable.strings */,
+				FEEC81C9F10676DD7B245FAF8D79A2C1 /* navigation_bar_icon_back_black.png */,
+				F2F02ADD0B705FD2026E9B1564F5502C /* navigationbar_icon_back_white.png */,
+				D1F50E4C91EAA87E98F1072297068F4C /* publish_icon_close_white.png */,
+				F2BF8BE39719E1DBD94E15D70DD6325E /* tag_normal.png */,
+				55DA3A3C8E6CC428F335E089FB9F1B71 /* tag_sel.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		8A1E81CB557693EBFE64A936135FEED3 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				A44C3670D94DB15A7A666B692383B1BF /* KYPhotoKit.podspec */,
+				7D67086E6300FB0AF2D351E09E6A92DD /* LICENSE */,
+				6C6BDB9B9AEE0CC4C8463915C5A1FC53 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		8B0E5D6DCC554152538473829A36831C /* hud */ = {
+			isa = PBXGroup;
+			children = (
+				190E371C54BB71A2D60BE48D4A646F25 /* KYHud.h */,
+				5D2FC27380F78C7BBC9AFDBA17FEC747 /* KYHud.m */,
+			);
+			name = hud;
+			sourceTree = "<group>";
+		};
+		955A8BAA8A771E92DF2157F299FA6B08 /* KYPhotoKit */ = {
+			isa = PBXGroup;
+			children = (
+				F767E3E99337BA99D2D1AEB3B1570E29 /* base */,
+				9910ADE746B15539DF3816C77784B9F4 /* display */,
+				8B0E5D6DCC554152538473829A36831C /* hud */,
+				8A1E81CB557693EBFE64A936135FEED3 /* Pod */,
+				756689C684DEA2684C917F23B9132F25 /* Resources */,
+				F6E725F9501EE0FE58D0BA7E7C1874AD /* scanner */,
+				B120A160980D469DD912D397C5548F4E /* sources */,
+				4A6955F32D0FAB5326C1F36BD38B0BFE /* Support Files */,
+			);
+			name = KYPhotoKit;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		9910ADE746B15539DF3816C77784B9F4 /* display */ = {
+			isa = PBXGroup;
+			children = (
+				73AADBB59D20B9CCF16D62D50BE5CE3A /* KYDisplayMacro.h */,
+				FF4B04DBA77D4BF1B23F3D9385ABDBAC /* model */,
+				3A03F4B9CAA52C05824AA15AF07D1B65 /* vc */,
+				031364A499AB2BB928D14ED8939C8C2A /* view */,
 			);
 			name = display;
 			sourceTree = "<group>";
@@ -360,65 +417,19 @@
 			path = "Target Support Files/Pods-KYPhotoKit_Example";
 			sourceTree = "<group>";
 		};
-		ABE440F4C7AD9EF22A3FB2C2A8A8884E /* model */ = {
+		B120A160980D469DD912D397C5548F4E /* sources */ = {
 			isa = PBXGroup;
 			children = (
-				EF361BA63B3C9AF8A9D1FE4F84E44300 /* KYAsset+Action.h */,
-				CBA3E2BCC2E0014AC5E271B8900DF0CF /* KYAsset+Action.m */,
+				DA307EF928FDFFD696CEE2EDB8AC67C9 /* KYAlbum.h */,
+				2329495A2A5218EEAD978B6CF874563B /* KYAlbum.m */,
+				2F8CB15B400AFF7AD484926DF2383852 /* KYAsset.h */,
+				DD38E78B28110BA24FB38352F2D1D5AC /* KYAsset.m */,
+				8720F201FDF35F1869C8D1E9ABCAEB60 /* KYPhotoSource.h */,
+				86B17DEDBD237850EB5FE44A9CAD7A2B /* KYPhotoSource.m */,
+				DB3BC750A3F57CA413E43E6325D38FF7 /* KYPhotoSourceManager.h */,
+				C26826EBF72FF4D50A001A0C57ACEB13 /* KYPhotoSourceManager.m */,
 			);
-			name = model;
-			path = KYPhotoKit/Classes/display/model;
-			sourceTree = "<group>";
-		};
-		AED68BA2E254A133A419D052FFFC7D00 /* KYPhotoKit */ = {
-			isa = PBXGroup;
-			children = (
-				CAB9967FC14ECE43B227B256DAA3E24C /* base */,
-				945CAF8D3F61E64C7F05A643E578FF93 /* display */,
-				D162845D15E5EB68600D11A61E948595 /* hud */,
-				EAD1A324DA24D74B51C813A8987813C9 /* Pod */,
-				F4BFBAD76BCDF307EE1C1AF9BB6E05F8 /* Resources */,
-				2BFBBB52B5D2C64A0961068B0D2DFCAC /* scanner */,
-				23AE2BCD9D33D8D995CB514E59B99B4D /* sources */,
-				2E53E8415A1DBD5C7CF68075B1352F40 /* Support Files */,
-			);
-			name = KYPhotoKit;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		C987B5BB6140DF012884312DB2DF242F /* view */ = {
-			isa = PBXGroup;
-			children = (
-				BB2FFE645F89F5F2F680BCAF184B8E66 /* KYAlbumCell.h */,
-				7150F15AAED6099B8212CCE9B8AC3639 /* KYAlbumCell.m */,
-				2BFA6A99D8CCAA2471DEF655C5353A0F /* KYAssetCell.h */,
-				BE674495206837104506A97FF2AA40C6 /* KYAssetCell.m */,
-				762AB6DF01CD2A64774F052C35E48944 /* KYTagBtn.h */,
-				80C06993960ECD2A4E96E30159E89FA2 /* KYTagBtn.m */,
-			);
-			name = view;
-			path = KYPhotoKit/Classes/display/view;
-			sourceTree = "<group>";
-		};
-		CAB9967FC14ECE43B227B256DAA3E24C /* base */ = {
-			isa = PBXGroup;
-			children = (
-				0C96CA988376C82908862CAF443676C5 /* KYPhotoHeader.h */,
-				816DA76D0D167BFF7DFDE49E934F460F /* KYPhotoKit.h */,
-				5D70C2266ABC792C69B6827491A6FECA /* KYPhotoSourceTool.h */,
-				6FBF99E74FA4570B189BBE17BE11293C /* KYPhotoSourceTool.m */,
-				A70FE0211DB3E75A1982F95EF3129BFE /* UIImage+SYExtension.h */,
-				A8C4EE8D1EE0CF62F602C09F04ADF7B3 /* UIImage+SYExtension.m */,
-			);
-			name = base;
+			name = sources;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -432,96 +443,109 @@
 			);
 			sourceTree = "<group>";
 		};
-		D162845D15E5EB68600D11A61E948595 /* hud */ = {
-			isa = PBXGroup;
-			children = (
-				68C0CEE59188299F7C5ABC244B8B750E /* KYHud.h */,
-				55F2BAFEDACAC1CB3A1EFC3E2C9D9BFE /* KYHud.m */,
-			);
-			name = hud;
-			sourceTree = "<group>";
-		};
 		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		EAD1A324DA24D74B51C813A8987813C9 /* Pod */ = {
+		F6E725F9501EE0FE58D0BA7E7C1874AD /* scanner */ = {
 			isa = PBXGroup;
 			children = (
-				2E15B87AA27A2F7C46369B5401D95D98 /* KYPhotoKit.podspec */,
-				BB4D83BE8C2FD5632F662EF8EC1C6240 /* LICENSE */,
-				438F65B24E4103EF270800A7A4B230C6 /* README.md */,
+				1003D001FEA35613E0E368734704EFD9 /* KYImageScannerCell.h */,
+				511CBA49627A93CAF16B01BF63B789E5 /* KYImageScannerCell.m */,
+				1DD286746B13ED326DC0C8AD67CD1B2B /* KYImageScannerViewController.h */,
+				B37A3F2C5187E527ECCE345A01557C26 /* KYImageScannerViewController.m */,
+				A33E48D8D7B768CEA8D43C376DCC60B2 /* KYPhotoTool.h */,
+				249FA17C2ABC857A3105734A42E93D75 /* KYPhotoTool.m */,
+				D408966FAAB5EFDC13801802A18D3E45 /* KYScanerLayout.h */,
+				CE857BA293E16FD88FEE2ABEAB9A9508 /* KYScanerLayout.m */,
+				DB76D43C8F1E0138E0E1DF510FFFA320 /* KYScannerImage.h */,
+				FF7CF6E9500B7F174E987EB4A0D38515 /* KYScannerImage.m */,
+				ACE3E50D0CC51C31386C77CAC48CD8F1 /* KYScannerPresentModel.h */,
+				8454B7B1D5C16C307A517F807257D982 /* KYScannerPresentModel.m */,
 			);
-			name = Pod;
+			name = scanner;
 			sourceTree = "<group>";
 		};
-		F4BFBAD76BCDF307EE1C1AF9BB6E05F8 /* Resources */ = {
+		F767E3E99337BA99D2D1AEB3B1570E29 /* base */ = {
 			isa = PBXGroup;
 			children = (
-				95F85E1E561FE6FB8C4A732A3901BCF7 /* cloud-download.png */,
-				4E5308367226ED735B9A4FFACB3E8AF2 /* icon_delete.png */,
-				E98622C751C4DF6D78DC696150B8DC83 /* navigation_bar_icon_back_black.png */,
-				D7B45CC8E7FC947B65E9330B8FCE08AE /* navigationbar_icon_back_white.png */,
-				7A8C5DDFCA5AD5C098F4ED2DECAE65D3 /* publish_icon_close_white.png */,
-				EA9B259BA4025355B184C7000C970303 /* tag_normal.png */,
-				0037C1C256DDA6C755FF1CFD299F555B /* tag_sel.png */,
+				FDC0569D62BF01EC007136708EB6CEE5 /* KYPhotoHeader.h */,
+				6A003FD9314E7A8710AB777AE785D9EF /* KYPhotoKit.h */,
+				9016A78E40CD5EB4A043EC101B2A48EA /* KYPhotoSourceTool.h */,
+				1DEBD58CACB189A3A4B65065D4CEF2E8 /* KYPhotoSourceTool.m */,
+				C109D642F92E592E2711079B3A9BFDF4 /* UIImage+SYExtension.h */,
+				E70FB7E5D00E958617DE222432903A84 /* UIImage+SYExtension.m */,
 			);
-			name = Resources;
+			name = base;
+			sourceTree = "<group>";
+		};
+		FF4B04DBA77D4BF1B23F3D9385ABDBAC /* model */ = {
+			isa = PBXGroup;
+			children = (
+				E72421B3C857492BD8659A611E16D6B6 /* KYAsset+Action.h */,
+				F2D6C1C9AB12BEB480CA589C49E2EA18 /* KYAsset+Action.m */,
+				2FE75B38E176430FE5083C89C924713E /* KYPhotoConfig.h */,
+				8B15E0067C7DA188CA25754ABD804020 /* KYPhotoConfig.m */,
+			);
+			name = model;
+			path = KYPhotoKit/Classes/display/model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		7265501ED91FE5816DBE94D1046127AE /* Headers */ = {
+		69B9D2C894D3B892E3E2DFC28CB582F4 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDDECB48414D0415C8D56C5F8F0CA73F /* KYAlbum.h in Headers */,
-				F117DFB27F8F9512B1E6CAFDB69A66F3 /* KYAlbumCell.h in Headers */,
-				BC9705B6E24B5B8421605A157A2E7D93 /* KYAlbumsViewController.h in Headers */,
-				25FF2728795178D63A227146DA96F8CC /* KYAsset+Action.h in Headers */,
-				94476D374B53F267B4DFEBC8E905D6E1 /* KYAsset.h in Headers */,
-				4CEB2F2E64CC947EE0BADE15B0437ADC /* KYAssetCell.h in Headers */,
-				6BA6F8F8699B1301CBA6D8C5BCF0D038 /* KYAssetsViewController.h in Headers */,
-				957B944BD6557C7C49CF65A96358FEDC /* KYDisplayMacro.h in Headers */,
-				955727D5DC1267C11EB113E8EE22E539 /* KYHud.h in Headers */,
-				31AF6D4D76AF06C984F838935551342C /* KYImageScannerCell.h in Headers */,
-				DCE700972B94D6644DF02EC2EE3FB926 /* KYImageScannerViewController.h in Headers */,
-				546F4498A8D394394616DDB849182CF4 /* KYPhotoBaseViewController.h in Headers */,
-				82EFA28EFA1B3207C036D0FF61CF001B /* KYPhotoHeader.h in Headers */,
-				F275B2401B423EF8F9481021D58AFCFA /* KYPhotoKit-umbrella.h in Headers */,
-				115CCE85AEA79F9850B64124DEB6F437 /* KYPhotoKit.h in Headers */,
-				E9DD83EBB57A9C7B036303A51441E21B /* KYPhotoLoadingDataProtocol.h in Headers */,
-				07D03A2FA526265352BD78368B2E720B /* KYPhotoNaviViewController.h in Headers */,
-				7791F90B5B2EA19BE9E1A6DEB35F4BAF /* KYPhotoSource.h in Headers */,
-				4689800711D2DAACF98AB733B1E65C43 /* KYPhotoSourceManager.h in Headers */,
-				49BCE3896A9B4FD28E27F52D7885E27A /* KYPhotoSourceTool.h in Headers */,
-				FFB4FD32DBD1D1B4F21DF68168620154 /* KYPhotoTool.h in Headers */,
-				C0BFF6EA3B4A065105E131D91D8E7046 /* KYScanerLayout.h in Headers */,
-				9410C8E6691E7D8139CC2D8A89E235C9 /* KYScannerImage.h in Headers */,
-				08B2C66E3FA89248E5AB956E9BC7A589 /* KYScannerPresentModel.h in Headers */,
-				F65B02839DDB508C8A7E57B471FA991A /* KYTagBtn.h in Headers */,
-				FF12854BA6B150C481179708326B5AFC /* UIImage+SYExtension.h in Headers */,
+				BDB5B88A60A27A5F470884B32027861E /* Pods-KYPhotoKit_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		98EAEE1D7C197BBE59A5901D2D590724 /* Headers */ = {
+		7CCBCA3C9DFCC747685F70A3638D0171 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5C42D7E19F664E1BDCDCBD0C3854D13 /* Pods-KYPhotoKit_Example-umbrella.h in Headers */,
+				9CF0F209449B748998478C2817AAFD08 /* KYAlbum.h in Headers */,
+				5171F7F4480176DDC70E22FDDC9F2FF5 /* KYAlbumCell.h in Headers */,
+				EBDC04033C6C5771D64EEBE5382C4C9A /* KYAlbumsViewController.h in Headers */,
+				90D81FB242DB1596163ECE973066510E /* KYAsset+Action.h in Headers */,
+				C091ADB19741404057BE0BC01C4A598E /* KYAsset.h in Headers */,
+				03721920126712E2048E059A9D2F7182 /* KYAssetCell.h in Headers */,
+				553DE6D8B9F10A23DAD8D544DEE67E50 /* KYAssetsViewController+Scanner.h in Headers */,
+				8D91F171F6A0A8151CD19D1577FDC31A /* KYAssetsViewController.h in Headers */,
+				CE9DFDC4CEDDB018DFAC7D1F100F9202 /* KYDisplayMacro.h in Headers */,
+				BA294A9DB67788DAD9466683D9317217 /* KYHud.h in Headers */,
+				F96B2616A73C5AE32D47EE8EDAA26728 /* KYImageScannerCell.h in Headers */,
+				626FF13585B84FDDBABA9D4582274AEA /* KYImageScannerViewController.h in Headers */,
+				D4898CDF5B4B240ED1D8A49A7C6EEB8B /* KYPhotoBaseViewController.h in Headers */,
+				DE11C322FB5C60AEEBDF9CDA322FDE90 /* KYPhotoConfig.h in Headers */,
+				0DB9AF23FC00A66AD94207AC118A1E10 /* KYPhotoHeader.h in Headers */,
+				E96A049B757604964DB638B0A33FEA96 /* KYPhotoKit-umbrella.h in Headers */,
+				79EAEF035095388E2BFFFE63E871C240 /* KYPhotoKit.h in Headers */,
+				1939E16C70920622A18A20B578BC2FF4 /* KYPhotoLoadingDataProtocol.h in Headers */,
+				A2355111C37B71E7200085DD8E54EEA6 /* KYPhotoNaviViewController.h in Headers */,
+				F81C6D9E3902B94E7A6C34BC714ED4C1 /* KYPhotoSource.h in Headers */,
+				C57A26EB57A5897C9A0921581D3B5EB8 /* KYPhotoSourceManager.h in Headers */,
+				3325AEBEAAF2ECADA9D110424F03F403 /* KYPhotoSourceTool.h in Headers */,
+				92C43778BDAED658D2D2566A5371007B /* KYPhotoTool.h in Headers */,
+				55B821F62EF0442FCCF538765EC4CE19 /* KYScanerLayout.h in Headers */,
+				96567D89A011E340DC8C1F01D7343DA8 /* KYScannerImage.h in Headers */,
+				0C254E3076B35AE362BB979A92DCF03C /* KYScannerPresentModel.h in Headers */,
+				88430B5E7535F1E24190789DBBE67DE9 /* KYTagBtn.h in Headers */,
+				E71A9FC54C16D241D0C0CB868FAE0CD1 /* UIImage+SYExtension.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9B62F8FD507093BD90D4F51B6836B910 /* Headers */ = {
+		BBF190ED81ACA96E8768ADEBF7B4378F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CE98C96BC66FF42FA22A76DECA760C9 /* Pods-KYPhotoKit_Tests-umbrella.h in Headers */,
+				5040CFAC3933C66697BA48CCCF3F67EF /* Pods-KYPhotoKit_Tests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -530,17 +554,17 @@
 /* Begin PBXNativeTarget section */
 		5A9D134F544C2305C6FCCC2B92FA91FC /* Pods-KYPhotoKit_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 865B6E710E4232D632B9E6AF26A1B25F /* Build configuration list for PBXNativeTarget "Pods-KYPhotoKit_Example" */;
+			buildConfigurationList = B6024D3C9C7C5FA85B79315F385ED06F /* Build configuration list for PBXNativeTarget "Pods-KYPhotoKit_Example" */;
 			buildPhases = (
-				98EAEE1D7C197BBE59A5901D2D590724 /* Headers */,
-				CA17ECAAEBE700C2C032E2CE164E971A /* Sources */,
-				8E2296271D05F9F161A40EBAB7D28A85 /* Frameworks */,
-				048FDB9F1009AA3D618CD52252A79E9E /* Resources */,
+				69B9D2C894D3B892E3E2DFC28CB582F4 /* Headers */,
+				9B54C00F9680151E2172DEBE509BED6F /* Sources */,
+				D46F55EE512FD7D246594F41E6AD234C /* Frameworks */,
+				1A634DC377D1FF3B0A42C595A22A8B58 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				4DB4686C7256A8FF7A62D859D84A8D1B /* PBXTargetDependency */,
+				A257AA4ACAE72360AF0B2F1B7FB85FB6 /* PBXTargetDependency */,
 			);
 			name = "Pods-KYPhotoKit_Example";
 			productName = "Pods-KYPhotoKit_Example";
@@ -549,17 +573,17 @@
 		};
 		81CC85C7720E34324C9CF2FC4647B773 /* KYPhotoKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B5D021F2721FFDFFB4CF676C5418DD8B /* Build configuration list for PBXNativeTarget "KYPhotoKit" */;
+			buildConfigurationList = BCE873A58FB2BF41D5368DFD14ABA3E0 /* Build configuration list for PBXNativeTarget "KYPhotoKit" */;
 			buildPhases = (
-				7265501ED91FE5816DBE94D1046127AE /* Headers */,
-				1EC61406B8A31F1B726B42122E548E02 /* Sources */,
-				2ADE3E173717C38DB2EE99AA681FD006 /* Frameworks */,
-				C1FA97EAE7F62E0BF62189F971AF993B /* Resources */,
+				7CCBCA3C9DFCC747685F70A3638D0171 /* Headers */,
+				4AEC822D5A7DB0A3D424369D1AFADAC4 /* Sources */,
+				B597E03A14DA72440BEE00811D3FF6B4 /* Frameworks */,
+				6EABF99D56A996E288C68332DD94E47B /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				387F467019BB9E3EC5BAABE9CFD11253 /* PBXTargetDependency */,
+				3F53C2353E451817A89A234C7EDDDE99 /* PBXTargetDependency */,
 			);
 			name = KYPhotoKit;
 			productName = KYPhotoKit;
@@ -568,17 +592,17 @@
 		};
 		9FB15BC7790882AB87BDF3D96D935262 /* Pods-KYPhotoKit_Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C6E578CB9C306CB673D980399FB459AB /* Build configuration list for PBXNativeTarget "Pods-KYPhotoKit_Tests" */;
+			buildConfigurationList = 0507D694A6CFCC56AB5544F0B5D17EC4 /* Build configuration list for PBXNativeTarget "Pods-KYPhotoKit_Tests" */;
 			buildPhases = (
-				9B62F8FD507093BD90D4F51B6836B910 /* Headers */,
-				0EE3509A9C714105D248AAA2084BF35E /* Sources */,
-				6B03676B8266744904CC6AD580150135 /* Frameworks */,
-				19A7C753BA6678DF5128B69B99E758E4 /* Resources */,
+				BBF190ED81ACA96E8768ADEBF7B4378F /* Headers */,
+				0DE63ECC46417D73D430FEDA577CB763 /* Sources */,
+				3C1C3A1BC5B4E92CB7FB80C77CD6B055 /* Frameworks */,
+				96254E5CFD03B5DF28FFFAC45CADB2E0 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				4142668DA3F85D7A97FFB8099E5ACFC7 /* PBXTargetDependency */,
+				D11BBD9C1FE07F9EADFAFD71DDB7CDCF /* PBXTargetDependency */,
 			);
 			name = "Pods-KYPhotoKit_Tests";
 			productName = "Pods-KYPhotoKit_Tests";
@@ -587,11 +611,11 @@
 		};
 		C700EC3C6C81A327DCEAC69643056978 /* KYPhotoKit-KYPhotoKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 25549A123546DD5A69FED0329ED353A5 /* Build configuration list for PBXNativeTarget "KYPhotoKit-KYPhotoKit" */;
+			buildConfigurationList = C6C860FF6E56ADCA22C4A94957316D0A /* Build configuration list for PBXNativeTarget "KYPhotoKit-KYPhotoKit" */;
 			buildPhases = (
-				FF5B22572F1A766BC280679576307C78 /* Sources */,
-				CE21535C660DA811EE4737C28864E39C /* Frameworks */,
-				FF1A74A7DDA37272078EE19FF04A1CF7 /* Resources */,
+				19BACD128C15820CC4658CAC0B013112 /* Sources */,
+				A9B2F0E74DCC4CE02187BEA46146A644 /* Frameworks */,
+				0363EA593CBC093C0F00C9A0FA7DA170 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -618,6 +642,13 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
+				es,
+				fr,
+				ja,
+				"pt-PT",
+				ru,
+				"zh-Hans",
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
 			productRefGroup = 1E5F8FB7889ACE2EBF33AB0A81C0DE62 /* Products */;
@@ -633,177 +664,148 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		048FDB9F1009AA3D618CD52252A79E9E /* Resources */ = {
+		0363EA593CBC093C0F00C9A0FA7DA170 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3AD5ED5C242EC0FFD326D02235F943E /* cloud-download.png in Resources */,
+				7E982873A37DFD46F095D196181463F9 /* icon_delete.png in Resources */,
+				E2F6178EA23EDE10B426CE8BE3DB74B9 /* Localizable.strings in Resources */,
+				9C6FF76E7148A3AADEBC332B5EE3A16D /* navigation_bar_icon_back_black.png in Resources */,
+				E1D5D4F32BD8F4301B5920DAFF749BA2 /* navigationbar_icon_back_white.png in Resources */,
+				5E2EC6A486270928802470823B511D16 /* publish_icon_close_white.png in Resources */,
+				C39A2A0110AC18C374F82B8FB9038215 /* tag_normal.png in Resources */,
+				E6FCBA00FA1A61BABF857FA6C234D105 /* tag_sel.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A634DC377D1FF3B0A42C595A22A8B58 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		19A7C753BA6678DF5128B69B99E758E4 /* Resources */ = {
+		6EABF99D56A996E288C68332DD94E47B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				924B9ACE359E6A32E95DE82E7F4925BF /* KYPhotoKit.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C1FA97EAE7F62E0BF62189F971AF993B /* Resources */ = {
+		96254E5CFD03B5DF28FFFAC45CADB2E0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				549449423F2E70F795AB5EE7283E8FA7 /* KYPhotoKit.bundle in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FF1A74A7DDA37272078EE19FF04A1CF7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CB5CB1F4CD36A70837B5E7D9E81B81CA /* cloud-download.png in Resources */,
-				F2C9A39688A52CCAB77EA6C1A3C06287 /* icon_delete.png in Resources */,
-				D2702F524F68440D44B0C3CEE032724F /* navigation_bar_icon_back_black.png in Resources */,
-				8668560486D605406006F5AFC60BCD79 /* navigationbar_icon_back_white.png in Resources */,
-				350287C2F8C540D55F71AB99EFC69C7A /* publish_icon_close_white.png in Resources */,
-				F5D9526577710C179E33BB2963E34718 /* tag_normal.png in Resources */,
-				3D9E9CA8CDC1B4501EFB95D11C053197 /* tag_sel.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0EE3509A9C714105D248AAA2084BF35E /* Sources */ = {
+		0DE63ECC46417D73D430FEDA577CB763 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3583D0B5FAA63DC6C585751131A6F41 /* Pods-KYPhotoKit_Tests-dummy.m in Sources */,
+				F66EE1FDE66B870CEB6F4CE52CAB53D6 /* Pods-KYPhotoKit_Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1EC61406B8A31F1B726B42122E548E02 /* Sources */ = {
+		19BACD128C15820CC4658CAC0B013112 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BAF4B8EB93EA7D8DA5598C54A19D7DD0 /* KYAlbum.m in Sources */,
-				27235D49211C9A6641ACCE4EFE9034BD /* KYAlbumCell.m in Sources */,
-				2B52746139D4F7D90CF5027527C1BA28 /* KYAlbumsViewController.m in Sources */,
-				F762FE6D80EA4E1F2CF65269CEA56C5D /* KYAsset+Action.m in Sources */,
-				36743DA2D3BDEF38DE03F58D2366D52F /* KYAsset.m in Sources */,
-				56E4D95ED78763210B73225DC825D86B /* KYAssetCell.m in Sources */,
-				A498EB1096196953D7398F86E0723725 /* KYAssetsViewController.m in Sources */,
-				9F309022A4847E67AE019160F41812EC /* KYHud.m in Sources */,
-				9FA3496B51296561AEC1E54E9B55A544 /* KYImageScannerCell.m in Sources */,
-				DF76C543C5AD1EBCE6209002760B0414 /* KYImageScannerViewController.m in Sources */,
-				A5A53502BC1A2955569D9CF801BD5579 /* KYPhotoBaseViewController.m in Sources */,
-				93811907CCF30152E3E9C40347A60BEA /* KYPhotoKit-dummy.m in Sources */,
-				6CF780F253442DF3A9522C6CDDE62C1F /* KYPhotoNaviViewController.m in Sources */,
-				F0D97D5305D6758C5D665B6A90F9DAB5 /* KYPhotoSource.m in Sources */,
-				4B2E27D89D17C5F66318924DEC642E54 /* KYPhotoSourceManager.m in Sources */,
-				2293C8D4F88B52218F4A086593BF05C7 /* KYPhotoSourceTool.m in Sources */,
-				244EF1A0E68D9BF82BB40A75A906ACFA /* KYPhotoTool.m in Sources */,
-				01E19BEE2C51FC8C02C0CEFD8C719FD9 /* KYScanerLayout.m in Sources */,
-				8B1526E681DD8308391A2D6A61D01577 /* KYScannerImage.m in Sources */,
-				A30CA01C7536499D60F13BF06635C005 /* KYScannerPresentModel.m in Sources */,
-				52392BFB7E6B9E35BBC5A332BBC86F4E /* KYTagBtn.m in Sources */,
-				4BBCA2E3928A17AE012156A1789892AB /* UIImage+SYExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CA17ECAAEBE700C2C032E2CE164E971A /* Sources */ = {
+		4AEC822D5A7DB0A3D424369D1AFADAC4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1AA934574D07C3B513B6B54CE57223FB /* Pods-KYPhotoKit_Example-dummy.m in Sources */,
+				9BFF4581DA40EDEF98671EAE7F1B421F /* KYAlbum.m in Sources */,
+				4FD5CEF6ED81D619FE404F4B86D16ADC /* KYAlbumCell.m in Sources */,
+				33A3AEEE584F0466B0AA953DFE74BDAA /* KYAlbumsViewController.m in Sources */,
+				F8924A8C074B66A74D984C3FFBDB2102 /* KYAsset+Action.m in Sources */,
+				CBA91BF4B551CDC74F4660D0503F27BC /* KYAsset.m in Sources */,
+				8819FE6A316D240F8D683167141A213A /* KYAssetCell.m in Sources */,
+				280E77CC861F51EBFBAD7248637E22EF /* KYAssetsViewController+Scanner.m in Sources */,
+				771D6560DA42BC519E22C6BBB1DA2F1D /* KYAssetsViewController.m in Sources */,
+				6E60032785B11DF13DB865117A968261 /* KYHud.m in Sources */,
+				60BE36D1964938894B4449A07DE3D3EB /* KYImageScannerCell.m in Sources */,
+				E0F2C3D5588711E100BADC2EB707B30D /* KYImageScannerViewController.m in Sources */,
+				C15258324F7D951AD2D2A1D8F693C3F7 /* KYPhotoBaseViewController.m in Sources */,
+				211D8B5C93328DE274C916826382DD7F /* KYPhotoConfig.m in Sources */,
+				0EC1263C47F6F2FBC9807C42740BE2AB /* KYPhotoKit-dummy.m in Sources */,
+				738C5D02E6433AC6DDEA7484BC773A6D /* KYPhotoNaviViewController.m in Sources */,
+				8960914005BD135C2C7AA2D8BA6290D8 /* KYPhotoSource.m in Sources */,
+				4E8C2DC1B1ED9582CCABFD49F477A767 /* KYPhotoSourceManager.m in Sources */,
+				815452ED4476DD8B5854AE1436536C1D /* KYPhotoSourceTool.m in Sources */,
+				8C0E9016F80FA6D6CAC81276678E8719 /* KYPhotoTool.m in Sources */,
+				D4D421A22733AD529B0D7CD5275F1060 /* KYScanerLayout.m in Sources */,
+				5F651562A511EFE6D7FDFAA78FCB9A81 /* KYScannerImage.m in Sources */,
+				9F4B77E7672587C6E1741CC65A9199EB /* KYScannerPresentModel.m in Sources */,
+				AE4EFDB1C09A22B422D28CDE741EF7E7 /* KYTagBtn.m in Sources */,
+				2495D7DCB8C6FEFECD4D7FC0A1E56852 /* UIImage+SYExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FF5B22572F1A766BC280679576307C78 /* Sources */ = {
+		9B54C00F9680151E2172DEBE509BED6F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1A9D54568AC158823279C215544B4CE /* Pods-KYPhotoKit_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		387F467019BB9E3EC5BAABE9CFD11253 /* PBXTargetDependency */ = {
+		3F53C2353E451817A89A234C7EDDDE99 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "KYPhotoKit-KYPhotoKit";
 			target = C700EC3C6C81A327DCEAC69643056978 /* KYPhotoKit-KYPhotoKit */;
-			targetProxy = 7476E5253805B94964130DD6C7C80565 /* PBXContainerItemProxy */;
+			targetProxy = 735AED7221D914EDC688A99C008F4A12 /* PBXContainerItemProxy */;
 		};
-		4142668DA3F85D7A97FFB8099E5ACFC7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-KYPhotoKit_Example";
-			target = 5A9D134F544C2305C6FCCC2B92FA91FC /* Pods-KYPhotoKit_Example */;
-			targetProxy = DB584136E6091C16563BA5A6A0CBF4F8 /* PBXContainerItemProxy */;
-		};
-		4DB4686C7256A8FF7A62D859D84A8D1B /* PBXTargetDependency */ = {
+		A257AA4ACAE72360AF0B2F1B7FB85FB6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = KYPhotoKit;
 			target = 81CC85C7720E34324C9CF2FC4647B773 /* KYPhotoKit */;
-			targetProxy = 5886208F28EB4E79E8E33C60A31E15B6 /* PBXContainerItemProxy */;
+			targetProxy = 268E8EFA79D57938D63CE02257700F2A /* PBXContainerItemProxy */;
+		};
+		D11BBD9C1FE07F9EADFAFD71DDB7CDCF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-KYPhotoKit_Example";
+			target = 5A9D134F544C2305C6FCCC2B92FA91FC /* Pods-KYPhotoKit_Example */;
+			targetProxy = D476AA7D38405F487E6D963B6C19DE5C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		8B499414A0D914473C6C3DCF9E56F900 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7A1B80F86E61FF8F2FB3EDF2201B190D /* Localizable.strings */,
+				8E3B710CB31EFF0923C64663E5E6F8CD /* Localizable.strings */,
+				27547834CD8A651DB95CDB19099CB0F2 /* Localizable.strings */,
+				700BA6DA0E48B9D32D86020E50B9AF36 /* Localizable.strings */,
+				7FC13460EE220962E30C406B3626C7FC /* Localizable.strings */,
+				4E5014A9EFF4051D474DF97EC5DDBAD2 /* Localizable.strings */,
+				7B72A341406A83A4FA15F2D17EAE6E00 /* Localizable.strings */,
+				642450467422D17F7D416D73544E7AAC /* Localizable.strings */,
+			);
+			name = Localizable.strings;
+			path = KYPhotoKit/Assets;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
-		0B5B0C51A0B2A9C8824124EE6D23D321 /* Release */ = {
+		18F0B183BB0CC3562A04ACB27F2E0A30 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EBB094533ED95F3B662DFD91E743F30A /* KYPhotoKit.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/KYPhotoKit";
-				IBSC_MODULE = KYPhotoKit;
-				INFOPLIST_FILE = "Target Support Files/KYPhotoKit/ResourceBundle-KYPhotoKit-KYPhotoKit-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_NAME = KYPhotoKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
-		1F6131DF1B391C6E87D11C99A126CAEF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1C5DA9BE46CB940E46EB6017A5D87E22 /* Pods-KYPhotoKit_Tests.debug.xcconfig */;
+			baseConfigurationReference = 6E936B7D5221317AA5C1561C7E84928D /* Pods-KYPhotoKit_Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-KYPhotoKit_Tests/Pods-KYPhotoKit_Tests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-KYPhotoKit_Tests/Pods-KYPhotoKit_Tests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		2896E66A92AE6FDE9912CE47FB8221FF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 706BD2C312CA0C9232750B95A44C95CB /* Pods-KYPhotoKit_Example.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -826,16 +828,32 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
-		49044A5ED525851005A14FFF2E6FBCAD /* Debug */ = {
+		2797FABD82BCF216D307316EEBCF0E41 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 270E8AC1ADE3C52FFB13EA14FD9590E3 /* KYPhotoKit.debug.xcconfig */;
+			baseConfigurationReference = AA986F52437DE320DAA9CB8F82A039F5 /* KYPhotoKit.release.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/KYPhotoKit";
+				IBSC_MODULE = KYPhotoKit;
+				INFOPLIST_FILE = "Target Support Files/KYPhotoKit/ResourceBundle-KYPhotoKit-KYPhotoKit-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = KYPhotoKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		552735F6BCCB5A647A1AF222958A1674 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D48E0E98CCC3CDB6C47B37CB59D1B2C6 /* KYPhotoKit.debug.xcconfig */;
+			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/KYPhotoKit";
 				IBSC_MODULE = KYPhotoKit;
 				INFOPLIST_FILE = "Target Support Files/KYPhotoKit/ResourceBundle-KYPhotoKit-KYPhotoKit-Info.plist";
@@ -848,11 +866,10 @@
 			};
 			name = Debug;
 		};
-		4FEF30016257B484C601F18B56E95AC1 /* Release */ = {
+		7857523489DBE4FEB4A147F7CCC5CD3F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EBB094533ED95F3B662DFD91E743F30A /* KYPhotoKit.release.xcconfig */;
+			baseConfigurationReference = AA986F52437DE320DAA9CB8F82A039F5 /* KYPhotoKit.release.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -879,12 +896,40 @@
 			};
 			name = Release;
 		};
-		59B6724D81B2F2235BCAFD09C255F338 /* Release */ = {
+		7A3A1DDF6B705455DBD042A14B7E3CD9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D48E0E98CCC3CDB6C47B37CB59D1B2C6 /* KYPhotoKit.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/KYPhotoKit/KYPhotoKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KYPhotoKit/KYPhotoKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/KYPhotoKit/KYPhotoKit.modulemap";
+				PRODUCT_MODULE_NAME = KYPhotoKit;
+				PRODUCT_NAME = KYPhotoKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8B2A13439A951A0F4C1FF46F10F6CF1B /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A295A251B3151E2BEB86C631EA1AE096 /* Pods-KYPhotoKit_Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -913,41 +958,7 @@
 			};
 			name = Release;
 		};
-		A149819587D40D46F2BAA1281BE153C6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6E936B7D5221317AA5C1561C7E84928D /* Pods-KYPhotoKit_Example.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-KYPhotoKit_Example/Pods-KYPhotoKit_Example-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-KYPhotoKit_Example/Pods-KYPhotoKit_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		B0087CB4594321EF41619F3181FE120E /* Release */ = {
+		9CF072E58B697F3F1DF026EB3E332DDD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -973,6 +984,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1000,18 +1012,17 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
 		};
-		B74C8EB117CFC4D8BCC7C39816C8D4AA /* Debug */ = {
+		9CFC7807AC4F89540BEF816BEDCAD46A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 270E8AC1ADE3C52FFB13EA14FD9590E3 /* KYPhotoKit.debug.xcconfig */;
+			baseConfigurationReference = 706BD2C312CA0C9232750B95A44C95CB /* Pods-KYPhotoKit_Example.debug.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -1020,24 +1031,26 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/KYPhotoKit/KYPhotoKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/KYPhotoKit/KYPhotoKit-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-KYPhotoKit_Example/Pods-KYPhotoKit_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/KYPhotoKit/KYPhotoKit.modulemap";
-				PRODUCT_MODULE_NAME = KYPhotoKit;
-				PRODUCT_NAME = KYPhotoKit;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-KYPhotoKit_Example/Pods-KYPhotoKit_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		B8BCBD0110C2658BB5DAADB9B7D97B92 /* Debug */ = {
+		A3C702068EEE81C5AF350F4CBA8C4B4F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1063,6 +1076,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1101,14 +1115,46 @@
 			};
 			name = Debug;
 		};
+		D5B6D963F55EF408C3EE0D09015468FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C5DA9BE46CB940E46EB6017A5D87E22 /* Pods-KYPhotoKit_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-KYPhotoKit_Tests/Pods-KYPhotoKit_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-KYPhotoKit_Tests/Pods-KYPhotoKit_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		25549A123546DD5A69FED0329ED353A5 /* Build configuration list for PBXNativeTarget "KYPhotoKit-KYPhotoKit" */ = {
+		0507D694A6CFCC56AB5544F0B5D17EC4 /* Build configuration list for PBXNativeTarget "Pods-KYPhotoKit_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				49044A5ED525851005A14FFF2E6FBCAD /* Debug */,
-				0B5B0C51A0B2A9C8824124EE6D23D321 /* Release */,
+				D5B6D963F55EF408C3EE0D09015468FD /* Debug */,
+				8B2A13439A951A0F4C1FF46F10F6CF1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1116,35 +1162,35 @@
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B8BCBD0110C2658BB5DAADB9B7D97B92 /* Debug */,
-				B0087CB4594321EF41619F3181FE120E /* Release */,
+				A3C702068EEE81C5AF350F4CBA8C4B4F /* Debug */,
+				9CF072E58B697F3F1DF026EB3E332DDD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		865B6E710E4232D632B9E6AF26A1B25F /* Build configuration list for PBXNativeTarget "Pods-KYPhotoKit_Example" */ = {
+		B6024D3C9C7C5FA85B79315F385ED06F /* Build configuration list for PBXNativeTarget "Pods-KYPhotoKit_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2896E66A92AE6FDE9912CE47FB8221FF /* Debug */,
-				A149819587D40D46F2BAA1281BE153C6 /* Release */,
+				9CFC7807AC4F89540BEF816BEDCAD46A /* Debug */,
+				18F0B183BB0CC3562A04ACB27F2E0A30 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B5D021F2721FFDFFB4CF676C5418DD8B /* Build configuration list for PBXNativeTarget "KYPhotoKit" */ = {
+		BCE873A58FB2BF41D5368DFD14ABA3E0 /* Build configuration list for PBXNativeTarget "KYPhotoKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B74C8EB117CFC4D8BCC7C39816C8D4AA /* Debug */,
-				4FEF30016257B484C601F18B56E95AC1 /* Release */,
+				7A3A1DDF6B705455DBD042A14B7E3CD9 /* Debug */,
+				7857523489DBE4FEB4A147F7CCC5CD3F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C6E578CB9C306CB673D980399FB459AB /* Build configuration list for PBXNativeTarget "Pods-KYPhotoKit_Tests" */ = {
+		C6C860FF6E56ADCA22C4A94957316D0A /* Build configuration list for PBXNativeTarget "KYPhotoKit-KYPhotoKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1F6131DF1B391C6E87D11C99A126CAEF /* Debug */,
-				59B6724D81B2F2235BCAFD09C255F338 /* Release */,
+				552735F6BCCB5A647A1AF222958A1674 /* Debug */,
+				2797FABD82BCF216D307316EEBCF0E41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -18,6 +18,34 @@ NSBundle *kyBunble(void){
     return bundle;
 }
 
+NSBundle *KYPhotoLocalizationBundle(void) {
+    static NSBundle *_localizationBundle = nil;
+    if (!_localizationBundle) {
+        // 检查本机语言
+        NSString *localIdentifier = [NSLocale preferredLanguages].firstObject;
+        // 支持的国际化语言
+        NSArray<NSString *> *localizations = [[NSBundle mainBundle] localizations];
+        // 默认语言
+        __block NSString *localization = @"en";
+        [localizations enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            NSString *languageCode = [[NSLocale componentsFromLocaleIdentifier:obj] objectForKey:NSLocaleLanguageCode] ;
+            if ([localIdentifier hasPrefix:languageCode]) {  // 匹配语言编码
+                localization = obj;
+                *stop = YES;
+            }
+        }];
+        NSString *bundlePath = [[NSBundle mainBundle] pathForResource:localization ofType:@"lproj"];
+        _localizationBundle = [NSBundle bundleWithPath:bundlePath];
+    }
+    return _localizationBundle;
+}
+
+NSString *TALocalizationStringWithKey(NSString *key,NSString *_Nullable defaultValue){
+    NSBundle *bundle = KYPhotoLocalizationBundle();
+    return [bundle localizedStringForKey:(key) value:@"" table: nil];
+}
+
+
 @implementation KYPhotoSourceTool
 
 +(UIImage *)imageWithName:(NSString *_Nullable)name type:(NSString *_Nullable)type{
@@ -28,5 +56,6 @@ NSBundle *kyBunble(void){
 +(NSString *)filepathWithName:(NSString *_Nullable)name type:(NSString *_Nullable)type{
     return [kyBunble() pathForResource:name ofType:type];
 }
+
 
 @end

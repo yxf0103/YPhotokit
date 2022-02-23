@@ -1,6 +1,6 @@
 {
   "name": "KYPhotoKit",
-  "version": "2.1.2",
+  "version": "2.1.3",
   "summary": "A simple for system lib photos,and a custom images scanner",
   "description": "A simple for system lib photos,and a custom images scanner,it just afford some ideas,you still need to do some work before you use it.",
   "homepage": "https://github.com/massyxf/YPhotokit",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/massyxf/YPhotokit.git",
-    "tag": "2.1.2",
+    "tag": "2.1.3",
     "submodules": true
   },
   "platforms": {

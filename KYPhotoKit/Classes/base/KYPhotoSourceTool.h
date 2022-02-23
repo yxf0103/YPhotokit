@@ -9,6 +9,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+FOUNDATION_EXTERN NSString *TALocalizationStringWithKey(NSString *key,NSString *_Nullable defaultValue);
+
+
 @interface KYPhotoSourceTool : NSObject
 
 /// 获取图片

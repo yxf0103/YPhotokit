@@ -25,7 +25,7 @@
 
 -(instancetype)init{
     if (self = [super init]) {
-        self.navigationItem.title = @"相册";
+        self.navigationItem.title = TALocalizationStringWithKey(@"相册", nil);
     }
     return self;
 }
@@ -40,7 +40,7 @@
 
 #pragma mark - ui
 -(void)setupUI{
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"关闭" style:UIBarButtonItemStyleDone target:self action:@selector(dismiss)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:TALocalizationStringWithKey(@"关闭", nil) style:UIBarButtonItemStyleDone target:self action:@selector(dismiss)];
     
     UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, KYNAVIHEIGHT, KYSCREENWIDTH, KYSCREENHEIGHT - KYNAVIHEIGHT) style:UITableViewStylePlain];
     [tableView registerClass:[KYAlbumCell class] forCellReuseIdentifier:KYAlbumCellIdentifier];

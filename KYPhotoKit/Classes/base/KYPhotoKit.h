@@ -10,5 +10,6 @@
 
 #import "KYPhotoHeader.h"
 #import "KYPhotoSourceTool.h"
+#import <KYBaseKit/KYBaseHeader.h>
 
 #endif /* SYPhotoHeader_h */

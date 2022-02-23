@@ -85,7 +85,7 @@ KYImageScannerCellDelegate>{
     bottomView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.8];
     UIButton *sendBtn = [UIButton buttonWithType:UIButtonTypeSystem];
     [bottomView addSubview:sendBtn];
-    [sendBtn setTitle:@"发送" forState:UIControlStateNormal];
+    [sendBtn setTitle:SYLocalizedStringForKey(@"发送",nil) forState:UIControlStateNormal];
     [sendBtn setTitleColor:KYColorRGB(0xff6542) forState:UIControlStateNormal];
     [sendBtn setTitleColor:KYColorRGB(0xe5e5ea) forState:UIControlStateDisabled];
     sendBtn.frame = CGRectMake(KYSCREENWIDTH - 10 - 45, 10, 45, 30);

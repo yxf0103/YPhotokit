@@ -32,6 +32,7 @@ Pod::Spec.new do |s|
 
   s.subspec 'base' do |sb|
     sb.source_files = 'KYPhotoKit/Classes/base/**/*'
+    sb.dependency 'KYBaseKit'
   end
   
   s.subspec 'sources' do |ss|
@@ -61,6 +62,8 @@ Pod::Spec.new do |s|
      'KYPhotoKit' => ['KYPhotoKit/Assets/**/*']
    }
    s.prefix_header_contents = "#import<KYPhotoKit/KYPhotoKit.h>"
+   
+   s.static_framework = true
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
